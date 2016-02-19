@@ -1,0 +1,34 @@
+{
+    "docs": [
+        {
+            "location": "/", 
+            "text": "Welcome to the Helpmonks Developer pages", 
+            "title": "Home"
+        }, 
+        {
+            "location": "/#welcome-to-the-helpmonks-developer-pages", 
+            "text": "", 
+            "title": "Welcome to the Helpmonks Developer pages"
+        }, 
+        {
+            "location": "/api/", 
+            "text": "Welcome", 
+            "title": "Developer API"
+        }, 
+        {
+            "location": "/api/#welcome", 
+            "text": "", 
+            "title": "Welcome"
+        }, 
+        {
+            "location": "/about/", 
+            "text": "About", 
+            "title": "About"
+        }, 
+        {
+            "location": "/about/#about", 
+            "text": "", 
+            "title": "About"
+        }
+    ]
+}
