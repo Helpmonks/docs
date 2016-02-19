@@ -11,14 +11,54 @@
             "title": "Welcome to the Helpmonks Developer pages"
         }, 
         {
-            "location": "/api/", 
-            "text": "Welcome", 
-            "title": "Developer API"
+            "location": "/api/overview/", 
+            "text": "Overview", 
+            "title": "Overview"
         }, 
         {
-            "location": "/api/#welcome", 
+            "location": "/api/overview/#overview", 
             "text": "", 
-            "title": "Welcome"
+            "title": "Overview"
+        }, 
+        {
+            "location": "/api/authentication/", 
+            "text": "Auth", 
+            "title": "Authentication"
+        }, 
+        {
+            "location": "/api/authentication/#auth", 
+            "text": "", 
+            "title": "Auth"
+        }, 
+        {
+            "location": "/api/conversation_find/", 
+            "text": "Find", 
+            "title": "Find"
+        }, 
+        {
+            "location": "/api/conversation_find/#find", 
+            "text": "", 
+            "title": "Find"
+        }, 
+        {
+            "location": "/api/customer_find/", 
+            "text": "Customer Find", 
+            "title": "Find"
+        }, 
+        {
+            "location": "/api/customer_find/#customer-find", 
+            "text": "", 
+            "title": "Customer Find"
+        }, 
+        {
+            "location": "/api/mailbox_find/", 
+            "text": "Mailbox Find", 
+            "title": "Find"
+        }, 
+        {
+            "location": "/api/mailbox_find/#mailbox-find", 
+            "text": "", 
+            "title": "Mailbox Find"
         }, 
         {
             "location": "/about/", 

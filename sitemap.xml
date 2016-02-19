@@ -3,23 +3,31 @@
 
     
     <url>
-     <loc>None/</loc>
+     <loc>http://developer.helpmonks.com/</loc>
      <lastmod>2016-02-18</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
 
     
+        
     <url>
-     <loc>None/api/</loc>
-     <lastmod>2016-02-18</lastmod>
+     <loc>http://developer.helpmonks.com</loc>
+     <lastmod></lastmod>
      <changefreq>daily</changefreq>
     </url>
+        
+    <url>
+     <loc>http://developer.helpmonks.com</loc>
+     <lastmod></lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
     
 
     
     <url>
-     <loc>None/about/</loc>
+     <loc>http://developer.helpmonks.com/about/</loc>
      <lastmod>2016-02-18</lastmod>
      <changefreq>daily</changefreq>
     </url>
