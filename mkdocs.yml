@@ -1,7 +1,7 @@
 site_name: Helpmonks Developer Guides
 theme_dir: readthedocshm
 site_url: http://developer.helpmonks.com
-site_description: This are the Helpmonks developer documentation pages
+site_description: These are the Helpmonks developer documentation pages
 site_author: Nitai Aventaggiato
 markdown_extensions:
   - smarty
@@ -14,11 +14,14 @@ pages:
   - 'Getting Started':
     - 'Overview': 'api/overview.md'
     - 'Authentication': 'api/authentication.md'
+    - 'Query Syntax': 'api/syntax.md'
   - 'APIs':
     - 'Conversation':
-      - 'Find': 'api/conversation_find.md'
+      - 'Find': 'api/conversation/find.md'
     - 'Customer':
-      - 'Find' : 'api/customer_find.md'
+      - 'Find' : 'api/customer/find.md'
     - 'Mailbox':
-      - 'Find': 'api/mailbox_find.md'
+      - 'Find': 'api/mailbox/find.md'
+  - 'Data Models':
+    - 'Conversations' : 'api/models/conversation.md'
 - 'About': 'about.md' 
