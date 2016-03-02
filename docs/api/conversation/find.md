@@ -34,7 +34,7 @@ https://(subdomain).helpmonks.com/api/v1/company_user/find
     </tr>
 </table>
 
-*Please refer to the **[Query syntax documentation](/api/syntax)** on how to query against your records*
+*The available fields are documented in the **[Conversation Data Model](/api/models/conversation/)**. Refer to the **[Query syntax documentation](/api/syntax)** on how to query against your records*
 
 ### Example
 
@@ -47,4 +47,6 @@ https://(subdomain).helpmonks.com/api/v1/company_user/find
 ```
 
 ### Returned data
+
+*Please refer to the **[Conversation Data Model](/api/models/conversation/)** to see the data structure being returned*
 

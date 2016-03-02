@@ -22,6 +22,16 @@ pages:
       - 'Find' : 'api/customer/find.md'
     - 'Mailbox':
       - 'Find': 'api/mailbox/find.md'
+    - 'Label':
+      - 'Find': 'api/label/find.md'
+    - 'User':
+      - 'Find': 'api/user/find.md'
+    - 'Search':
+      - 'Find': 'api/search/index.md'
   - 'Data Models':
     - 'Conversations' : 'api/models/conversation.md'
+    - 'Customer' : 'api/models/customer.md'
+    - 'Mailbox' : 'api/models/mailbox.md'
+    - 'Label' : 'api/models/label.md'
+    - 'User' : 'api/models/user.md'
 - 'About': 'about.md' 
