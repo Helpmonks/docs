@@ -4,12 +4,18 @@
     
     <url>
      <loc>http://developer.helpmonks.com/</loc>
-     <lastmod>2016-02-18</lastmod>
+     <lastmod>2016-03-01</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
 
     
+        
+    <url>
+     <loc>http://developer.helpmonks.com</loc>
+     <lastmod></lastmod>
+     <changefreq>daily</changefreq>
+    </url>
         
     <url>
      <loc>http://developer.helpmonks.com</loc>
@@ -28,7 +34,7 @@
     
     <url>
      <loc>http://developer.helpmonks.com/about/</loc>
-     <lastmod>2016-02-18</lastmod>
+     <lastmod>2016-03-01</lastmod>
      <changefreq>daily</changefreq>
     </url>
     

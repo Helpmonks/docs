@@ -94,6 +94,14 @@
             
             </div>
         
+            <li class="">
+                <a style="padding-left:70px;" class="" href="../syntax/" id="Query Syntax">Query Syntax </a>
+            </li>
+            
+            <div style="display:none" id="hidden_Getting StartedOverviewAuthenticationQuery Syntax">
+            
+            </div>
+        
         </div>
     
         <li class="">
@@ -109,7 +117,7 @@
             <div style="display:none" id="hidden_APIsConversation">
             
                 <li class="">
-                    <a style="padding-left:90px;" class="" href="../conversation_find/" id="Find">Find </a>
+                    <a style="padding-left:90px;" class="" href="../conversation/find/" id="Find">Find </a>
                 </li>
             
             </div>
@@ -121,7 +129,7 @@
             <div style="display:none" id="hidden_APIsConversationCustomer">
             
                 <li class="">
-                    <a style="padding-left:90px;" class="" href="../customer_find/" id="Find">Find </a>
+                    <a style="padding-left:90px;" class="" href="../customer/find/" id="Find">Find </a>
                 </li>
             
             </div>
@@ -133,8 +141,92 @@
             <div style="display:none" id="hidden_APIsConversationCustomerMailbox">
             
                 <li class="">
-                    <a style="padding-left:90px;" class="" href="../mailbox_find/" id="Find">Find </a>
+                    <a style="padding-left:90px;" class="" href="../mailbox/find/" id="Find">Find </a>
                 </li>
+            
+            </div>
+        
+            <li class="">
+                <a style="padding-left:70px;" class=""  id="Label" onclick="showChildren('APIsConversationCustomerMailboxLabel')">Label  <i class="fa fa-arrow-circle-down" style="padding-left:5px;font-size:13px;"></i></a>
+            </li>
+            
+            <div style="display:none" id="hidden_APIsConversationCustomerMailboxLabel">
+            
+                <li class="">
+                    <a style="padding-left:90px;" class="" href="../label/find/" id="Find">Find </a>
+                </li>
+            
+            </div>
+        
+            <li class="">
+                <a style="padding-left:70px;" class=""  id="User" onclick="showChildren('APIsConversationCustomerMailboxLabelUser')">User  <i class="fa fa-arrow-circle-down" style="padding-left:5px;font-size:13px;"></i></a>
+            </li>
+            
+            <div style="display:none" id="hidden_APIsConversationCustomerMailboxLabelUser">
+            
+                <li class="">
+                    <a style="padding-left:90px;" class="" href="../user/find/" id="Find">Find </a>
+                </li>
+            
+            </div>
+        
+            <li class="">
+                <a style="padding-left:70px;" class=""  id="Search" onclick="showChildren('APIsConversationCustomerMailboxLabelUserSearch')">Search  <i class="fa fa-arrow-circle-down" style="padding-left:5px;font-size:13px;"></i></a>
+            </li>
+            
+            <div style="display:none" id="hidden_APIsConversationCustomerMailboxLabelUserSearch">
+            
+                <li class="">
+                    <a style="padding-left:90px;" class="" href="../search/" id="Find">Find </a>
+                </li>
+            
+            </div>
+        
+        </div>
+    
+        <li class="">
+            <a style="padding-left:50px;" class=""  id="Data Models" onclick="showChildren('Data Models')">Data Models  <i class="fa fa-arrow-circle-down" style="padding-left:5px;font-size:13px;"></i></a>
+        </li>
+        
+        <div style="display:none" id="hidden_Data Models">
+        
+            <li class="">
+                <a style="padding-left:70px;" class="" href="../models/conversation/" id="Conversations">Conversations </a>
+            </li>
+            
+            <div style="display:none" id="hidden_Data ModelsConversations">
+            
+            </div>
+        
+            <li class="">
+                <a style="padding-left:70px;" class="" href="../models/customer/" id="Customer">Customer </a>
+            </li>
+            
+            <div style="display:none" id="hidden_Data ModelsConversationsCustomer">
+            
+            </div>
+        
+            <li class="">
+                <a style="padding-left:70px;" class="" href="../models/mailbox/" id="Mailbox">Mailbox </a>
+            </li>
+            
+            <div style="display:none" id="hidden_Data ModelsConversationsCustomerMailbox">
+            
+            </div>
+        
+            <li class="">
+                <a style="padding-left:70px;" class="" href="../models/label/" id="Label">Label </a>
+            </li>
+            
+            <div style="display:none" id="hidden_Data ModelsConversationsCustomerMailboxLabel">
+            
+            </div>
+        
+            <li class="">
+                <a style="padding-left:70px;" class="" href="../models/user/" id="User">User </a>
+            </li>
+            
+            <div style="display:none" id="hidden_Data ModelsConversationsCustomerMailboxLabelUser">
             
             </div>
         
@@ -193,7 +285,17 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="overview">Overview</h1>
+                <h1 id="helpmonks-api-overview">Helpmonks API Overview</h1>
+<p>The Helpmonks API allows you to interact with your data stored in Helpmonks. You can, among many other methods, create a new conversation, update a conversation, create a customer record, create notes, interact with labels and search.</p>
+<h2 id="data-structure">Data structure</h2>
+<p>All API methods are issues with a POST or a GET request. POST API methods expect a JSON structure in the body. Please see each individidual documentation to learn aboot the available parameters.</p>
+<p>All API methods return a JSON data object.</p>
+<h2 id="api-url">API URL</h2>
+<p>API requests should be done towards https://(yoursubdomain).helpmonks.com/(apimethod). Please refer to the API documentation for the correct URL.</p>
+<h2 id="api-key">API Key</h2>
+<p>Please see <a href="../../api/authentication/">Authentication</a> to learn how to create your API key and authenticate towards the Helpmonks API.</p>
+<h2 id="help">Help</h2>
+<p>If you have any questions, please post a message to our <a href="https://help.helpmonks.com">Helpmonks Developer forum</a>. </p>
               
             </div>
           </div>

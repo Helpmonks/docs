@@ -8,7 +8,7 @@
   
   <meta name="author" content="Nitai Aventaggiato">
   
-  <title>Authentication - Helpmonks Developer Guides</title>
+  <title>Query Syntax - Helpmonks Developer Guides</title>
   
 
   <link rel="shortcut icon" href="../../img/favicon.ico">
@@ -25,9 +25,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Authentication";
-    var mkdocs_page_input_path = "api/authentication.md";
-    var mkdocs_page_url = "/api/authentication/";
+    var mkdocs_page_name = "Query Syntax";
+    var mkdocs_page_input_path = "api/syntax.md";
+    var mkdocs_page_url = "/api/syntax/";
   </script>
   
   <script src="../../js/jquery-2.1.1.min.js"></script>
@@ -86,16 +86,16 @@
             
             </div>
         
-            <li class="current">
-                <a style="padding-left:70px;" class="current" href="./" id="Authentication">Authentication </a>
+            <li class="">
+                <a style="padding-left:70px;" class="" href="../authentication/" id="Authentication">Authentication </a>
             </li>
             
             <div style="display:none" id="hidden_Getting StartedOverviewAuthentication">
             
             </div>
         
-            <li class="">
-                <a style="padding-left:70px;" class="" href="../syntax/" id="Query Syntax">Query Syntax </a>
+            <li class="current">
+                <a style="padding-left:70px;" class="current" href="./" id="Query Syntax">Query Syntax </a>
             </li>
             
             <div style="display:none" id="hidden_Getting StartedOverviewAuthenticationQuery Syntax">
@@ -275,7 +275,7 @@
         
       
     
-    <li>Authentication</li>
+    <li>Query Syntax</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -285,22 +285,82 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="authentication">Authentication</h1>
-<p>All API requests have to contain an authentication header with the API key of a user. This is a standard <strong>Basic Authentication header</strong> and should be in the following format:</p>
-<pre><code>authentication: {
-    username : &quot;b4dc4a8c0a9543af8342b6c68b1af918&quot; &lt;-- your API key,
-    password : &quot;p&quot; &lt;-- any string
+                <h1 id="query-syntax-for-the-helpmonks-api">Query Syntax for the Helpmonks API</h1>
+<p>Helpmonks utilizes the MongoDB database together with the Mongoose ORM framework. Thus, the Helpmonks API exposes the Mongoose query syntax directly. For you this means that you have the full query syntax to your disposel with the Helpmonks API.</p>
+<p>If you are not familiar with the MongoDB query syntax we recommend a quick read of the <a href="http://docs.mongodb.org/manual/reference/sql-comparison/index.html">comparison between SQL queries and MongoDB queries</a>.</p>
+<p>As the query syntax is written in a JSON notation, it should already be familiar to a lot of developers and easy to learn.</p>
+<h2 id="find-findone-and-findbyid">Find, FindOne and FindById</h2>
+<p>Every API section (Conversation, User, etc.) will contain at least a &ldquo;find&rdquo; method. &ldquo;Find&rdquo; is the most versatile query syntax. &ldquo;Find&rdquo; accepts the following three parameters:</p>
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Value</th>
+        <th>Required</th>
+    </tr>
+    <tr>
+        <td>query</td>
+        <td>Available column in object</td>
+        <td>Yes</td>
+    </tr>
+    <tr>
+        <td>fields</td>
+        <td>Available column name</td>
+        <td>No</td>
+    </tr>
+    <tr>
+        <td>options</td>
+        <td>Available options like sort, slice, etc.</td>
+        <td>No</td>
+    </tr>
+</table>
+
+<h3 id="query">query</h3>
+<p>In the query object you define the columns you want to query against, i.e. they are similar to the SQL WHERE columns. Say, you want to query a users firstname and email address:</p>
+<pre><code>{
+    query : { 'first_name' : 'Nitai', 'email' : 'nitai@helpmonks.com' }
 }
 </code></pre>
 
-<p>As authentication is done with the API key, but the Basic Authentication protocol requires a password, you can use any string value as a password.</p>
-<p>Please see the documentation of your preferred language how to create and pass along the authentication header.</p>
-<h2 id="obtaining-your-api-key">Obtaining your API key</h2>
-<p>You can generate one or more API keys in your profile within the Helpmonks application.</p>
-<p><img alt="" src="../../images/api_keys.png" /></p>
-<p>Please make sure to keep your API key a secret. A good practice is to renew your API key every 6 months.</p>
-<h2 id="permissions">Permissions</h2>
-<p>Your permissions within Helpmonks will also apply to the API, i.e. if you use the API key of a user who is an Administrator you will also have Administrator access with the API. On the other hand, a user with &ldquo;user&rdquo; permissions will not be able to conduct certain actions withs the API. These API requests will receive a validation error message in the returning data structure.</p>
+<p><em>The above assumes that the data model for the collection has columns of &ldquo;first_name&rdquo; and &ldquo;email&rdquo;</em></p>
+<h3 id="fields">fields</h3>
+<p>The &ldquo;field&rdquo; value allows you to define the columns you want to have returned. <strong>Note: Each data model defines default fields to be returned and usually you don&rsquo;t need to explisitely define this</strong> </p>
+<pre><code>{
+    fields : { 'first_name email' }
+}
+</code></pre>
+
+<p><em>Please note that you separate the column names with a space!</em></p>
+<h3 id="options">options</h3>
+<p>The &ldquo;options&rdquo; allow you to further tailor your query. You use &ldquo;options&rdquo; to filter, sort, etc. the query.</p>
+<pre><code>{
+    options : { sort : { first_name: 'asc' } }
+}
+</code></pre>
+
+<p><em>sort by &ldquo;first_name&rdquo; ascending</em></p>
+<h3 id="example-find-query-syntax">Example Find Query Syntax</h3>
+<p>Given the above example, we would query a user in the Helpmonks API with the following POST request:</p>
+<pre><code>{
+    query : { 'first_name' : 'Nitai', 'email' : 'nitai@helpmonks.com' },
+    fields : { 'first_name email' },
+    options : { sort : { first_name: 'asc' } }
+}
+</code></pre>
+
+<p>On the other hand, if you want to return all users you would do this:</p>
+<pre><code>{
+    query: {}
+}
+</code></pre>
+
+<p>As the &ldquo;fields&rdquo; and &ldquo;options&rdquo; parameters are optional the above would return all user records with the default fields and ordered as they are stored in the MongoDB database.</p>
+<h2 id="findone">FindOne</h2>
+<p>As the method name implicates, the &ldquo;findOne&rdquo; methods will return only one record but utilizes the same syntax and the above &ldquo;find&rdquo;. The difference is that when the &ldquo;findOne&rdquo; executes, the first found document is returned!</p>
+<p>You should use the &ldquo;findOne&rdquo; whenever you are sure that only one record exists or are looking for an explisit user record. As a fact, the above find query is much faster with the &ldquo;findOne&rdquo; method.</p>
+<p>If you know the ID of a record, always use the &ldquo;findById&rdquo; methods!</p>
+<h2 id="findbyid">FindByID</h2>
+<p>All API methods will return the found objects, each containing a unique ID (usually named &ldquo;_id&rdquo;). Hence, if you know the ID of a record it is recommend to always use the &ldquo;findOne&rdquo; methods to query against the database. </p>
+<p>As MongoDB indexes the ID of each record this query is also the most performant one and should be used whenever possible.</p>
               
             </div>
           </div>
@@ -308,10 +368,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../syntax/" class="btn btn-neutral float-right" title="Query Syntax">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../conversation/find/" class="btn btn-neutral float-right" title="Find">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../overview/" class="btn btn-neutral" title="Overview"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../authentication/" class="btn btn-neutral" title="Authentication"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -337,10 +397,10 @@
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../overview/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../authentication/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../syntax/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../conversation/find/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div> -->

@@ -2,63 +2,298 @@
     "docs": [
         {
             "location": "/", 
-            "text": "Welcome to the Helpmonks Developer pages", 
+            "text": "Welcome to the Helpmonks Developer pages\n\n\nOn the following pages you will found", 
             "title": "Home"
         }, 
         {
             "location": "/#welcome-to-the-helpmonks-developer-pages", 
-            "text": "", 
+            "text": "On the following pages you will found", 
             "title": "Welcome to the Helpmonks Developer pages"
         }, 
         {
             "location": "/api/overview/", 
-            "text": "Overview", 
+            "text": "Helpmonks API Overview\n\n\nThe Helpmonks API allows you to interact with your data stored in Helpmonks. You can, among many other methods, create a new conversation, update a conversation, create a customer record, create notes, interact with labels and search.\n\n\nData structure\n\n\nAll API methods are issues with a POST or a GET request. POST API methods expect a JSON structure in the body. Please see each individidual documentation to learn aboot the available parameters.\n\n\nAll API methods return a JSON data object.\n\n\nAPI URL\n\n\nAPI requests should be done towards https://(yoursubdomain).helpmonks.com/(apimethod). Please refer to the API documentation for the correct URL.\n\n\nAPI Key\n\n\nPlease see \nAuthentication\n to learn how to create your API key and authenticate towards the Helpmonks API.\n\n\nHelp\n\n\nIf you have any questions, please post a message to our \nHelpmonks Developer forum\n.", 
             "title": "Overview"
         }, 
         {
-            "location": "/api/overview/#overview", 
-            "text": "", 
-            "title": "Overview"
+            "location": "/api/overview/#helpmonks-api-overview", 
+            "text": "The Helpmonks API allows you to interact with your data stored in Helpmonks. You can, among many other methods, create a new conversation, update a conversation, create a customer record, create notes, interact with labels and search.", 
+            "title": "Helpmonks API Overview"
+        }, 
+        {
+            "location": "/api/overview/#data-structure", 
+            "text": "All API methods are issues with a POST or a GET request. POST API methods expect a JSON structure in the body. Please see each individidual documentation to learn aboot the available parameters.  All API methods return a JSON data object.", 
+            "title": "Data structure"
+        }, 
+        {
+            "location": "/api/overview/#api-url", 
+            "text": "API requests should be done towards https://(yoursubdomain).helpmonks.com/(apimethod). Please refer to the API documentation for the correct URL.", 
+            "title": "API URL"
+        }, 
+        {
+            "location": "/api/overview/#api-key", 
+            "text": "Please see  Authentication  to learn how to create your API key and authenticate towards the Helpmonks API.", 
+            "title": "API Key"
+        }, 
+        {
+            "location": "/api/overview/#help", 
+            "text": "If you have any questions, please post a message to our  Helpmonks Developer forum .", 
+            "title": "Help"
         }, 
         {
             "location": "/api/authentication/", 
-            "text": "Auth", 
+            "text": "Authentication\n\n\nAll API requests have to contain an authentication header with the API key of a user. This is a standard \nBasic Authentication header\n and should be in the following format:\n\n\nauthentication: {\n    username : \nb4dc4a8c0a9543af8342b6c68b1af918\n \n-- your API key,\n    password : \np\n \n-- any string\n}\n\n\n\n\nAs authentication is done with the API key, but the Basic Authentication protocol requires a password, you can use any string value as a password.\n\n\nPlease see the documentation of your preferred language how to create and pass along the authentication header.\n\n\nObtaining your API key\n\n\nYou can generate one or more API keys in your profile within the Helpmonks application.\n\n\n\n\nPlease make sure to keep your API key a secret. A good practice is to renew your API key every 6 months.\n\n\nPermissions\n\n\nYour permissions within Helpmonks will also apply to the API, i.e. if you use the API key of a user who is an Administrator you will also have Administrator access with the API. On the other hand, a user with \nuser\n permissions will not be able to conduct certain actions withs the API. These API requests will receive a validation error message in the returning data structure.", 
             "title": "Authentication"
         }, 
         {
-            "location": "/api/authentication/#auth", 
-            "text": "", 
-            "title": "Auth"
+            "location": "/api/authentication/#authentication", 
+            "text": "All API requests have to contain an authentication header with the API key of a user. This is a standard  Basic Authentication header  and should be in the following format:  authentication: {\n    username :  b4dc4a8c0a9543af8342b6c68b1af918   -- your API key,\n    password :  p   -- any string\n}  As authentication is done with the API key, but the Basic Authentication protocol requires a password, you can use any string value as a password.  Please see the documentation of your preferred language how to create and pass along the authentication header.", 
+            "title": "Authentication"
         }, 
         {
-            "location": "/api/conversation_find/", 
-            "text": "Find", 
+            "location": "/api/authentication/#obtaining-your-api-key", 
+            "text": "You can generate one or more API keys in your profile within the Helpmonks application.   Please make sure to keep your API key a secret. A good practice is to renew your API key every 6 months.", 
+            "title": "Obtaining your API key"
+        }, 
+        {
+            "location": "/api/authentication/#permissions", 
+            "text": "Your permissions within Helpmonks will also apply to the API, i.e. if you use the API key of a user who is an Administrator you will also have Administrator access with the API. On the other hand, a user with  user  permissions will not be able to conduct certain actions withs the API. These API requests will receive a validation error message in the returning data structure.", 
+            "title": "Permissions"
+        }, 
+        {
+            "location": "/api/syntax/", 
+            "text": "Query Syntax for the Helpmonks API\n\n\nHelpmonks utilizes the MongoDB database together with the Mongoose ORM framework. Thus, the Helpmonks API exposes the Mongoose query syntax directly. For you this means that you have the full query syntax to your disposel with the Helpmonks API.\n\n\nIf you are not familiar with the MongoDB query syntax we recommend a quick read of the \ncomparison between SQL queries and MongoDB queries\n.\n\n\nAs the query syntax is written in a JSON notation, it should already be familiar to a lot of developers and easy to learn.\n\n\nFind, FindOne and FindById\n\n\nEvery API section (Conversation, User, etc.) will contain at least a \nfind\n method. \nFind\n is the most versatile query syntax. \nFind\n accepts the following three parameters:\n\n\n\n    \n\n        \nName\n\n        \nValue\n\n        \nRequired\n\n    \n\n    \n\n        \nquery\n\n        \nAvailable column in object\n\n        \nYes\n\n    \n\n    \n\n        \nfields\n\n        \nAvailable column name\n\n        \nNo\n\n    \n\n    \n\n        \noptions\n\n        \nAvailable options like sort, slice, etc.\n\n        \nNo\n\n    \n\n\n\n\n\nquery\n\n\nIn the query object you define the columns you want to query against, i.e. they are similar to the SQL WHERE columns. Say, you want to query a users firstname and email address:\n\n\n{\n    query : { 'first_name' : 'Nitai', 'email' : 'nitai@helpmonks.com' }\n}\n\n\n\n\nThe above assumes that the data model for the collection has columns of \nfirst_name\n and \nemail\n\n\nfields\n\n\nThe \nfield\n value allows you to define the columns you want to have returned. \nNote: Each data model defines default fields to be returned and usually you don\nt need to explisitely define this\n \n\n\n{\n    fields : { 'first_name email' }\n}\n\n\n\n\nPlease note that you separate the column names with a space!\n\n\noptions\n\n\nThe \noptions\n allow you to further tailor your query. You use \noptions\n to filter, sort, etc. the query.\n\n\n{\n    options : { sort : { first_name: 'asc' } }\n}\n\n\n\n\nsort by \nfirst_name\n ascending\n\n\nExample Find Query Syntax\n\n\nGiven the above example, we would query a user in the Helpmonks API with the following POST request:\n\n\n{\n    query : { 'first_name' : 'Nitai', 'email' : 'nitai@helpmonks.com' },\n    fields : { 'first_name email' },\n    options : { sort : { first_name: 'asc' } }\n}\n\n\n\n\nOn the other hand, if you want to return all users you would do this:\n\n\n{\n    query: {}\n}\n\n\n\n\nAs the \nfields\n and \noptions\n parameters are optional the above would return all user records with the default fields and ordered as they are stored in the MongoDB database.\n\n\nFindOne\n\n\nAs the method name implicates, the \nfindOne\n methods will return only one record but utilizes the same syntax and the above \nfind\n. The difference is that when the \nfindOne\n executes, the first found document is returned!\n\n\nYou should use the \nfindOne\n whenever you are sure that only one record exists or are looking for an explisit user record. As a fact, the above find query is much faster with the \nfindOne\n method.\n\n\nIf you know the ID of a record, always use the \nfindById\n methods!\n\n\nFindByID\n\n\nAll API methods will return the found objects, each containing a unique ID (usually named \n_id\n). Hence, if you know the ID of a record it is recommend to always use the \nfindOne\n methods to query against the database. \n\n\nAs MongoDB indexes the ID of each record this query is also the most performant one and should be used whenever possible.", 
+            "title": "Query Syntax"
+        }, 
+        {
+            "location": "/api/syntax/#query-syntax-for-the-helpmonks-api", 
+            "text": "Helpmonks utilizes the MongoDB database together with the Mongoose ORM framework. Thus, the Helpmonks API exposes the Mongoose query syntax directly. For you this means that you have the full query syntax to your disposel with the Helpmonks API.  If you are not familiar with the MongoDB query syntax we recommend a quick read of the  comparison between SQL queries and MongoDB queries .  As the query syntax is written in a JSON notation, it should already be familiar to a lot of developers and easy to learn.", 
+            "title": "Query Syntax for the Helpmonks API"
+        }, 
+        {
+            "location": "/api/syntax/#find-findone-and-findbyid", 
+            "text": "Every API section (Conversation, User, etc.) will contain at least a  find  method.  Find  is the most versatile query syntax.  Find  accepts the following three parameters:  \n     \n         Name \n         Value \n         Required \n     \n     \n         query \n         Available column in object \n         Yes \n     \n     \n         fields \n         Available column name \n         No \n     \n     \n         options \n         Available options like sort, slice, etc. \n         No", 
+            "title": "Find, FindOne and FindById"
+        }, 
+        {
+            "location": "/api/syntax/#query", 
+            "text": "In the query object you define the columns you want to query against, i.e. they are similar to the SQL WHERE columns. Say, you want to query a users firstname and email address:  {\n    query : { 'first_name' : 'Nitai', 'email' : 'nitai@helpmonks.com' }\n}  The above assumes that the data model for the collection has columns of  first_name  and  email", 
+            "title": "query"
+        }, 
+        {
+            "location": "/api/syntax/#fields", 
+            "text": "The  field  value allows you to define the columns you want to have returned.  Note: Each data model defines default fields to be returned and usually you don t need to explisitely define this    {\n    fields : { 'first_name email' }\n}  Please note that you separate the column names with a space!", 
+            "title": "fields"
+        }, 
+        {
+            "location": "/api/syntax/#options", 
+            "text": "The  options  allow you to further tailor your query. You use  options  to filter, sort, etc. the query.  {\n    options : { sort : { first_name: 'asc' } }\n}  sort by  first_name  ascending", 
+            "title": "options"
+        }, 
+        {
+            "location": "/api/syntax/#example-find-query-syntax", 
+            "text": "Given the above example, we would query a user in the Helpmonks API with the following POST request:  {\n    query : { 'first_name' : 'Nitai', 'email' : 'nitai@helpmonks.com' },\n    fields : { 'first_name email' },\n    options : { sort : { first_name: 'asc' } }\n}  On the other hand, if you want to return all users you would do this:  {\n    query: {}\n}  As the  fields  and  options  parameters are optional the above would return all user records with the default fields and ordered as they are stored in the MongoDB database.", 
+            "title": "Example Find Query Syntax"
+        }, 
+        {
+            "location": "/api/syntax/#findone", 
+            "text": "As the method name implicates, the  findOne  methods will return only one record but utilizes the same syntax and the above  find . The difference is that when the  findOne  executes, the first found document is returned!  You should use the  findOne  whenever you are sure that only one record exists or are looking for an explisit user record. As a fact, the above find query is much faster with the  findOne  method.  If you know the ID of a record, always use the  findById  methods!", 
+            "title": "FindOne"
+        }, 
+        {
+            "location": "/api/syntax/#findbyid", 
+            "text": "All API methods will return the found objects, each containing a unique ID (usually named  _id ). Hence, if you know the ID of a record it is recommend to always use the  findOne  methods to query against the database.   As MongoDB indexes the ID of each record this query is also the most performant one and should be used whenever possible.", 
+            "title": "FindByID"
+        }, 
+        {
+            "location": "/api/conversation/find/", 
+            "text": "Customer Find\n\n\nProtocol\n\n\nPOST\n\n\nURL\n\n\nhttps://(subdomain).helpmonks.com/api/v1/company_user/find\n\n\nParameters\n\n\n\n    \n\n        \nName\n\n        \nRequired\n\n        \nValue\n\n        \nComment\n\n    \n\n    \n\n        \nquery\n\n        \nYes\n\n        \nAvailable column in object\n\n        \n\n    \n\n    \n\n        \nfields\n\n        \nNo\n\n        \nAvailable column name\n\n        \n\n    \n\n    \n\n        \noptions\n\n        \nNo\n\n        \nAvailable options like sort, slice, etc.\n\n        \n\n    \n\n\n\n\nThe available fields are documented in the \nConversation Data Model\n. Refer to the \nQuery syntax documentation\n on how to query against your records\n\n\nExample\n\n\n{\n    query : { 'first_name' : 'Nitai', 'email' : 'nitai@helpmonks.com' },\n    fields : { 'first_name email' },\n    options : { sort : { first_name: 'asc' } }\n}\n\n\n\n\nReturned data\n\n\nPlease refer to the \nConversation Data Model\n to see the data structure being returned", 
             "title": "Find"
         }, 
         {
-            "location": "/api/conversation_find/#find", 
-            "text": "", 
-            "title": "Find"
-        }, 
-        {
-            "location": "/api/customer_find/", 
-            "text": "Customer Find", 
-            "title": "Find"
-        }, 
-        {
-            "location": "/api/customer_find/#customer-find", 
+            "location": "/api/conversation/find/#customer-find", 
             "text": "", 
             "title": "Customer Find"
         }, 
         {
-            "location": "/api/mailbox_find/", 
-            "text": "Mailbox Find", 
+            "location": "/api/conversation/find/#protocol", 
+            "text": "POST", 
+            "title": "Protocol"
+        }, 
+        {
+            "location": "/api/conversation/find/#url", 
+            "text": "https://(subdomain).helpmonks.com/api/v1/company_user/find", 
+            "title": "URL"
+        }, 
+        {
+            "location": "/api/conversation/find/#parameters", 
+            "text": "Name \n         Required \n         Value \n         Comment \n     \n     \n         query \n         Yes \n         Available column in object \n         \n     \n     \n         fields \n         No \n         Available column name \n         \n     \n     \n         options \n         No \n         Available options like sort, slice, etc. \n         \n       The available fields are documented in the  Conversation Data Model . Refer to the  Query syntax documentation  on how to query against your records", 
+            "title": "Parameters"
+        }, 
+        {
+            "location": "/api/conversation/find/#example", 
+            "text": "{\n    query : { 'first_name' : 'Nitai', 'email' : 'nitai@helpmonks.com' },\n    fields : { 'first_name email' },\n    options : { sort : { first_name: 'asc' } }\n}", 
+            "title": "Example"
+        }, 
+        {
+            "location": "/api/conversation/find/#returned-data", 
+            "text": "Please refer to the  Conversation Data Model  to see the data structure being returned", 
+            "title": "Returned data"
+        }, 
+        {
+            "location": "/api/customer/find/", 
+            "text": "Customer Find\n\n\nProtocol\n\n\nPOST\n\n\nURL\n\n\nhttps://(subdomain).helpmonks.com/api/v1/company_user/find", 
             "title": "Find"
         }, 
         {
-            "location": "/api/mailbox_find/#mailbox-find", 
+            "location": "/api/customer/find/#customer-find", 
             "text": "", 
-            "title": "Mailbox Find"
+            "title": "Customer Find"
+        }, 
+        {
+            "location": "/api/customer/find/#protocol", 
+            "text": "POST", 
+            "title": "Protocol"
+        }, 
+        {
+            "location": "/api/customer/find/#url", 
+            "text": "https://(subdomain).helpmonks.com/api/v1/company_user/find", 
+            "title": "URL"
+        }, 
+        {
+            "location": "/api/mailbox/find/", 
+            "text": "Customer Find\n\n\nProtocol\n\n\nPOST\n\n\nURL\n\n\nhttps://(subdomain).helpmonks.com/api/v1/company_user/find", 
+            "title": "Find"
+        }, 
+        {
+            "location": "/api/mailbox/find/#customer-find", 
+            "text": "", 
+            "title": "Customer Find"
+        }, 
+        {
+            "location": "/api/mailbox/find/#protocol", 
+            "text": "POST", 
+            "title": "Protocol"
+        }, 
+        {
+            "location": "/api/mailbox/find/#url", 
+            "text": "https://(subdomain).helpmonks.com/api/v1/company_user/find", 
+            "title": "URL"
+        }, 
+        {
+            "location": "/api/label/find/", 
+            "text": "Customer Find\n\n\nProtocol\n\n\nPOST\n\n\nURL\n\n\nhttps://(subdomain).helpmonks.com/api/v1/company_user/find", 
+            "title": "Find"
+        }, 
+        {
+            "location": "/api/label/find/#customer-find", 
+            "text": "", 
+            "title": "Customer Find"
+        }, 
+        {
+            "location": "/api/label/find/#protocol", 
+            "text": "POST", 
+            "title": "Protocol"
+        }, 
+        {
+            "location": "/api/label/find/#url", 
+            "text": "https://(subdomain).helpmonks.com/api/v1/company_user/find", 
+            "title": "URL"
+        }, 
+        {
+            "location": "/api/user/find/", 
+            "text": "Customer Find\n\n\nProtocol\n\n\nPOST\n\n\nURL\n\n\nhttps://(subdomain).helpmonks.com/api/v1/company_user/find", 
+            "title": "Find"
+        }, 
+        {
+            "location": "/api/user/find/#customer-find", 
+            "text": "", 
+            "title": "Customer Find"
+        }, 
+        {
+            "location": "/api/user/find/#protocol", 
+            "text": "POST", 
+            "title": "Protocol"
+        }, 
+        {
+            "location": "/api/user/find/#url", 
+            "text": "https://(subdomain).helpmonks.com/api/v1/company_user/find", 
+            "title": "URL"
+        }, 
+        {
+            "location": "/api/search/", 
+            "text": "Customer Find\n\n\nProtocol\n\n\nPOST\n\n\nURL\n\n\nhttps://(subdomain).helpmonks.com/api/v1/company_user/find", 
+            "title": "Find"
+        }, 
+        {
+            "location": "/api/search/#customer-find", 
+            "text": "", 
+            "title": "Customer Find"
+        }, 
+        {
+            "location": "/api/search/#protocol", 
+            "text": "POST", 
+            "title": "Protocol"
+        }, 
+        {
+            "location": "/api/search/#url", 
+            "text": "https://(subdomain).helpmonks.com/api/v1/company_user/find", 
+            "title": "URL"
+        }, 
+        {
+            "location": "/api/models/conversation/", 
+            "text": "Data Model for Conversation\n\n\nThis is the data model for records in the returning data structure. You also use this model to query against the records.\n\n\n{\n    '_id' : ObjectId, // READONLY\n    'host_id' : ObjectId,\n    'last_communication_date' : Date,\n    'status' : String, // one of these: 'inbox' 'assigned' 'archived' 'closed' 'spam' 'trash'\n    'mailbox_id' : ObjectId, // REQUIRED\n    'assignee' : ObjectId,\n    'labels' : [\n        ObjectId\n    ],\n    'emails' : [{\n        'timestamp' : Date, // default : Date.now\n        'subject' : String,\n        'excerpt' : String,\n        'body' : String,\n        'sanitized' : String,\n        'responded_to' : String,\n        'from' : {\n            'user_id' : ObjectId, // See note below\n            'company_user_id' : ObjectId // See note below\n        },\n        'cc' : String,\n        'bcc' : String,\n        'to' : ObjectId,\n        'is_forward' : Boolean, // default: false\n        'attachments' : [{\n            'contentType' : String,\n            'fileName' : String,\n            'generatedFileName' : String,\n            'contentId' : String,\n            'checksum' : String,\n            'length' : Number,\n            's3url' : String\n        }],\n        'message_id' : String\n    }],\n    'notes' : [{\n        'timestamp' : Date, // default : Date.now\n        'subject' : String, // default : 'note'\n        'excerpt' : String,\n        'body' : String,\n        'from' : ObjectId,\n        'is_public' : Boolean, // default: true\n    }],\n    'actions' : [{\n        'user_id' : ObjectId,\n        'timestamp' : Date, // default : Date.now\n        'subject' : String, // default : 'action'\n        'excerpt' : String,\n        'body' : String,\n        'from' : ObjectId,\n        'forward_id' : ObjectId\n    }],\n    'reminders' : [{\n        'reminder_date' : Date, // REQUIRED\n        'user_id' : ObjectId, // REQUIRED\n    }],\n    'has_attachments' : Boolean, // default: false,\n    'sender_timezone_offset' : String,\n    'company_id' : ObjectId\n}\n\n\n\n\nNote\n\n\nThe emails.from must either contain a \nuser_id\n or a \ncompany_user_id\n value.", 
+            "title": "Conversations"
+        }, 
+        {
+            "location": "/api/models/conversation/#data-model-for-conversation", 
+            "text": "This is the data model for records in the returning data structure. You also use this model to query against the records.  {\n    '_id' : ObjectId, // READONLY\n    'host_id' : ObjectId,\n    'last_communication_date' : Date,\n    'status' : String, // one of these: 'inbox' 'assigned' 'archived' 'closed' 'spam' 'trash'\n    'mailbox_id' : ObjectId, // REQUIRED\n    'assignee' : ObjectId,\n    'labels' : [\n        ObjectId\n    ],\n    'emails' : [{\n        'timestamp' : Date, // default : Date.now\n        'subject' : String,\n        'excerpt' : String,\n        'body' : String,\n        'sanitized' : String,\n        'responded_to' : String,\n        'from' : {\n            'user_id' : ObjectId, // See note below\n            'company_user_id' : ObjectId // See note below\n        },\n        'cc' : String,\n        'bcc' : String,\n        'to' : ObjectId,\n        'is_forward' : Boolean, // default: false\n        'attachments' : [{\n            'contentType' : String,\n            'fileName' : String,\n            'generatedFileName' : String,\n            'contentId' : String,\n            'checksum' : String,\n            'length' : Number,\n            's3url' : String\n        }],\n        'message_id' : String\n    }],\n    'notes' : [{\n        'timestamp' : Date, // default : Date.now\n        'subject' : String, // default : 'note'\n        'excerpt' : String,\n        'body' : String,\n        'from' : ObjectId,\n        'is_public' : Boolean, // default: true\n    }],\n    'actions' : [{\n        'user_id' : ObjectId,\n        'timestamp' : Date, // default : Date.now\n        'subject' : String, // default : 'action'\n        'excerpt' : String,\n        'body' : String,\n        'from' : ObjectId,\n        'forward_id' : ObjectId\n    }],\n    'reminders' : [{\n        'reminder_date' : Date, // REQUIRED\n        'user_id' : ObjectId, // REQUIRED\n    }],\n    'has_attachments' : Boolean, // default: false,\n    'sender_timezone_offset' : String,\n    'company_id' : ObjectId\n}", 
+            "title": "Data Model for Conversation"
+        }, 
+        {
+            "location": "/api/models/conversation/#note", 
+            "text": "The emails.from must either contain a  user_id  or a  company_user_id  value.", 
+            "title": "Note"
+        }, 
+        {
+            "location": "/api/models/customer/", 
+            "text": "Data Model for Customer\n\n\nThis is the data model for records in the returning data structure. You also use this model to query against the records.\n\n\n{\n    '_id' : ObjectId, // READONLY\n    'host_id' : ObjectId, // REQURIED\n    'company_id' : ObjectId,\n    'email' : String, // REQUIRED\n    'first_name' : String,\n    'middle_name' : String,\n    'last_name' : String,\n    'notes' : String,\n    'last_correspondence_date' : Date,\n    'last_email_chain_id' : ObjectId\n}", 
+            "title": "Customer"
+        }, 
+        {
+            "location": "/api/models/customer/#data-model-for-customer", 
+            "text": "This is the data model for records in the returning data structure. You also use this model to query against the records.  {\n    '_id' : ObjectId, // READONLY\n    'host_id' : ObjectId, // REQURIED\n    'company_id' : ObjectId,\n    'email' : String, // REQUIRED\n    'first_name' : String,\n    'middle_name' : String,\n    'last_name' : String,\n    'notes' : String,\n    'last_correspondence_date' : Date,\n    'last_email_chain_id' : ObjectId\n}", 
+            "title": "Data Model for Customer"
+        }, 
+        {
+            "location": "/api/models/mailbox/", 
+            "text": "Data Model for Mailbox\n\n\nThis is the data model for records in the returning data structure. You also use this model to query against the records.\n\n\n{\n    '_id' : ObjectId, // READONLY\n    'active' : Boolean, // REQUIRED\n    'name' : String,\n    'host_id' : ObjectId, // REQUIRED\n    'email' : String, // UNIQUE\n    'forward_to' : String,\n    'alias' : String,\n    'from' : String,\n    'parse_implicit_forward' : Boolean, // default : true\n    'signature' : String, // default : ''\n    'sending_via' : {\n        'custom' : Boolean, // REQUIRED\n        'server' : String, // default : ''\n        'username' : String, // default : ''\n        'password' : String, // default : ''\n        'port' : String, // default : ''\n        'is_ssl' : Boolean, // default : false\n    },\n    'users' : [ \n        ObjectId\n    ],\n    'auto_reply' : {\n        'enabled' : Boolean, // default : false\n        'subject' : String, // default : ''\n        'message' : String, // default : ''\n    },\n    'label_explorer' : Boolean // default : false\n    'notifications' : {\n        'new_message' : Boolean, // default : true\n        'comments' : Boolean, // default : true\n        'replies' : Boolean, // default : true\n        'assignment' : Boolean, // default : true\n    },\n    'email_template' : String, // REQUIRED default : 'simple',\n    'default_status' : String // REQUIRED default : 'unchanged'\n}", 
+            "title": "Mailbox"
+        }, 
+        {
+            "location": "/api/models/mailbox/#data-model-for-mailbox", 
+            "text": "This is the data model for records in the returning data structure. You also use this model to query against the records.  {\n    '_id' : ObjectId, // READONLY\n    'active' : Boolean, // REQUIRED\n    'name' : String,\n    'host_id' : ObjectId, // REQUIRED\n    'email' : String, // UNIQUE\n    'forward_to' : String,\n    'alias' : String,\n    'from' : String,\n    'parse_implicit_forward' : Boolean, // default : true\n    'signature' : String, // default : ''\n    'sending_via' : {\n        'custom' : Boolean, // REQUIRED\n        'server' : String, // default : ''\n        'username' : String, // default : ''\n        'password' : String, // default : ''\n        'port' : String, // default : ''\n        'is_ssl' : Boolean, // default : false\n    },\n    'users' : [ \n        ObjectId\n    ],\n    'auto_reply' : {\n        'enabled' : Boolean, // default : false\n        'subject' : String, // default : ''\n        'message' : String, // default : ''\n    },\n    'label_explorer' : Boolean // default : false\n    'notifications' : {\n        'new_message' : Boolean, // default : true\n        'comments' : Boolean, // default : true\n        'replies' : Boolean, // default : true\n        'assignment' : Boolean, // default : true\n    },\n    'email_template' : String, // REQUIRED default : 'simple',\n    'default_status' : String // REQUIRED default : 'unchanged'\n}", 
+            "title": "Data Model for Mailbox"
+        }, 
+        {
+            "location": "/api/models/label/", 
+            "text": "Data Model for Label\n\n\nThis is the data model for records in the returning data structure. You also use this model to query against the records.\n\n\n{\n    '_id' : ObjectId, // READONLY\n    'name' : String,\n    'host_id' : ObjectId, // REQUIRED\n    'parent_id' : ObjectId,\n    'children' Boolean, // REQUIRED\n    'ancestors' : {\n        'path' : [{\n            _id : false,\n            'id' : ObjectId, // REQUIRED\n            'name' : String, REQUIRED\n        }]\n    },\n    'active_mailboxes' : [\n        {\n            _id : false,\n            'id' : ObjectId\n            'show' : Boolean, // default : true\n        }\n    ]\n}", 
+            "title": "Label"
+        }, 
+        {
+            "location": "/api/models/label/#data-model-for-label", 
+            "text": "This is the data model for records in the returning data structure. You also use this model to query against the records.  {\n    '_id' : ObjectId, // READONLY\n    'name' : String,\n    'host_id' : ObjectId, // REQUIRED\n    'parent_id' : ObjectId,\n    'children' Boolean, // REQUIRED\n    'ancestors' : {\n        'path' : [{\n            _id : false,\n            'id' : ObjectId, // REQUIRED\n            'name' : String, REQUIRED\n        }]\n    },\n    'active_mailboxes' : [\n        {\n            _id : false,\n            'id' : ObjectId\n            'show' : Boolean, // default : true\n        }\n    ]\n}", 
+            "title": "Data Model for Label"
+        }, 
+        {
+            "location": "/api/models/user/", 
+            "text": "Data Model for User\n\n\nThis is the data model for records in the returning data structure. You also use this model to query against the records.\n\n\n{\n    '_id' : ObjectId, // READONLY\n    'host_id' : ObjectId\n    'template_id' : ObjectId,\n    'password' : String,\n    'first_name' : String, // REQUIRED\n    'last_name' : String, // REQUIRED\n    'is_active' : Boolean, // REQUIRED default : true\n    'email' : String, // REQUIRED\n    'groups' : [\n        String\n    ],\n    'fields' : [{\n        _id : false,\n        'field_id' : Number,\n        'field_name' : String,\n        'value' : Mixed\n    }],\n    'last_login_date' : Date,\n    'time' : {\n        'time_zone' : String, // default : 'America/New_York'\n        'time_format' : String, // default : '12'\n    },\n    'uuid_for_password' : String,\n    'notifications' : [{\n        '_id' : false,\n        'mailbox_id' : ObjectId,\n        'new_message' : Boolean // default : true\n        'comments' : Boolean, // default : true\n        'replies' : Boolean, // default : true\n        'assignment' : Boolean, // default : true\n    }],\n    'email_quote_count' : Number, // default : '7'\n    'signature' : String,\n    'api_keys' : [{\n        'api_key' : String,\n        'active' : Boolean, // default : true\n        'date_create' : Date\n    }]\n}", 
+            "title": "User"
+        }, 
+        {
+            "location": "/api/models/user/#data-model-for-user", 
+            "text": "This is the data model for records in the returning data structure. You also use this model to query against the records.  {\n    '_id' : ObjectId, // READONLY\n    'host_id' : ObjectId\n    'template_id' : ObjectId,\n    'password' : String,\n    'first_name' : String, // REQUIRED\n    'last_name' : String, // REQUIRED\n    'is_active' : Boolean, // REQUIRED default : true\n    'email' : String, // REQUIRED\n    'groups' : [\n        String\n    ],\n    'fields' : [{\n        _id : false,\n        'field_id' : Number,\n        'field_name' : String,\n        'value' : Mixed\n    }],\n    'last_login_date' : Date,\n    'time' : {\n        'time_zone' : String, // default : 'America/New_York'\n        'time_format' : String, // default : '12'\n    },\n    'uuid_for_password' : String,\n    'notifications' : [{\n        '_id' : false,\n        'mailbox_id' : ObjectId,\n        'new_message' : Boolean // default : true\n        'comments' : Boolean, // default : true\n        'replies' : Boolean, // default : true\n        'assignment' : Boolean, // default : true\n    }],\n    'email_quote_count' : Number, // default : '7'\n    'signature' : String,\n    'api_keys' : [{\n        'api_key' : String,\n        'active' : Boolean, // default : true\n        'date_create' : Date\n    }]\n}", 
+            "title": "Data Model for User"
         }, 
         {
             "location": "/about/", 
