@@ -1,10 +1,10 @@
-# Customer Find
+# Customer Update
 
 ### Protocol
 POST
 
 ### URL
-https://(subdomain).helpmonks.com/api/v1/company_user/find
+https://(subdomain).helpmonks.com/api/v1/company_user/update
 
 ### Parameters
 <table>
@@ -15,21 +15,9 @@ https://(subdomain).helpmonks.com/api/v1/company_user/find
         <th>Comment</th>
     </tr>
     <tr>
-        <td>query</td>
+        <td>customer</td>
         <td>Yes</td>
-        <td>Available column in object</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>fields</td>
-        <td>No</td>
-        <td>Available column name</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>options</td>
-        <td>No</td>
-        <td>Available options like sort, slice, etc.</td>
+        <td>Object containing the ID of the user and fields to update</td>
         <td></td>
     </tr>
 </table>
@@ -40,9 +28,11 @@ https://(subdomain).helpmonks.com/api/v1/company_user/find
 
 ```
 {
-    query : { 'first_name' : 'Nitai', 'email' : 'nitai@helpmonks.com' },
-    fields : { 'first_name email' },
-    options : { sort : { first_name: 'asc' } }
+    customer : { 
+        'id' : '54708b4cd71ef2dbdb557b9d', 
+        'email' : 'nitai@helpmonks.com',
+        "first_name" : "Nitai"
+    }
 }
 ```
 

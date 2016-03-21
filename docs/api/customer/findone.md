@@ -1,10 +1,10 @@
-# User Find
+# Customer FindOne
 
 ### Protocol
 POST
 
 ### URL
-https://(subdomain).helpmonks.com/api/v1/user/find
+https://(subdomain).helpmonks.com/api/v1/company_user/findone
 
 ### Parameters
 <table>
@@ -34,7 +34,7 @@ https://(subdomain).helpmonks.com/api/v1/user/find
     </tr>
 </table>
 
-*The available fields are documented in the **[User Data Model](/api/models/user/)**. Refer to the **[Query syntax documentation](/api/syntax)** on how to query against your records*
+*The available fields are documented in the **[Customer Data Model](/api/models/customer/)**. Refer to the **[Query syntax documentation](/api/syntax)** on how to query against your records*
 
 ### Example
 
@@ -48,5 +48,5 @@ https://(subdomain).helpmonks.com/api/v1/user/find
 
 ### Returned data
 
-*Please refer to the **[User Data Model](/api/models/user/)** to see the data structure being returned*
+*Please refer to the **[Customer Data Model](/api/models/customer/)** to see the data structure being returned*
 

@@ -1,10 +1,10 @@
-# User Find
+# User Activate
 
 ### Protocol
-POST
+GET
 
 ### URL
-https://(subdomain).helpmonks.com/api/v1/user/find
+https://(subdomain).helpmonks.com/api/v1/user/activate/(id)
 
 ### Parameters
 <table>
@@ -15,21 +15,9 @@ https://(subdomain).helpmonks.com/api/v1/user/find
         <th>Comment</th>
     </tr>
     <tr>
-        <td>query</td>
+        <td>ID</td>
         <td>Yes</td>
-        <td>Available column in object</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>fields</td>
-        <td>No</td>
-        <td>Available column name</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>options</td>
-        <td>No</td>
-        <td>Available options like sort, slice, etc.</td>
+        <td>ObjectId</td>
         <td></td>
     </tr>
 </table>
@@ -39,11 +27,7 @@ https://(subdomain).helpmonks.com/api/v1/user/find
 ### Example
 
 ```
-{
-    query : { 'first_name' : 'Nitai', 'email' : 'nitai@helpmonks.com' },
-    fields : { 'first_name email' },
-    options : { sort : { first_name: 'asc' } }
-}
+https://(subdomain).helpmonks.com/api/v1/user/activate/findbyid/54708b4cd71ef2dbdb557b9d
 ```
 
 ### Returned data

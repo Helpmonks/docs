@@ -1,10 +1,10 @@
-# Customer Find
+# Conversation Find
 
 ### Protocol
 POST
 
 ### URL
-https://(subdomain).helpmonks.com/api/v1/company_user/find
+https://(subdomain).helpmonks.com/api/v1/conversation/find
 
 ### Parameters
 <table>

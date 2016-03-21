@@ -1,10 +1,10 @@
-# User Find
+# Mailbox FindOne
 
 ### Protocol
 POST
 
 ### URL
-https://(subdomain).helpmonks.com/api/v1/user/find
+https://(subdomain).helpmonks.com/api/v1/mailbox/findone
 
 ### Parameters
 <table>
@@ -34,19 +34,19 @@ https://(subdomain).helpmonks.com/api/v1/user/find
     </tr>
 </table>
 
-*The available fields are documented in the **[User Data Model](/api/models/user/)**. Refer to the **[Query syntax documentation](/api/syntax)** on how to query against your records*
+*The available fields are documented in the **[Mailbox Data Model](/api/models/mailbox/)**. Refer to the **[Query syntax documentation](/api/syntax)** on how to query against your records*
 
 ### Example
 
 ```
 {
-    query : { 'first_name' : 'Nitai', 'email' : 'nitai@helpmonks.com' },
-    fields : { 'first_name email' },
-    options : { sort : { first_name: 'asc' } }
+    query : { 'name' : 'Support' },
+    fields : { 'name' },
+    options : { sort : { name: 'asc' } }
 }
 ```
 
 ### Returned data
 
-*Please refer to the **[User Data Model](/api/models/user/)** to see the data structure being returned*
+*Please refer to the **[Mailbox Data Model](/api/models/mailbox/)** to see the data structure being returned*
 

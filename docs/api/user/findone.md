@@ -1,10 +1,10 @@
-# User Find
+# User FindOne
 
 ### Protocol
 POST
 
 ### URL
-https://(subdomain).helpmonks.com/api/v1/user/find
+https://(subdomain).helpmonks.com/api/v1/user/findone
 
 ### Parameters
 <table>

@@ -1,10 +1,10 @@
-# Mailbox Find
+# Mailbox FindById
 
 ### Protocol
-POST
+GET
 
 ### URL
-https://(subdomain).helpmonks.com/api/v1/mailbox/find
+https://(subdomain).helpmonks.com/api/v1/user/mailbox/findbyid/(id)
 
 ### Parameters
 <table>
@@ -15,21 +15,9 @@ https://(subdomain).helpmonks.com/api/v1/mailbox/find
         <th>Comment</th>
     </tr>
     <tr>
-        <td>query</td>
+        <td>ID</td>
         <td>Yes</td>
-        <td>Available column in object</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>fields</td>
-        <td>No</td>
-        <td>Available column name</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>options</td>
-        <td>No</td>
-        <td>Available options like sort, slice, etc.</td>
+        <td>ObjectId</td>
         <td></td>
     </tr>
 </table>
@@ -39,11 +27,7 @@ https://(subdomain).helpmonks.com/api/v1/mailbox/find
 ### Example
 
 ```
-{
-    query : { 'name' : 'Support' },
-    fields : {},
-    options : {}
-}
+https://(subdomain).helpmonks.com/api/v1/mailbox/findbyid/54708b4cd71ef2dbdb557b9d
 ```
 
 ### Returned data

@@ -1,10 +1,10 @@
-# User Find
+# User Create
 
 ### Protocol
 POST
 
 ### URL
-https://(subdomain).helpmonks.com/api/v1/user/find
+https://(subdomain).helpmonks.com/api/v1/user/create
 
 ### Parameters
 <table>
@@ -15,21 +15,9 @@ https://(subdomain).helpmonks.com/api/v1/user/find
         <th>Comment</th>
     </tr>
     <tr>
-        <td>query</td>
+        <td>user</td>
         <td>Yes</td>
-        <td>Available column in object</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>fields</td>
-        <td>No</td>
-        <td>Available column name</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>options</td>
-        <td>No</td>
-        <td>Available options like sort, slice, etc.</td>
+        <td>Object containing the fields for this user</td>
         <td></td>
     </tr>
 </table>
@@ -40,9 +28,11 @@ https://(subdomain).helpmonks.com/api/v1/user/find
 
 ```
 {
-    query : { 'first_name' : 'Nitai', 'email' : 'nitai@helpmonks.com' },
-    fields : { 'first_name email' },
-    options : { sort : { first_name: 'asc' } }
+    user : { 
+        "email" : "user@domain.com",
+        "first_name" : "User",
+        "last_name" : "Awesome"
+    }
 }
 ```
 
