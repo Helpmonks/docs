@@ -20,12 +20,28 @@ pages:
       - 'Find': 'api/conversation/find.md'
     - 'Customer':
       - 'Find' : 'api/customer/find.md'
+      - 'FindOne': 'api/customer/findone.md'
+      - 'FindById': 'api/customer/findbyid.md'
+      - 'Delete': 'api/customer/delete.md'
+      - 'Update': 'api/customer/update.md'
+      - 'Create': 'api/customer/create.md'
     - 'Mailbox':
       - 'Find': 'api/mailbox/find.md'
+      - 'FindOne': 'api/mailbox/findone.md'
+      - 'FindById': 'api/mailbox/findbyid.md'
     - 'Label':
       - 'Find': 'api/label/find.md'
+      - 'FindOne': 'api/label/findone.md'
+      - 'FindById': 'api/label/findbyid.md'
     - 'User':
       - 'Find': 'api/user/find.md'
+      - 'FindOne': 'api/user/findone.md'
+      - 'FindById': 'api/user/findbyid.md'
+      - 'Delete': 'api/user/delete.md'
+      - 'Update': 'api/user/update.md'
+      - 'Create': 'api/user/create.md'
+      - 'Activate': 'api/user/activate.md'
+      - 'Deactivate': 'api/user/deactivate.md'
     - 'Search':
       - 'Find': 'api/search/index.md'
   - 'Data Models':
