@@ -1,10 +1,10 @@
-# Conversation Find
+# Conversation Add Note
 
 ### Protocol
 POST
 
 ### URL
-https://(subdomain).helpmonks.com/api/v1/conversation/find
+https://(subdomain).helpmonks.com/api/v1/conversation/note/add
 
 ### Parameters
 <table>
@@ -15,21 +15,15 @@ https://(subdomain).helpmonks.com/api/v1/conversation/find
         <th>Comment</th>
     </tr>
     <tr>
-        <td>query</td>
+        <td>id</td>
         <td>Yes</td>
-        <td>Available column in object</td>
+        <td>ObjectId of the conversation to update</td>
         <td></td>
     </tr>
     <tr>
-        <td>fields</td>
-        <td>No</td>
-        <td>Available column name</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>options</td>
-        <td>No</td>
-        <td>Available options like sort, slice, etc.</td>
+        <td>notes</td>
+        <td>Yes</td>
+        <td>Object that containd notes to add</td>
         <td></td>
     </tr>
 </table>
@@ -39,10 +33,13 @@ https://(subdomain).helpmonks.com/api/v1/conversation/find
 ### Example
 
 ```
-{
-    query : { status : 'closed' },
-    fields : {},
-    options : { sort : { last_conversation_date: 'asc' } }
+{ 
+    "id" : "569ed97edfeec6ccffb6c2ec",
+    "notes" : [ 
+        { 
+            "note" : "A note from the API"
+        }
+    ]
 }
 ```
 

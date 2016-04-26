@@ -1,10 +1,10 @@
-# Conversation Find
+# Conversation FindOne
 
 ### Protocol
 POST
 
 ### URL
-https://(subdomain).helpmonks.com/api/v1/conversation/find
+https://(subdomain).helpmonks.com/api/v1/conversation/findone
 
 ### Parameters
 <table>

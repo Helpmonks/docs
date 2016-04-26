@@ -1,10 +1,10 @@
-# Conversation Find
+# Conversation Update Label
 
 ### Protocol
 POST
 
 ### URL
-https://(subdomain).helpmonks.com/api/v1/conversation/find
+https://(subdomain).helpmonks.com/api/v1/conversation/label
 
 ### Parameters
 <table>
@@ -15,22 +15,22 @@ https://(subdomain).helpmonks.com/api/v1/conversation/find
         <th>Comment</th>
     </tr>
     <tr>
-        <td>query</td>
+        <td>id</td>
         <td>Yes</td>
-        <td>Available column in object</td>
+        <td>ObjectId of the conversation to update</td>
         <td></td>
     </tr>
     <tr>
-        <td>fields</td>
-        <td>No</td>
-        <td>Available column name</td>
+        <td>label</td>
+        <td>Yes</td>
+        <td>An array of labels</td>
         <td></td>
     </tr>
     <tr>
-        <td>options</td>
+        <td>replace</td>
         <td>No</td>
-        <td>Available options like sort, slice, etc.</td>
-        <td></td>
+        <td>Replace or append the labels</td>
+        <td>true or false / if false will append labels. Default is false.</td>
     </tr>
 </table>
 
@@ -39,10 +39,10 @@ https://(subdomain).helpmonks.com/api/v1/conversation/find
 ### Example
 
 ```
-{
-    query : { status : 'closed' },
-    fields : {},
-    options : { sort : { last_conversation_date: 'asc' } }
+{ 
+    "id" : "569ed97edfeec6ccffb6c2ec",
+    "label" : ["SLA"],
+    "replace" : true
 }
 ```
 

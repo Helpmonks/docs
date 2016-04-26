@@ -1,10 +1,10 @@
-# Conversation Find
+# Conversation Update
 
 ### Protocol
 POST
 
 ### URL
-https://(subdomain).helpmonks.com/api/v1/conversation/find
+https://(subdomain).helpmonks.com/api/v1/conversation/update
 
 ### Parameters
 <table>
@@ -15,21 +15,9 @@ https://(subdomain).helpmonks.com/api/v1/conversation/find
         <th>Comment</th>
     </tr>
     <tr>
-        <td>query</td>
+        <td>id</td>
         <td>Yes</td>
-        <td>Available column in object</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>fields</td>
-        <td>No</td>
-        <td>Available column name</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>options</td>
-        <td>No</td>
-        <td>Available options like sort, slice, etc.</td>
+        <td>ObjectId of the conversation to update</td>
         <td></td>
     </tr>
 </table>
@@ -40,9 +28,8 @@ https://(subdomain).helpmonks.com/api/v1/conversation/find
 
 ```
 {
-    query : { status : 'closed' },
-    fields : {},
-    options : { sort : { last_conversation_date: 'asc' } }
+    id : '54708b4cd71ef2dbdb557b9d',
+    (add available fields here to update)
 }
 ```
 
