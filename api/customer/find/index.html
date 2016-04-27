@@ -120,6 +120,42 @@
                     <a style="padding-left:90px;" class="" href="../../conversation/find/" id="Find">Find </a>
                 </li>
             
+                <li class="">
+                    <a style="padding-left:90px;" class="" href="../../conversation/findone/" id="FindOne">FindOne </a>
+                </li>
+            
+                <li class="">
+                    <a style="padding-left:90px;" class="" href="../../conversation/findbyid/" id="FindById">FindById </a>
+                </li>
+            
+                <li class="">
+                    <a style="padding-left:90px;" class="" href="../../conversation/update/" id="Update">Update </a>
+                </li>
+            
+                <li class="">
+                    <a style="padding-left:90px;" class="" href="../../conversation/update_status/" id="Update Status">Update Status </a>
+                </li>
+            
+                <li class="">
+                    <a style="padding-left:90px;" class="" href="../../conversation/update_label/" id="Update Label">Update Label </a>
+                </li>
+            
+                <li class="">
+                    <a style="padding-left:90px;" class="" href="../../conversation/note_add/" id="Add Notes">Add Notes </a>
+                </li>
+            
+                <li class="">
+                    <a style="padding-left:90px;" class="" href="../../conversation/note_delete/" id="Delete Note">Delete Note </a>
+                </li>
+            
+                <li class="">
+                    <a style="padding-left:90px;" class="" href="../../conversation/delete/" id="Delete">Delete </a>
+                </li>
+            
+                <li class="">
+                    <a style="padding-left:90px;" class="" href="../../conversation/create/" id="Create">Create </a>
+                </li>
+            
             </div>
         
             <li class="current">
@@ -130,6 +166,26 @@
             
                 <li class="current">
                     <a style="padding-left:90px;" class="current" href="./" id="Find">Find </a>
+                </li>
+            
+                <li class="">
+                    <a style="padding-left:90px;" class="" href="../findone/" id="FindOne">FindOne </a>
+                </li>
+            
+                <li class="">
+                    <a style="padding-left:90px;" class="" href="../findbyid/" id="FindById">FindById </a>
+                </li>
+            
+                <li class="">
+                    <a style="padding-left:90px;" class="" href="../delete/" id="Delete">Delete </a>
+                </li>
+            
+                <li class="">
+                    <a style="padding-left:90px;" class="" href="../update/" id="Update">Update </a>
+                </li>
+            
+                <li class="">
+                    <a style="padding-left:90px;" class="" href="../create/" id="Create">Create </a>
                 </li>
             
             </div>
@@ -144,6 +200,14 @@
                     <a style="padding-left:90px;" class="" href="../../mailbox/find/" id="Find">Find </a>
                 </li>
             
+                <li class="">
+                    <a style="padding-left:90px;" class="" href="../../mailbox/findone/" id="FindOne">FindOne </a>
+                </li>
+            
+                <li class="">
+                    <a style="padding-left:90px;" class="" href="../../mailbox/findbyid/" id="FindById">FindById </a>
+                </li>
+            
             </div>
         
             <li class="">
@@ -154,6 +218,14 @@
             
                 <li class="">
                     <a style="padding-left:90px;" class="" href="../../label/find/" id="Find">Find </a>
+                </li>
+            
+                <li class="">
+                    <a style="padding-left:90px;" class="" href="../../label/findone/" id="FindOne">FindOne </a>
+                </li>
+            
+                <li class="">
+                    <a style="padding-left:90px;" class="" href="../../label/findbyid/" id="FindById">FindById </a>
                 </li>
             
             </div>
@@ -168,17 +240,41 @@
                     <a style="padding-left:90px;" class="" href="../../user/find/" id="Find">Find </a>
                 </li>
             
+                <li class="">
+                    <a style="padding-left:90px;" class="" href="../../user/findone/" id="FindOne">FindOne </a>
+                </li>
+            
+                <li class="">
+                    <a style="padding-left:90px;" class="" href="../../user/findbyid/" id="FindById">FindById </a>
+                </li>
+            
+                <li class="">
+                    <a style="padding-left:90px;" class="" href="../../user/delete/" id="Delete">Delete </a>
+                </li>
+            
+                <li class="">
+                    <a style="padding-left:90px;" class="" href="../../user/update/" id="Update">Update </a>
+                </li>
+            
+                <li class="">
+                    <a style="padding-left:90px;" class="" href="../../user/create/" id="Create">Create </a>
+                </li>
+            
+                <li class="">
+                    <a style="padding-left:90px;" class="" href="../../user/activate/" id="Activate">Activate </a>
+                </li>
+            
+                <li class="">
+                    <a style="padding-left:90px;" class="" href="../../user/deactivate/" id="Deactivate">Deactivate </a>
+                </li>
+            
             </div>
         
             <li class="">
-                <a style="padding-left:70px;" class=""  id="Search" onclick="showChildren('APIsConversationCustomerMailboxLabelUserSearch')">Search  <i class="fa fa-arrow-circle-down" style="padding-left:5px;font-size:13px;"></i></a>
+                <a style="padding-left:70px;" class="" href="../../search/" id="Search">Search </a>
             </li>
             
             <div style="display:none" id="hidden_APIsConversationCustomerMailboxLabelUserSearch">
-            
-                <li class="">
-                    <a style="padding-left:90px;" class="" href="../../search/" id="Find">Find </a>
-                </li>
             
             </div>
         
@@ -238,7 +334,7 @@
           
             <li><ul class="subnav">
     <li class="">
-        <a class="" href="../../../about/" id="About" style="font-size:95%;font-weight:bold;">About</a>
+        <a class="" href="../../../about/" id="About Helpmonks" style="font-size:95%;font-weight:bold;">About Helpmonks</a>
     </li>
     
     <li class="paddingtop20"></li>
@@ -288,8 +384,46 @@
                 <h1 id="customer-find">Customer Find</h1>
 <h3 id="protocol">Protocol</h3>
 <p>POST</p>
-<h2 id="url">URL</h2>
+<h3 id="url">URL</h3>
 <p>https://(subdomain).helpmonks.com/api/v1/company_user/find</p>
+<h3 id="parameters">Parameters</h3>
+<p><table>
+    <tr>
+        <th>Name</th>
+        <th>Required</th>
+        <th>Value</th>
+        <th>Comment</th>
+    </tr>
+    <tr>
+        <td>query</td>
+        <td>Yes</td>
+        <td>Available column in object</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>fields</td>
+        <td>No</td>
+        <td>Available column name</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>options</td>
+        <td>No</td>
+        <td>Available options like sort, slice, etc.</td>
+        <td></td>
+    </tr>
+</table></p>
+<p><em>The available fields are documented in the <strong><a href="../../../api/models/customer/">Customer Data Model</a></strong>. Refer to the <strong><a href="../../../api/syntax">Query syntax documentation</a></strong> on how to query against your records</em></p>
+<h3 id="example">Example</h3>
+<pre><code>{
+    query : { 'first_name' : 'Nitai', 'email' : 'nitai@helpmonks.com' },
+    fields : { 'first_name email' },
+    options : { sort : { first_name: 'asc' } }
+}
+</code></pre>
+
+<h3 id="returned-data">Returned data</h3>
+<p><em>Please refer to the <strong><a href="../../../api/models/customer/">Customer Data Model</a></strong> to see the data structure being returned</em></p>
               
             </div>
           </div>
@@ -297,10 +431,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../../mailbox/find/" class="btn btn-neutral float-right" title="Find">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../findone/" class="btn btn-neutral float-right" title="FindOne">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../../conversation/find/" class="btn btn-neutral" title="Find"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../conversation/create/" class="btn btn-neutral" title="Create"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -326,10 +460,10 @@
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../../conversation/find/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../../conversation/create/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../../mailbox/find/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../findone/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div> -->
