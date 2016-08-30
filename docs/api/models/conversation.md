@@ -62,10 +62,16 @@ This is the data model for records in the returning data structure. You also use
     }],
     'has_attachments' : Boolean, // default: false,
     'sender_timezone_offset' : String,
-    'company_id' : ObjectId
+    'company_id' : ObjectId,
+    'communication_with' : [
+        ObjectId
+    ]
 }
 ```
 
 ## Note
 
-The emails.from must either contain a "user_id" or a "company_user_id" value.
+The "emails.from" must either contain a "user_id" or a "company_user_id" value.
+
+The "communication_with" field can only contain valid company_user id's. It's being used to show with whom you have the conversation with in the Helpmonks app.
+

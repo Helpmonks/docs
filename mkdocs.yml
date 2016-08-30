@@ -22,6 +22,7 @@ pages:
       - 'FindById': 'api/conversation/findbyid.md'
       - 'Update': 'api/conversation/update.md'
       - 'Update Status': 'api/conversation/update_status.md'
+      - 'Update Assignee': 'api/conversation/update_assignee.md'
       - 'Update Label': 'api/conversation/update_label.md'
       - 'Add Notes': 'api/conversation/note_add.md'
       - 'Delete Note': 'api/conversation/note_delete.md'
