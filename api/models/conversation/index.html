@@ -137,6 +137,10 @@
                 </li>
             
                 <li class="">
+                    <a style="padding-left:90px;" class="" href="../../conversation/update_assignee/" id="Update Assignee">Update Assignee </a>
+                </li>
+            
+                <li class="">
                     <a style="padding-left:90px;" class="" href="../../conversation/update_label/" id="Update Label">Update Label </a>
                 </li>
             
@@ -442,12 +446,16 @@
     }],
     'has_attachments' : Boolean, // default: false,
     'sender_timezone_offset' : String,
-    'company_id' : ObjectId
+    'company_id' : ObjectId,
+    'communication_with' : [
+        ObjectId
+    ]
 }
 </code></pre>
 
 <h2 id="note">Note</h2>
-<p>The emails.from must either contain a &ldquo;user_id&rdquo; or a &ldquo;company_user_id&rdquo; value.</p>
+<p>The &ldquo;emails.from&rdquo; must either contain a &ldquo;user_id&rdquo; or a &ldquo;company_user_id&rdquo; value.</p>
+<p>The &ldquo;communication_with&rdquo; field can only contain valid company_user id&rsquo;s. It&rsquo;s being used to show with whom you have the conversation with in the Helpmonks app.</p>
               
             </div>
           </div>

@@ -8,7 +8,7 @@
   
   <meta name="author" content="Nitai Aventaggiato">
   
-  <title>Update - Helpmonks Developer Guides</title>
+  <title>Update Assignee - Helpmonks Developer Guides</title>
   
 
   <link rel="shortcut icon" href="../../../img/favicon.ico">
@@ -25,9 +25,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Update";
-    var mkdocs_page_input_path = "api/conversation/update.md";
-    var mkdocs_page_url = "/api/conversation/update/";
+    var mkdocs_page_name = "Update Assignee";
+    var mkdocs_page_input_path = "api/conversation/update_assignee.md";
+    var mkdocs_page_url = "/api/conversation/update_assignee/";
   </script>
   
   <script src="../../../js/jquery-2.1.1.min.js"></script>
@@ -128,16 +128,16 @@
                     <a style="padding-left:90px;" class="" href="../findbyid/" id="FindById">FindById </a>
                 </li>
             
-                <li class="current">
-                    <a style="padding-left:90px;" class="current" href="./" id="Update">Update </a>
+                <li class="">
+                    <a style="padding-left:90px;" class="" href="../update/" id="Update">Update </a>
                 </li>
             
                 <li class="">
                     <a style="padding-left:90px;" class="" href="../update_status/" id="Update Status">Update Status </a>
                 </li>
             
-                <li class="">
-                    <a style="padding-left:90px;" class="" href="../update_assignee/" id="Update Assignee">Update Assignee </a>
+                <li class="current">
+                    <a style="padding-left:90px;" class="current" href="./" id="Update Assignee">Update Assignee </a>
                 </li>
             
                 <li class="">
@@ -375,7 +375,7 @@
         
       
     
-    <li>Update</li>
+    <li>Update Assignee</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -385,11 +385,11 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="conversation-update">Conversation Update</h1>
+                <h1 id="conversation-update-assignee">Conversation Update Assignee</h1>
 <h3 id="protocol">Protocol</h3>
 <p>POST</p>
 <h3 id="url">URL</h3>
-<p>https://(subdomain).helpmonks.com/api/v1/conversation/update</p>
+<p>https://(subdomain).helpmonks.com/api/v1/conversation/update/assignee</p>
 <h3 id="parameters">Parameters</h3>
 <p><table>
     <tr>
@@ -404,19 +404,23 @@
         <td>ObjectId of the conversation to update</td>
         <td></td>
     </tr>
+    <tr>
+        <td>user_id</td>
+        <td>Yes</td>
+        <td>ObjectId of the Helpmonks user</td>
+        <td></td>
+    </tr>
 </table></p>
 <p><em>The available fields are documented in the <strong><a href="../../../api/models/conversation/">Conversation Data Model</a></strong>. Refer to the <strong><a href="../../../api/syntax">Query syntax documentation</a></strong> on how to query against your records</em></p>
 <h3 id="example">Example</h3>
-<pre><code>{
-    id : '54708b4cd71ef2dbdb557b9d',
-    (add available fields here to update)
+<pre><code>{ 
+    &quot;id&quot; : &quot;569ed97edfeec6ccffb6c2ec&quot;,
+    &quot;user_id&quot; : &quot;57c1e0f6c4be9b0a00d6b0cb&quot;
 }
 </code></pre>
 
 <h3 id="returned-data">Returned data</h3>
 <p><em>Please refer to the <strong><a href="../../../api/models/conversation/">Conversation Data Model</a></strong> to see the data structure being returned</em></p>
-<h3 id="note">Note</h3>
-<p>You can only update existing fields and not create new values, i.e. company user, etc.</p>
               
             </div>
           </div>
@@ -424,10 +428,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../update_status/" class="btn btn-neutral float-right" title="Update Status">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../update_label/" class="btn btn-neutral float-right" title="Update Label">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../findbyid/" class="btn btn-neutral" title="FindById"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../update_status/" class="btn btn-neutral" title="Update Status"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -453,10 +457,10 @@
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../findbyid/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../update_status/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../update_status/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../update_label/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div> -->

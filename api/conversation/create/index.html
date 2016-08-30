@@ -137,6 +137,10 @@
                 </li>
             
                 <li class="">
+                    <a style="padding-left:90px;" class="" href="../update_assignee/" id="Update Assignee">Update Assignee </a>
+                </li>
+            
+                <li class="">
                     <a style="padding-left:90px;" class="" href="../update_label/" id="Update Label">Update Label </a>
                 </li>
             
@@ -425,6 +429,32 @@
 }
 </code></pre>
 
+<h3 id="using-user-data-instead-of-objectid-for-company_user">Using user data instead of ObjectId for company_user</h3>
+<p>The company_user_id object also accepts a user object in addition to a ObjectID. If a user object is provided the system will add the user or will look up the user with the email address.</p>
+<p>Using a user object would look like this:</p>
+<pre><code>...
+&quot;from&quot;: {
+  &quot;company_user_id&quot;: {
+    &quot;email&quot; : &quot;email@user.com&quot;,
+    &quot;first_name&quot; : &quot;Awesome&quot;,
+    &quot;last_name&quot; : &quot;Customer&quot;
+  },
+  &quot;user_id&quot;: null
+}
+...
+</code></pre>
+
+<h3 id="labels">Labels</h3>
+<p>You can add labels (one or many) at the same time as creating the conversation. The label(s) have to exist. You provide label(s) in an array. For example:</p>
+<pre><code>...
+&quot;labels&quot; : [
+  &quot;Helpmonks&quot;,
+  &quot;Awesome&quot;
+]
+...
+</code></pre>
+
+<p>The lookup for the label is not case-sensitive.</p>
 <h3 id="returned-data">Returned data</h3>
 <p><em>Please refer to the <strong><a href="../../../api/models/conversation/">Conversation Data Model</a></strong> to see the data structure being returned</em></p>
               

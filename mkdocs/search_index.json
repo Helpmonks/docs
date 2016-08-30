@@ -217,7 +217,7 @@
         }, 
         {
             "location": "/api/conversation/update/", 
-            "text": "Conversation Update\n\n\nProtocol\n\n\nPOST\n\n\nURL\n\n\nhttps://(subdomain).helpmonks.com/api/v1/conversation/update\n\n\nParameters\n\n\n\n    \n\n        \nName\n\n        \nRequired\n\n        \nValue\n\n        \nComment\n\n    \n\n    \n\n        \nid\n\n        \nYes\n\n        \nObjectId of the conversation to update\n\n        \n\n    \n\n\n\n\nThe available fields are documented in the \nConversation Data Model\n. Refer to the \nQuery syntax documentation\n on how to query against your records\n\n\nExample\n\n\n{\n    id : '54708b4cd71ef2dbdb557b9d',\n    (add available fields here to update)\n}\n\n\n\n\nReturned data\n\n\nPlease refer to the \nConversation Data Model\n to see the data structure being returned", 
+            "text": "Conversation Update\n\n\nProtocol\n\n\nPOST\n\n\nURL\n\n\nhttps://(subdomain).helpmonks.com/api/v1/conversation/update\n\n\nParameters\n\n\n\n    \n\n        \nName\n\n        \nRequired\n\n        \nValue\n\n        \nComment\n\n    \n\n    \n\n        \nid\n\n        \nYes\n\n        \nObjectId of the conversation to update\n\n        \n\n    \n\n\n\n\nThe available fields are documented in the \nConversation Data Model\n. Refer to the \nQuery syntax documentation\n on how to query against your records\n\n\nExample\n\n\n{\n    id : '54708b4cd71ef2dbdb557b9d',\n    (add available fields here to update)\n}\n\n\n\n\nReturned data\n\n\nPlease refer to the \nConversation Data Model\n to see the data structure being returned\n\n\nNote\n\n\nYou can only update existing fields and not create new values, i.e. company user, etc.", 
             "title": "Update"
         }, 
         {
@@ -251,6 +251,11 @@
             "title": "Returned data"
         }, 
         {
+            "location": "/api/conversation/update/#note", 
+            "text": "You can only update existing fields and not create new values, i.e. company user, etc.", 
+            "title": "Note"
+        }, 
+        {
             "location": "/api/conversation/update_status/", 
             "text": "Conversation Update Status\n\n\nProtocol\n\n\nGET\n\n\nURL\n\n\nhttps://(subdomain).helpmonks.com/api/v1/conversation/status/(id)/(status)\n\n\nParameters\n\n\n\n    \n\n        \nName\n\n        \nRequired\n\n        \nValue\n\n        \nComment\n\n    \n\n    \n\n        \nid\n\n        \nYes\n\n        \nObjectId\n\n        \n\n    \n\n    \n\n        \nstatus\n\n        \nYes\n\n        \nNew status\n\n        \nValid status\ns are \ninbox\n, \nclosed\n, \nspam\n or \narchieved\n\n    \n\n\n\n\nExample\n\n\nhttps://(subdomain).helpmonks.com/api/v1/conversation/status/54708b4cd71ef2dbdb557b9d/closed\n\n\n\n\nReturned data\n\n\nPlease refer to the \nConversation Data Model\n to see the data structure being returned", 
             "title": "Update Status"
@@ -282,6 +287,41 @@
         }, 
         {
             "location": "/api/conversation/update_status/#returned-data", 
+            "text": "Please refer to the  Conversation Data Model  to see the data structure being returned", 
+            "title": "Returned data"
+        }, 
+        {
+            "location": "/api/conversation/update_assignee/", 
+            "text": "Conversation Update Assignee\n\n\nProtocol\n\n\nPOST\n\n\nURL\n\n\nhttps://(subdomain).helpmonks.com/api/v1/conversation/update/assignee\n\n\nParameters\n\n\n\n    \n\n        \nName\n\n        \nRequired\n\n        \nValue\n\n        \nComment\n\n    \n\n    \n\n        \nid\n\n        \nYes\n\n        \nObjectId of the conversation to update\n\n        \n\n    \n\n    \n\n        \nuser_id\n\n        \nYes\n\n        \nObjectId of the Helpmonks user\n\n        \n\n    \n\n\n\n\nThe available fields are documented in the \nConversation Data Model\n. Refer to the \nQuery syntax documentation\n on how to query against your records\n\n\nExample\n\n\n{ \n    \nid\n : \n569ed97edfeec6ccffb6c2ec\n,\n    \nuser_id\n : \n57c1e0f6c4be9b0a00d6b0cb\n\n}\n\n\n\n\nReturned data\n\n\nPlease refer to the \nConversation Data Model\n to see the data structure being returned", 
+            "title": "Update Assignee"
+        }, 
+        {
+            "location": "/api/conversation/update_assignee/#conversation-update-assignee", 
+            "text": "", 
+            "title": "Conversation Update Assignee"
+        }, 
+        {
+            "location": "/api/conversation/update_assignee/#protocol", 
+            "text": "POST", 
+            "title": "Protocol"
+        }, 
+        {
+            "location": "/api/conversation/update_assignee/#url", 
+            "text": "https://(subdomain).helpmonks.com/api/v1/conversation/update/assignee", 
+            "title": "URL"
+        }, 
+        {
+            "location": "/api/conversation/update_assignee/#parameters", 
+            "text": "Name \n         Required \n         Value \n         Comment \n     \n     \n         id \n         Yes \n         ObjectId of the conversation to update \n         \n     \n     \n         user_id \n         Yes \n         ObjectId of the Helpmonks user \n         \n       The available fields are documented in the  Conversation Data Model . Refer to the  Query syntax documentation  on how to query against your records", 
+            "title": "Parameters"
+        }, 
+        {
+            "location": "/api/conversation/update_assignee/#example", 
+            "text": "{ \n     id  :  569ed97edfeec6ccffb6c2ec ,\n     user_id  :  57c1e0f6c4be9b0a00d6b0cb \n}", 
+            "title": "Example"
+        }, 
+        {
+            "location": "/api/conversation/update_assignee/#returned-data", 
             "text": "Please refer to the  Conversation Data Model  to see the data structure being returned", 
             "title": "Returned data"
         }, 
@@ -427,7 +467,7 @@
         }, 
         {
             "location": "/api/conversation/create/", 
-            "text": "Conversation Create\n\n\nThis allows you to import existing converations and add them to your Helpmonks shared inbox.\n\n\nProtocol\n\n\nPOST\n\n\nURL\n\n\nhttps://(subdomain).helpmonks.com/api/v1/conversation/create\n\n\nParameters\n\n\n\n    \n\n        \nName\n\n        \nRequired\n\n        \nValue\n\n        \nComment\n\n    \n\n    \n\n        \nbody\n\n        \nYes\n\n        \nContaining objects of new conversation\n\n        \n\n    \n\n\n\n\nThe available fields are documented in the \nConversation Data Model\n. Refer to the \nQuery syntax documentation\n on how to query against your records\n\n\nExample\n\n\n{ \n  \nstatus\n: \ninbox\n,\n  \nmailbox_id\n: \n54b14a700e3db642552771ab\n,\n  \nassignee\n: null,\n  \nemails\n: [\n    {\n      \nsubject\n: \nNEW\n,\n      \nbody\n: \nThis should send it to the customer\n,\n      \nfrom\n: {\n        \ncompany_user_id\n: null,\n        \nuser_id\n: \n54708b4ad71ef2dbdb557b78\n\n      }\n    }\n  ],\n  \nlabels\n: [\n    \n54708b4cd71ef2dbdb557b88\n,\n    \n54708b4cd71ef2dbdb557b89\n\n  ]\n}\n\n\n\n\nReturned data\n\n\nPlease refer to the \nConversation Data Model\n to see the data structure being returned", 
+            "text": "Conversation Create\n\n\nThis allows you to import existing converations and add them to your Helpmonks shared inbox.\n\n\nProtocol\n\n\nPOST\n\n\nURL\n\n\nhttps://(subdomain).helpmonks.com/api/v1/conversation/create\n\n\nParameters\n\n\n\n    \n\n        \nName\n\n        \nRequired\n\n        \nValue\n\n        \nComment\n\n    \n\n    \n\n        \nbody\n\n        \nYes\n\n        \nContaining objects of new conversation\n\n        \n\n    \n\n\n\n\nThe available fields are documented in the \nConversation Data Model\n. Refer to the \nQuery syntax documentation\n on how to query against your records\n\n\nExample\n\n\n{ \n  \nstatus\n: \ninbox\n,\n  \nmailbox_id\n: \n54b14a700e3db642552771ab\n,\n  \nassignee\n: null,\n  \nemails\n: [\n    {\n      \nsubject\n: \nNEW\n,\n      \nbody\n: \nThis should send it to the customer\n,\n      \nfrom\n: {\n        \ncompany_user_id\n: null,\n        \nuser_id\n: \n54708b4ad71ef2dbdb557b78\n\n      }\n    }\n  ],\n  \nlabels\n: [\n    \n54708b4cd71ef2dbdb557b88\n,\n    \n54708b4cd71ef2dbdb557b89\n\n  ]\n}\n\n\n\n\nUsing user data instead of ObjectId for company_user\n\n\nThe company_user_id object also accepts a user object in addition to a ObjectID. If a user object is provided the system will add the user or will look up the user with the email address.\n\n\nUsing a user object would look like this:\n\n\n...\n\nfrom\n: {\n  \ncompany_user_id\n: {\n    \nemail\n : \nemail@user.com\n,\n    \nfirst_name\n : \nAwesome\n,\n    \nlast_name\n : \nCustomer\n\n  },\n  \nuser_id\n: null\n}\n...\n\n\n\n\nLabels\n\n\nYou can add labels (one or many) at the same time as creating the conversation. The label(s) have to exist. You provide label(s) in an array. For example:\n\n\n...\n\nlabels\n : [\n  \nHelpmonks\n,\n  \nAwesome\n\n]\n...\n\n\n\n\nThe lookup for the label is not case-sensitive.\n\n\nReturned data\n\n\nPlease refer to the \nConversation Data Model\n to see the data structure being returned", 
             "title": "Create"
         }, 
         {
@@ -454,6 +494,16 @@
             "location": "/api/conversation/create/#example", 
             "text": "{ \n   status :  inbox ,\n   mailbox_id :  54b14a700e3db642552771ab ,\n   assignee : null,\n   emails : [\n    {\n       subject :  NEW ,\n       body :  This should send it to the customer ,\n       from : {\n         company_user_id : null,\n         user_id :  54708b4ad71ef2dbdb557b78 \n      }\n    }\n  ],\n   labels : [\n     54708b4cd71ef2dbdb557b88 ,\n     54708b4cd71ef2dbdb557b89 \n  ]\n}", 
             "title": "Example"
+        }, 
+        {
+            "location": "/api/conversation/create/#using-user-data-instead-of-objectid-for-company_user", 
+            "text": "The company_user_id object also accepts a user object in addition to a ObjectID. If a user object is provided the system will add the user or will look up the user with the email address.  Using a user object would look like this:  ... from : {\n   company_user_id : {\n     email  :  email@user.com ,\n     first_name  :  Awesome ,\n     last_name  :  Customer \n  },\n   user_id : null\n}\n...", 
+            "title": "Using user data instead of ObjectId for company_user"
+        }, 
+        {
+            "location": "/api/conversation/create/#labels", 
+            "text": "You can add labels (one or many) at the same time as creating the conversation. The label(s) have to exist. You provide label(s) in an array. For example:  ... labels  : [\n   Helpmonks ,\n   Awesome \n]\n...  The lookup for the label is not case-sensitive.", 
+            "title": "Labels"
         }, 
         {
             "location": "/api/conversation/create/#returned-data", 
@@ -1197,17 +1247,17 @@
         }, 
         {
             "location": "/api/models/conversation/", 
-            "text": "Data Model for Conversation\n\n\nThis is the data model for records in the returning data structure. You also use this model to query against the records.\n\n\n{\n    '_id' : ObjectId, // READONLY\n    'host_id' : ObjectId,\n    'last_communication_date' : Date,\n    'status' : String, // one of these: 'inbox' 'assigned' 'archived' 'closed' 'spam' 'trash'\n    'mailbox_id' : ObjectId, // REQUIRED\n    'assignee' : ObjectId,\n    'labels' : [\n        ObjectId\n    ],\n    'emails' : [{\n        'timestamp' : Date, // default : Date.now\n        'subject' : String,\n        'excerpt' : String,\n        'body' : String,\n        'sanitized' : String,\n        'responded_to' : String,\n        'from' : {\n            'user_id' : ObjectId, // See note below\n            'company_user_id' : ObjectId // See note below\n        },\n        'cc' : String,\n        'bcc' : String,\n        'to' : ObjectId,\n        'is_forward' : Boolean, // default: false\n        'attachments' : [{\n            'contentType' : String,\n            'fileName' : String,\n            'generatedFileName' : String,\n            'contentId' : String,\n            'checksum' : String,\n            'length' : Number,\n            's3url' : String\n        }],\n        'message_id' : String\n    }],\n    'notes' : [{\n        'timestamp' : Date, // default : Date.now\n        'subject' : String, // default : 'note'\n        'excerpt' : String,\n        'body' : String,\n        'from' : ObjectId,\n        'is_public' : Boolean, // default: true\n    }],\n    'actions' : [{\n        'user_id' : ObjectId,\n        'timestamp' : Date, // default : Date.now\n        'subject' : String, // default : 'action'\n        'excerpt' : String,\n        'body' : String,\n        'from' : ObjectId,\n        'forward_id' : ObjectId\n    }],\n    'reminders' : [{\n        'reminder_date' : Date, // REQUIRED\n        'user_id' : ObjectId, // REQUIRED\n    }],\n    'has_attachments' : Boolean, // default: false,\n    'sender_timezone_offset' : String,\n    'company_id' : ObjectId\n}\n\n\n\n\nNote\n\n\nThe emails.from must either contain a \nuser_id\n or a \ncompany_user_id\n value.", 
+            "text": "Data Model for Conversation\n\n\nThis is the data model for records in the returning data structure. You also use this model to query against the records.\n\n\n{\n    '_id' : ObjectId, // READONLY\n    'host_id' : ObjectId,\n    'last_communication_date' : Date,\n    'status' : String, // one of these: 'inbox' 'assigned' 'archived' 'closed' 'spam' 'trash'\n    'mailbox_id' : ObjectId, // REQUIRED\n    'assignee' : ObjectId,\n    'labels' : [\n        ObjectId\n    ],\n    'emails' : [{\n        'timestamp' : Date, // default : Date.now\n        'subject' : String,\n        'excerpt' : String,\n        'body' : String,\n        'sanitized' : String,\n        'responded_to' : String,\n        'from' : {\n            'user_id' : ObjectId, // See note below\n            'company_user_id' : ObjectId // See note below\n        },\n        'cc' : String,\n        'bcc' : String,\n        'to' : ObjectId,\n        'is_forward' : Boolean, // default: false\n        'attachments' : [{\n            'contentType' : String,\n            'fileName' : String,\n            'generatedFileName' : String,\n            'contentId' : String,\n            'checksum' : String,\n            'length' : Number,\n            's3url' : String\n        }],\n        'message_id' : String\n    }],\n    'notes' : [{\n        'timestamp' : Date, // default : Date.now\n        'subject' : String, // default : 'note'\n        'excerpt' : String,\n        'body' : String,\n        'from' : ObjectId,\n        'is_public' : Boolean, // default: true\n    }],\n    'actions' : [{\n        'user_id' : ObjectId,\n        'timestamp' : Date, // default : Date.now\n        'subject' : String, // default : 'action'\n        'excerpt' : String,\n        'body' : String,\n        'from' : ObjectId,\n        'forward_id' : ObjectId\n    }],\n    'reminders' : [{\n        'reminder_date' : Date, // REQUIRED\n        'user_id' : ObjectId, // REQUIRED\n    }],\n    'has_attachments' : Boolean, // default: false,\n    'sender_timezone_offset' : String,\n    'company_id' : ObjectId,\n    'communication_with' : [\n        ObjectId\n    ]\n}\n\n\n\n\nNote\n\n\nThe \nemails.from\n must either contain a \nuser_id\n or a \ncompany_user_id\n value.\n\n\nThe \ncommunication_with\n field can only contain valid company_user id\ns. It\ns being used to show with whom you have the conversation with in the Helpmonks app.", 
             "title": "Conversations"
         }, 
         {
             "location": "/api/models/conversation/#data-model-for-conversation", 
-            "text": "This is the data model for records in the returning data structure. You also use this model to query against the records.  {\n    '_id' : ObjectId, // READONLY\n    'host_id' : ObjectId,\n    'last_communication_date' : Date,\n    'status' : String, // one of these: 'inbox' 'assigned' 'archived' 'closed' 'spam' 'trash'\n    'mailbox_id' : ObjectId, // REQUIRED\n    'assignee' : ObjectId,\n    'labels' : [\n        ObjectId\n    ],\n    'emails' : [{\n        'timestamp' : Date, // default : Date.now\n        'subject' : String,\n        'excerpt' : String,\n        'body' : String,\n        'sanitized' : String,\n        'responded_to' : String,\n        'from' : {\n            'user_id' : ObjectId, // See note below\n            'company_user_id' : ObjectId // See note below\n        },\n        'cc' : String,\n        'bcc' : String,\n        'to' : ObjectId,\n        'is_forward' : Boolean, // default: false\n        'attachments' : [{\n            'contentType' : String,\n            'fileName' : String,\n            'generatedFileName' : String,\n            'contentId' : String,\n            'checksum' : String,\n            'length' : Number,\n            's3url' : String\n        }],\n        'message_id' : String\n    }],\n    'notes' : [{\n        'timestamp' : Date, // default : Date.now\n        'subject' : String, // default : 'note'\n        'excerpt' : String,\n        'body' : String,\n        'from' : ObjectId,\n        'is_public' : Boolean, // default: true\n    }],\n    'actions' : [{\n        'user_id' : ObjectId,\n        'timestamp' : Date, // default : Date.now\n        'subject' : String, // default : 'action'\n        'excerpt' : String,\n        'body' : String,\n        'from' : ObjectId,\n        'forward_id' : ObjectId\n    }],\n    'reminders' : [{\n        'reminder_date' : Date, // REQUIRED\n        'user_id' : ObjectId, // REQUIRED\n    }],\n    'has_attachments' : Boolean, // default: false,\n    'sender_timezone_offset' : String,\n    'company_id' : ObjectId\n}", 
+            "text": "This is the data model for records in the returning data structure. You also use this model to query against the records.  {\n    '_id' : ObjectId, // READONLY\n    'host_id' : ObjectId,\n    'last_communication_date' : Date,\n    'status' : String, // one of these: 'inbox' 'assigned' 'archived' 'closed' 'spam' 'trash'\n    'mailbox_id' : ObjectId, // REQUIRED\n    'assignee' : ObjectId,\n    'labels' : [\n        ObjectId\n    ],\n    'emails' : [{\n        'timestamp' : Date, // default : Date.now\n        'subject' : String,\n        'excerpt' : String,\n        'body' : String,\n        'sanitized' : String,\n        'responded_to' : String,\n        'from' : {\n            'user_id' : ObjectId, // See note below\n            'company_user_id' : ObjectId // See note below\n        },\n        'cc' : String,\n        'bcc' : String,\n        'to' : ObjectId,\n        'is_forward' : Boolean, // default: false\n        'attachments' : [{\n            'contentType' : String,\n            'fileName' : String,\n            'generatedFileName' : String,\n            'contentId' : String,\n            'checksum' : String,\n            'length' : Number,\n            's3url' : String\n        }],\n        'message_id' : String\n    }],\n    'notes' : [{\n        'timestamp' : Date, // default : Date.now\n        'subject' : String, // default : 'note'\n        'excerpt' : String,\n        'body' : String,\n        'from' : ObjectId,\n        'is_public' : Boolean, // default: true\n    }],\n    'actions' : [{\n        'user_id' : ObjectId,\n        'timestamp' : Date, // default : Date.now\n        'subject' : String, // default : 'action'\n        'excerpt' : String,\n        'body' : String,\n        'from' : ObjectId,\n        'forward_id' : ObjectId\n    }],\n    'reminders' : [{\n        'reminder_date' : Date, // REQUIRED\n        'user_id' : ObjectId, // REQUIRED\n    }],\n    'has_attachments' : Boolean, // default: false,\n    'sender_timezone_offset' : String,\n    'company_id' : ObjectId,\n    'communication_with' : [\n        ObjectId\n    ]\n}", 
             "title": "Data Model for Conversation"
         }, 
         {
             "location": "/api/models/conversation/#note", 
-            "text": "The emails.from must either contain a  user_id  or a  company_user_id  value.", 
+            "text": "The  emails.from  must either contain a  user_id  or a  company_user_id  value.  The  communication_with  field can only contain valid company_user id s. It s being used to show with whom you have the conversation with in the Helpmonks app.", 
             "title": "Note"
         }, 
         {
