@@ -4,9 +4,19 @@ The Helpmonks API allows you to interact with your data stored in Helpmonks. You
 
 ## Data structure
 
-All API methods are issues with a POST or a GET request. POST API methods expect a JSON structure in the body. Please see each individidual documentation to learn aboot the available parameters.
+All API methods are issues with a POST or a GET request. POST API methods expect a JSON structure in the body. Please see each individidual documentation to learn about the available parameters.
 
-All API methods return a JSON data object.
+All API methods return a JSON data object in the format:
+
+```
+{
+    "success" : true / false,
+    "error" : error object (only shown if success is false),
+    "results" : result object or string
+}
+```
+
+Please see each individidual documentation to learn about the data in the results.
 
 ## API URL
 
