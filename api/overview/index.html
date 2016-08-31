@@ -388,8 +388,16 @@
                 <h1 id="helpmonks-api-overview">Helpmonks API Overview</h1>
 <p>The Helpmonks API allows you to interact with your data stored in Helpmonks. You can, among many other methods, create a new conversation, update a conversation, create a customer record, create notes, interact with labels and search.</p>
 <h2 id="data-structure">Data structure</h2>
-<p>All API methods are issues with a POST or a GET request. POST API methods expect a JSON structure in the body. Please see each individidual documentation to learn aboot the available parameters.</p>
-<p>All API methods return a JSON data object.</p>
+<p>All API methods are issues with a POST or a GET request. POST API methods expect a JSON structure in the body. Please see each individidual documentation to learn about the available parameters.</p>
+<p>All API methods return a JSON data object in the format:</p>
+<pre><code>{
+    &quot;success&quot; : true / false,
+    &quot;error&quot; : error object (only shown if success is false),
+    &quot;results&quot; : result object or string
+}
+</code></pre>
+
+<p>Please see each individidual documentation to learn about the data in the results.</p>
 <h2 id="api-url">API URL</h2>
 <p>API requests should be done towards https://(yoursubdomain).helpmonks.com/(apimethod). Please refer to the API documentation for the correct URL.</p>
 <h2 id="api-key">API Key</h2>

@@ -17,7 +17,7 @@
         }, 
         {
             "location": "/api/overview/", 
-            "text": "Helpmonks API Overview\n\n\nThe Helpmonks API allows you to interact with your data stored in Helpmonks. You can, among many other methods, create a new conversation, update a conversation, create a customer record, create notes, interact with labels and search.\n\n\nData structure\n\n\nAll API methods are issues with a POST or a GET request. POST API methods expect a JSON structure in the body. Please see each individidual documentation to learn aboot the available parameters.\n\n\nAll API methods return a JSON data object.\n\n\nAPI URL\n\n\nAPI requests should be done towards https://(yoursubdomain).helpmonks.com/(apimethod). Please refer to the API documentation for the correct URL.\n\n\nAPI Key\n\n\nPlease see \nAuthentication\n to learn how to create your API key and authenticate towards the Helpmonks API.\n\n\nHelp\n\n\nIf you have any questions, please post a message to our \nHelpmonks Developer forum\n.", 
+            "text": "Helpmonks API Overview\n\n\nThe Helpmonks API allows you to interact with your data stored in Helpmonks. You can, among many other methods, create a new conversation, update a conversation, create a customer record, create notes, interact with labels and search.\n\n\nData structure\n\n\nAll API methods are issues with a POST or a GET request. POST API methods expect a JSON structure in the body. Please see each individidual documentation to learn about the available parameters.\n\n\nAll API methods return a JSON data object in the format:\n\n\n{\n    \nsuccess\n : true / false,\n    \nerror\n : error object (only shown if success is false),\n    \nresults\n : result object or string\n}\n\n\n\n\nPlease see each individidual documentation to learn about the data in the results.\n\n\nAPI URL\n\n\nAPI requests should be done towards https://(yoursubdomain).helpmonks.com/(apimethod). Please refer to the API documentation for the correct URL.\n\n\nAPI Key\n\n\nPlease see \nAuthentication\n to learn how to create your API key and authenticate towards the Helpmonks API.\n\n\nHelp\n\n\nIf you have any questions, please post a message to our \nHelpmonks Developer forum\n.", 
             "title": "Overview"
         }, 
         {
@@ -27,7 +27,7 @@
         }, 
         {
             "location": "/api/overview/#data-structure", 
-            "text": "All API methods are issues with a POST or a GET request. POST API methods expect a JSON structure in the body. Please see each individidual documentation to learn aboot the available parameters.  All API methods return a JSON data object.", 
+            "text": "All API methods are issues with a POST or a GET request. POST API methods expect a JSON structure in the body. Please see each individidual documentation to learn about the available parameters.  All API methods return a JSON data object in the format:  {\n     success  : true / false,\n     error  : error object (only shown if success is false),\n     results  : result object or string\n}  Please see each individidual documentation to learn about the data in the results.", 
             "title": "Data structure"
         }, 
         {
