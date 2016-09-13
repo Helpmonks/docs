@@ -17,18 +17,13 @@
         }, 
         {
             "location": "/api/overview/", 
-            "text": "Helpmonks API Overview\n\n\nThe Helpmonks API allows you to interact with your data stored in Helpmonks. You can, among many other methods, create a new conversation, update a conversation, create a customer record, create notes, interact with labels and search.\n\n\nData structure\n\n\nAll API methods are issues with a POST or a GET request. POST API methods expect a JSON structure in the body. Please see each individidual documentation to learn about the available parameters.\n\n\nAll API methods return a JSON data object in the format:\n\n\n{\n    \nsuccess\n : true / false,\n    \nerror\n : error object (only shown if success is false),\n    \nresults\n : result object or string\n}\n\n\n\n\nPlease see each individidual documentation to learn about the data in the results.\n\n\nAPI URL\n\n\nAPI requests should be done towards https://(yoursubdomain).helpmonks.com/(apimethod). Please refer to the API documentation for the correct URL.\n\n\nAPI Key\n\n\nPlease see \nAuthentication\n to learn how to create your API key and authenticate towards the Helpmonks API.\n\n\nHelp\n\n\nIf you have any questions, please post a message to our \nHelpmonks Developer forum\n.", 
+            "text": "Helpmonks API Overview\n\n\nThe Helpmonks API allows you to interact with your data stored in Helpmonks. You can, among many other methods, create a new conversation, update a conversation, create a customer record, create notes, interact with labels and search.\n\n\nAPI URL\n\n\nAPI requests should be done towards https://(yoursubdomain).helpmonks.com/(apimethod). Please refer to the API documentation for the correct URL.\n\n\nAPI Key\n\n\nPlease see \nAuthentication\n to learn how to create your API key and authenticate towards the Helpmonks API.\n\n\nData structure\n\n\nAll API methods are issues with a POST or a GET request. POST API methods expect a JSON structure in the body. Please see each individidual documentation to learn about the available parameters.\n\n\nAll API methods return a JSON data object in the format:\n\n\n{\n    \nsuccess\n : true / false,\n    \nerror\n : error object (only shown if success is false),\n    \nresults\n : result object or string\n}\n\n\n\n\nPlease see each individidual documentation to learn about the data in the results.\n\n\nExample for CURL\n\n\nGiven the above, you would use the following with CURL to send API requests to the Helpmonks API:\n\n\ncurl -X \nPOST\n \nhttps://domain.helpmonks.com/api/v1/conversation/create\n \\\n-H \nAuthorization: Basic Njc3ZjFiZWQ5MTUwNGQzNWE5YTQ1MjkxmU3OGFkYjE6KioqKiogSGlkZGVuIGNyWRlbnRpYWICoqKioq\n \\\n-H \nContent-Type: application/json; charset=utf-8\n \\\n-d \n{JSON BODY}\n\n\n\n\n\nHelp\n\n\nIf you have any questions, please post a message to our \nHelpmonks Developer forum\n.", 
             "title": "Overview"
         }, 
         {
             "location": "/api/overview/#helpmonks-api-overview", 
             "text": "The Helpmonks API allows you to interact with your data stored in Helpmonks. You can, among many other methods, create a new conversation, update a conversation, create a customer record, create notes, interact with labels and search.", 
             "title": "Helpmonks API Overview"
-        }, 
-        {
-            "location": "/api/overview/#data-structure", 
-            "text": "All API methods are issues with a POST or a GET request. POST API methods expect a JSON structure in the body. Please see each individidual documentation to learn about the available parameters.  All API methods return a JSON data object in the format:  {\n     success  : true / false,\n     error  : error object (only shown if success is false),\n     results  : result object or string\n}  Please see each individidual documentation to learn about the data in the results.", 
-            "title": "Data structure"
         }, 
         {
             "location": "/api/overview/#api-url", 
@@ -39,6 +34,16 @@
             "location": "/api/overview/#api-key", 
             "text": "Please see  Authentication  to learn how to create your API key and authenticate towards the Helpmonks API.", 
             "title": "API Key"
+        }, 
+        {
+            "location": "/api/overview/#data-structure", 
+            "text": "All API methods are issues with a POST or a GET request. POST API methods expect a JSON structure in the body. Please see each individidual documentation to learn about the available parameters.  All API methods return a JSON data object in the format:  {\n     success  : true / false,\n     error  : error object (only shown if success is false),\n     results  : result object or string\n}  Please see each individidual documentation to learn about the data in the results.", 
+            "title": "Data structure"
+        }, 
+        {
+            "location": "/api/overview/#example-for-curl", 
+            "text": "Given the above, you would use the following with CURL to send API requests to the Helpmonks API:  curl -X  POST   https://domain.helpmonks.com/api/v1/conversation/create  \\\n-H  Authorization: Basic Njc3ZjFiZWQ5MTUwNGQzNWE5YTQ1MjkxmU3OGFkYjE6KioqKiogSGlkZGVuIGNyWRlbnRpYWICoqKioq  \\\n-H  Content-Type: application/json; charset=utf-8  \\\n-d  {JSON BODY}", 
+            "title": "Example for CURL"
         }, 
         {
             "location": "/api/overview/#help", 
