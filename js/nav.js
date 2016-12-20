@@ -1,26 +1,32 @@
 // Function to show children
 function showChildren(id) {
-    // Toggle
-    $("[id='hidden_" + id + "']").toggle();
+    //get the jquery object, the menu item
+    var navObj = $("[id='hidden_" + id + "']");
+    var toggleMenuObj = $("[id='"+id + "_butt']");
+    
+    // Toggle, show or hide the menu item
+    navObj.toggle();
+    toggleMenuObj.toggleClass("fa-plus-square").toggleClass("fa-minus-square");
+    
     // Set cookie
-    if (typeof $.cookie('docToggle') === 'undefined') {
-        var _cookie = [];
-    }
-    else {
-        var _cookie = JSON.parse($.cookie('docToggle'));
-    }
+    var _cookie = (typeof $.cookie('docToggle') === 'undefined')?[]:JSON.parse($.cookie('docToggle'));
+    
     // Check if div is now closed
-    var _visible = $("[id='hidden_" + id + "']").is(':visible');
+    var _visible = navObj.is(':visible');
+    
     // if div is show we add value to cookie
     if (_visible) {
-        // Make sure the value is not already in the array. this also pushed the value to the array
+        // Make sure the value is not already in the array. this also pushed the value to the array, and change the nev element to minus
         _addToSet(_cookie, id);
+        toggleMenuObj.removeClass("fa-plus-square").addClass("fa-minus-square");
     }
-    // remove value
+    // remove value from cookie if it is closed, and change the nav element to plus
     else {
         _removeFromSet(_cookie, id);
+        toggleMenuObj.removeClass("fa-minus-square").addClass("fa-plus-square");
     }
-    // Set cookie
+    
+    // Set cookie in the browser
     $.cookie('docToggle', JSON.stringify(_cookie), { expires: 7, path: '/' });
     // Return
     return false;
