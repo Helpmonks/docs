@@ -33,6 +33,9 @@
     var mkdocs_page_name = "{{ page_title }}";
     var mkdocs_page_input_path = "{{ current_page.input_path }}";
     var mkdocs_page_url = "{{ current_page.abs_url }}";
+
+    var ooahel = '{{page.url}}';
+    
   </script>
   {% endif %}
   <script src="{{ base_url }}/js/jquery-2.1.1.min.js"></script>
@@ -114,16 +117,30 @@
 <!-- {% include "versions.html" %} -->
 
 <script type="text/javascript">
-  // If cookie is defined toggle the id
-  if (typeof $.cookie('docToggle') !== 'undefined') {
-      // Parse cookie which is an array
-      var _parsed_cookie = JSON.parse($.cookie('docToggle'));
-      // Loop over array and show hidden divs
-      $.each(_parsed_cookie, function(index, value) {
-          // Toggle
-          $("[id='hidden_" + value + "']").css('display','');
-      })
+    // If cookie is defined toggle the id
+    if (typeof $.cookie('docToggle') !== 'undefined') {
+        // Parse cookie which is an array
+        var _parsed_cookie = JSON.parse($.cookie('docToggle'));
+        // Loop over array and show hidden divs
+        $.each(_parsed_cookie, function(index, value) {
+            // Toggle
+            $("[id='hidden_" + value + "']").css('display','');
+            $("[id='"+ value + "_butt']").removeClass("fa-plus-square").addClass("fa-minus-square");
+
+        });
+        //scroll to the correct item in the menu
+        var remSlash = /\//g;
+        var remDot = /\./g;
+        var remDash = /-/g;
+
+        var currentNav = mkdocs_page_url.replace(remSlash,'').replace('index.html','').replace(remDot,'').replace(remDash,'_');
+        //now scroll to the position of the nav
+        var pos = $('#'+currentNav).offset().top - 50;
+        $('nav').animate({scrollTop: pos},'fast');
   }
+  
+  
+  //
 </script>
 
 </body>

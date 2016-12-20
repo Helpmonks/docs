@@ -1,22 +1,106 @@
+
 <ul class="subnav">
     <li class="{% if nav_item.active%}current{%endif%}">
-        <a class="{% if nav_item.active%}current{%endif%}" {% if not nav_item.children%}href="{{ nav_item.url }}"{%endif%} id="{{ nav_item.title }}" style="font-size:95%;font-weight:bold;">{{ nav_item.title }}</a>
+        <a class="{% if nav_item.active%}current{%endif%}"
+           {% if not nav_item.children%}href="{{ nav_item.url }}"{%endif%}
+           id="{{ nav_item.url|replace("/","")|replace("index.html","")|replace(".","")|replace("-","_") }}"
+           style="font-size:95%;font-weight:bold;">
+                {{ nav_item.title }}
+    </a>
     </li>
     {% for nav_item in nav_item.children %}
         <li class="{% if nav_item.active%}current{%endif%}">
-            <a style="padding-left:50px;" class="{% if nav_item.active%}current{%endif%}" {% if not nav_item.children%}href="{{ nav_item.url }}"{%endif%} id="{{ nav_item.title }}"{% if nav_item.children%} onclick="showChildren('{{ nav_item.title }}')"{%endif%}>{{ nav_item.title }} {% if nav_item.children%} <i class="fa fa-arrow-circle-down" style="padding-left:5px;font-size:13px;"></i>{%endif%}</a>
+            {# setup the id for the first child to use to open on load and scroll to, see nav.js and base.html at bottom of page #}
+            {% if nav_item.children %}
+                {% set childaID = nav_item.title|replace(" ", "_") %}
+            {%else%}
+                {% if nav_item.active%} 
+                    {% set childaID = current_page.abs_url|replace("/","")|replace("index.html","")|replace(".","")|replace("-","_") %}
+                {%else%} 
+                    {% set childaID = nav_item.url|replace("/","")|replace("index.html","")|replace(".","")|replace("-","_") %}
+                {%endif%}
+            {%endif%}
+            <a style="padding-left:50px;"
+               class="{% if nav_item.active%}current{%endif%}"
+               {% if not nav_item.children%}href="{{ nav_item.url }}"{%endif%}
+               id="{{ childaID }}"
+               {% if nav_item.children%} onclick="showChildren('{{ childaID }}')"{%endif%}>
+                  {% if nav_item.children%} 
+                    <i class="fa fa-plus-square" id="{{ childaID }}_butt" style="padding-left:5px;font-size:13px;"></i>
+                {%endif%} 
+                {{ nav_item.title }} 
+            </a>
         </li>
-        {% set id_hidden = nav_item.title %}
+        
+{# calculate the sub-menu to show and hide. This is a second level menu so Parent:(root) > Child:(sub-menu) #}
+{# the id of the  being hidden_[name] is toggled with the call to showChildren from the child element above  #}
+{# the id is calculated thus: hidden_parentUrlOrTitle #}
+        {% if nav_item.children %}
+            {% set id_hidden = nav_item.title|replace(" ", "_") %}
+        {%else%}
+            {% if nav_item.active%} 
+                {% set id_hidden = current_page.abs_url|replace("/","")|replace("index.html","")|replace(".","")|replace("-","_") %}
+            {%else%} 
+                {% set id_hidden = nav_item.url|replace("/","")|replace("index.html","")|replace(".","")|replace("-","_") %}
+            {%endif%}
+        {%endif%}
+        
         <div style="display:none" id="hidden_{{ id_hidden }}">
         {% for nav_item in nav_item.children %}
+            {# childbID is the id of this specific child element, used in conjunction with the parent id_hidden #}
+            {% if nav_item.children %}
+                {% set childbID = nav_item.title|replace(" ", "_") %}
+            {%else%}
+                {% if nav_item.active%} 
+                    {% set childbID = current_page.abs_url|replace("/","")|replace("index.html","")|replace(".","")|replace("-","_") %}
+                {%else%} 
+                    {% set childbID = nav_item.url|replace("/","")|replace("index.html","")|replace(".","")|replace("-","_") %}
+                {%endif%}
+            {%endif%}
             <li class="{% if nav_item.active%}current{%endif%}">
-                <a style="padding-left:70px;" class="{% if nav_item.active%}current{%endif%}" {% if not nav_item.children%}href="{{ nav_item.url }}"{%endif%} id="{{ nav_item.title }}"{% if nav_item.children%} onclick="showChildren('{{ id_hidden }}{{ nav_item.title }}')"{%endif%}>{{ nav_item.title }} {% if nav_item.children%} <i class="fa fa-arrow-circle-down" style="padding-left:5px;font-size:13px;"></i>{%endif%}</a>
+                <a style="padding-left:70px;" 
+                   class="{% if nav_item.active%}current{%endif%}" 
+                   {% if not nav_item.children%}href="{{ nav_item.url }}"{%endif%} 
+                   id="{{childbID}}"
+                   {% if nav_item.children%} onclick="showChildren('{{ id_hidden }}{{childbID}}')"{%endif%}>
+                        {% if nav_item.children%} 
+                          <i class="fa fa-plus-square" id="{{ id_hidden }}{{childbID}}_butt" style="padding-left:5px;font-size:13px;"></i>
+                        {%endif%} 
+                        {{ nav_item.title }}
+                </a>
             </li>
-            {% set id_hidden = id_hidden + nav_item.title %}
-            <div style="display:none" id="hidden_{{ id_hidden }}">
+{# calculate the sub-menu to show and hide. This is a second level menu so Parent:(root) > Child:(sub-menu) > Grandchild:(2nd level) #}
+{# the id of the  being hidden_[name] is toggled with the call to showChildren from the child element above  #}
+{# the id is calculated thus: hidden_parentUrlOrTitle_childUrlOrTitle #}
+{# ToDo: make recursive function to allow for unlimited depth of menus  #}
+            {% if nav_item.children %}
+                {% set id_hidden = id_hidden + nav_item.title|replace(" ", "_") %}
+            {%else%}
+                {% if nav_item.active%} 
+                    {% set id_hidden = id_hidden + current_page.abs_url|replace("/","")|replace("index.html","")|replace(".","")|replace("-","_") %}
+                {%else%}
+                    {% set id_hidden = id_hidden + nav_item.url|replace("/","")|replace("index.html","")|replace(".","")|replace("-","_") %}
+                {%endif%}
+            {%endif%}
+            
+            <div style="display:none;" id="hidden_{{ id_hidden }}">
             {% for nav_item in nav_item.children %}
+                {% if nav_item.active%} 
+                    {% set childcID = current_page.abs_url|replace("/","")|replace("index.html","")|replace(".","")|replace("-","_") %}
+                {%else%}
+                    {% set childcID = nav_item.url|replace("/","")|replace("index.html","")|replace(".","")|replace("-","_") %}
+                {%endif%}
                 <li class="{% if nav_item.active%}current{%endif%}">
-                    <a style="padding-left:90px;" class="{% if nav_item.active%}current{%endif%}" {% if not nav_item.children%}href="{{ nav_item.url }}"{%endif%} id="{{ nav_item.title }}"{% if nav_item.children%} onclick="showChildren('{{ id_hidden }}')"{%endif%}>{{ nav_item.title }} {% if nav_item.children%} <i class="fa fa-arrow-circle-down" style="padding-left:5px;font-size:13px;"></i>{%endif%}</a>
+                    <a style="padding-left:90px;"
+                       class="{% if nav_item.active%}current{%endif%}"
+                       {% if not nav_item.children%}href="{{ nav_item.url }}"{%endif%}
+                       id="{{childcID}}"
+                       {% if nav_item.children%} onclick="showChildren('{{ id_hidden }}')"{%endif%}>
+                            {% if nav_item.children%} 
+                                <i class="fa fa-plus-square" id="{{id_hidden}}_butt" style="padding-left:5px;font-size:13px;"></i>
+                            {%endif%} 
+                            {{ nav_item.title }}
+                    </a>
                 </li>
             {% endfor %}
             </div>
