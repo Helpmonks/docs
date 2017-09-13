@@ -26,7 +26,7 @@
   <script>
     // Current page data
     var mkdocs_page_name = "Update";
-    var mkdocs_page_input_path = "api/conversation/update.md";
+    var mkdocs_page_input_path = "api\conversation\update.md";
     var mkdocs_page_url = "/api/conversation/update/";
   </script>
   
@@ -90,7 +90,7 @@
                 <a style="padding-left:70px;" class="" href="../../authentication/" id="Authentication">Authentication </a>
             </li>
             
-            <div style="display:none" id="hidden_Getting StartedOverviewAuthentication">
+            <div style="display:none" id="hidden_Getting StartedAuthentication">
             
             </div>
         
@@ -98,7 +98,7 @@
                 <a style="padding-left:70px;" class="" href="../../syntax/" id="Query Syntax">Query Syntax </a>
             </li>
             
-            <div style="display:none" id="hidden_Getting StartedOverviewAuthenticationQuery Syntax">
+            <div style="display:none" id="hidden_Getting StartedQuery Syntax">
             
             </div>
         
@@ -163,10 +163,10 @@
             </div>
         
             <li class="">
-                <a style="padding-left:70px;" class=""  id="Customer" onclick="showChildren('APIsConversationCustomer')">Customer  <i class="fa fa-arrow-circle-down" style="padding-left:5px;font-size:13px;"></i></a>
+                <a style="padding-left:70px;" class=""  id="Customer" onclick="showChildren('APIsCustomer')">Customer  <i class="fa fa-arrow-circle-down" style="padding-left:5px;font-size:13px;"></i></a>
             </li>
             
-            <div style="display:none" id="hidden_APIsConversationCustomer">
+            <div style="display:none" id="hidden_APIsCustomer">
             
                 <li class="">
                     <a style="padding-left:90px;" class="" href="../../customer/find/" id="Find">Find </a>
@@ -195,10 +195,10 @@
             </div>
         
             <li class="">
-                <a style="padding-left:70px;" class=""  id="Mailbox" onclick="showChildren('APIsConversationCustomerMailbox')">Mailbox  <i class="fa fa-arrow-circle-down" style="padding-left:5px;font-size:13px;"></i></a>
+                <a style="padding-left:70px;" class=""  id="Mailbox" onclick="showChildren('APIsMailbox')">Mailbox  <i class="fa fa-arrow-circle-down" style="padding-left:5px;font-size:13px;"></i></a>
             </li>
             
-            <div style="display:none" id="hidden_APIsConversationCustomerMailbox">
+            <div style="display:none" id="hidden_APIsMailbox">
             
                 <li class="">
                     <a style="padding-left:90px;" class="" href="../../mailbox/find/" id="Find">Find </a>
@@ -212,13 +212,17 @@
                     <a style="padding-left:90px;" class="" href="../../mailbox/findbyid/" id="FindById">FindById </a>
                 </li>
             
+                <li class="">
+                    <a style="padding-left:90px;" class="" href="../../mailbox/create/" id="Create">Create </a>
+                </li>
+            
             </div>
         
             <li class="">
-                <a style="padding-left:70px;" class=""  id="Label" onclick="showChildren('APIsConversationCustomerMailboxLabel')">Label  <i class="fa fa-arrow-circle-down" style="padding-left:5px;font-size:13px;"></i></a>
+                <a style="padding-left:70px;" class=""  id="Label" onclick="showChildren('APIsLabel')">Label  <i class="fa fa-arrow-circle-down" style="padding-left:5px;font-size:13px;"></i></a>
             </li>
             
-            <div style="display:none" id="hidden_APIsConversationCustomerMailboxLabel">
+            <div style="display:none" id="hidden_APIsLabel">
             
                 <li class="">
                     <a style="padding-left:90px;" class="" href="../../label/find/" id="Find">Find </a>
@@ -235,10 +239,10 @@
             </div>
         
             <li class="">
-                <a style="padding-left:70px;" class=""  id="User" onclick="showChildren('APIsConversationCustomerMailboxLabelUser')">User  <i class="fa fa-arrow-circle-down" style="padding-left:5px;font-size:13px;"></i></a>
+                <a style="padding-left:70px;" class=""  id="User" onclick="showChildren('APIsUser')">User  <i class="fa fa-arrow-circle-down" style="padding-left:5px;font-size:13px;"></i></a>
             </li>
             
-            <div style="display:none" id="hidden_APIsConversationCustomerMailboxLabelUser">
+            <div style="display:none" id="hidden_APIsUser">
             
                 <li class="">
                     <a style="padding-left:90px;" class="" href="../../user/find/" id="Find">Find </a>
@@ -278,7 +282,7 @@
                 <a style="padding-left:70px;" class="" href="../../search/" id="Search">Search </a>
             </li>
             
-            <div style="display:none" id="hidden_APIsConversationCustomerMailboxLabelUserSearch">
+            <div style="display:none" id="hidden_APIsSearch">
             
             </div>
         
@@ -302,7 +306,7 @@
                 <a style="padding-left:70px;" class="" href="../../models/customer/" id="Customer">Customer </a>
             </li>
             
-            <div style="display:none" id="hidden_Data ModelsConversationsCustomer">
+            <div style="display:none" id="hidden_Data ModelsCustomer">
             
             </div>
         
@@ -310,7 +314,7 @@
                 <a style="padding-left:70px;" class="" href="../../models/mailbox/" id="Mailbox">Mailbox </a>
             </li>
             
-            <div style="display:none" id="hidden_Data ModelsConversationsCustomerMailbox">
+            <div style="display:none" id="hidden_Data ModelsMailbox">
             
             </div>
         
@@ -318,7 +322,7 @@
                 <a style="padding-left:70px;" class="" href="../../models/label/" id="Label">Label </a>
             </li>
             
-            <div style="display:none" id="hidden_Data ModelsConversationsCustomerMailboxLabel">
+            <div style="display:none" id="hidden_Data ModelsLabel">
             
             </div>
         
@@ -326,7 +330,7 @@
                 <a style="padding-left:70px;" class="" href="../../models/user/" id="User">User </a>
             </li>
             
-            <div style="display:none" id="hidden_Data ModelsConversationsCustomerMailboxLabelUser">
+            <div style="display:none" id="hidden_Data ModelsUser">
             
             </div>
         

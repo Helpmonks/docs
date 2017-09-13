@@ -831,6 +831,51 @@
             "title": "Returned data"
         }, 
         {
+            "location": "/api/mailbox/create/", 
+            "text": "Mailbox Create\n\n\nAvailability\n\n\nAvailable as of Sept. 12th, 2017. Version 1.6.3\n\n\nProtocol\n\n\nPOST\n\n\nURL\n\n\nhttps://(subdomain).helpmonks.com/api/v1/mailbox/create\n\n\nParameters\n\n\n\n    \n\n        \nName\n\n        \nRequired\n\n        \nValue\n\n        \nComment\n\n    \n\n    \n\n        \nname\n\n        \nYes\n\n        \nName of the mailbox\n\n        \nString\n\n    \n\n    \n\n        \nemail\n\n        \nYes\n\n        \nEmail-address of the mailbox\n\n        \nString\n\n    \n\n    \n\n        \nfrom\n\n        \nNo\n\n        \nDefine from whom to send replies: mailbox or user\n\n        \nString\n\n    \n\n    \n\n        \nusers\n\n        \nNo\n\n        \nAn array of users of the mailbox\n\n        \nArray with ObjectId\n\n    \n\n    \n\n        \nactive\n\n        \nNo\n\n        \nIf mailbox should be active. Value is true or false.\n\n        \nBoolean\n\n    \n\n\n\n\nImportant Note\n\n\nIn order to see the newly created mailbox, users need to sign out of Helpmonks!\n\n\nExample\n\n\n{\n    \nname\n : \nSupport Mailbox\n,\n    \nemail\n : \nsupport@domain.com\n\n}\n\n\n\n\nReturned data\n\n\nPlease refer to the \nMailbox Data Model\n to see the data structure being returned", 
+            "title": "Create"
+        }, 
+        {
+            "location": "/api/mailbox/create/#mailbox-create", 
+            "text": "", 
+            "title": "Mailbox Create"
+        }, 
+        {
+            "location": "/api/mailbox/create/#availability", 
+            "text": "Available as of Sept. 12th, 2017. Version 1.6.3", 
+            "title": "Availability"
+        }, 
+        {
+            "location": "/api/mailbox/create/#protocol", 
+            "text": "POST", 
+            "title": "Protocol"
+        }, 
+        {
+            "location": "/api/mailbox/create/#url", 
+            "text": "https://(subdomain).helpmonks.com/api/v1/mailbox/create", 
+            "title": "URL"
+        }, 
+        {
+            "location": "/api/mailbox/create/#parameters", 
+            "text": "Name \n         Required \n         Value \n         Comment \n     \n     \n         name \n         Yes \n         Name of the mailbox \n         String \n     \n     \n         email \n         Yes \n         Email-address of the mailbox \n         String \n     \n     \n         from \n         No \n         Define from whom to send replies: mailbox or user \n         String \n     \n     \n         users \n         No \n         An array of users of the mailbox \n         Array with ObjectId \n     \n     \n         active \n         No \n         If mailbox should be active. Value is true or false. \n         Boolean", 
+            "title": "Parameters"
+        }, 
+        {
+            "location": "/api/mailbox/create/#important-note", 
+            "text": "In order to see the newly created mailbox, users need to sign out of Helpmonks!", 
+            "title": "Important Note"
+        }, 
+        {
+            "location": "/api/mailbox/create/#example", 
+            "text": "{\n     name  :  Support Mailbox ,\n     email  :  support@domain.com \n}", 
+            "title": "Example"
+        }, 
+        {
+            "location": "/api/mailbox/create/#returned-data", 
+            "text": "Please refer to the  Mailbox Data Model  to see the data structure being returned", 
+            "title": "Returned data"
+        }, 
+        {
             "location": "/api/label/find/", 
             "text": "Label Find\n\n\nProtocol\n\n\nPOST\n\n\nURL\n\n\nhttps://(subdomain).helpmonks.com/api/v1/label/find\n\n\nParameters\n\n\n\n    \n\n        \nName\n\n        \nRequired\n\n        \nValue\n\n        \nComment\n\n    \n\n    \n\n        \nquery\n\n        \nYes\n\n        \nAvailable column in object\n\n        \n\n    \n\n    \n\n        \nfields\n\n        \nNo\n\n        \nAvailable column name\n\n        \n\n    \n\n    \n\n        \noptions\n\n        \nNo\n\n        \nAvailable options like sort, slice, etc.\n\n        \n\n    \n\n\n\n\nThe available fields are documented in the \nLabel Data Model\n. Refer to the \nQuery syntax documentation\n on how to query against your records\n\n\nExample\n\n\n{\n    query : { 'name' : 'Followup' },\n    fields : {},\n    options : {}\n}\n\n\n\n\nReturned data\n\n\nPlease refer to the \nLabel Data Model\n to see the data structure being returned", 
             "title": "Find"
