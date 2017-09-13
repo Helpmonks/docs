@@ -39,6 +39,7 @@ pages:
       - 'Find': 'api/mailbox/find.md'
       - 'FindOne': 'api/mailbox/findone.md'
       - 'FindById': 'api/mailbox/findbyid.md'
+      - 'Create': 'api/mailbox/create.md'
     - 'Label':
       - 'Find': 'api/label/find.md'
       - 'FindOne': 'api/label/findone.md'
