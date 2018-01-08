@@ -32,6 +32,30 @@ https://(subdomain).helpmonks.com/api/v1/search
         <td>How many results to show per page</td>
         <td>Defaults to 50</td>
     </tr>
+    <tr>
+        <td>search_mailboxes</td>
+        <td>No</td>
+        <td>Mailbox Ids to search in</td>
+        <td>Available as of Jan. 10th, 2018</td>
+    </tr>
+    <tr>
+        <td>search_status</td>
+        <td>No</td>
+        <td>Inbox, Assigned, Archived, Closed</td>
+        <td>Available as of Jan. 10th, 2018</td>
+    </tr>
+    <tr>
+        <td>search_labels</td>
+        <td>No</td>
+        <td>Label Ids to search in</td>
+        <td>Available as of Jan. 10th, 2018</td>
+    </tr>
+    <tr>
+        <td>search_get_trash</td>
+        <td>No</td>
+        <td>To include conversations in the Trash and Spam folder. true/false</td>
+        <td>Available as of Jan. 10th, 2018</td>
+    </tr>
 </table>
 
 ### Example
@@ -39,6 +63,7 @@ https://(subdomain).helpmonks.com/api/v1/search
 ```
 {
     search_text : "Helpmonks",
+    search_status : "Closed",
     page_no : 0,
     num_per_page : 50
 }
