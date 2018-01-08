@@ -1,394 +1,1081 @@
+
+
+
+
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <meta name="author" content="Nitai Aventaggiato">
-  
-  <title>Delete - Helpmonks Developer Guides</title>
-  
-
-  <link rel="shortcut icon" href="../../../img/favicon.ico">
-
-  
-  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
-
-  <link rel="stylesheet" href="../../../css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../../css/theme_extra.css" type="text/css" />
-  <link rel="stylesheet" href="../../../css/highlight.css">
-
-  <link rel="stylesheet" href="../../../css/custom.css">
-
-  
-  <script>
-    // Current page data
-    var mkdocs_page_name = "Delete";
-    var mkdocs_page_input_path = "api\user\delete.md";
-    var mkdocs_page_url = "/api/user/delete/";
-  </script>
-  
-  <script src="../../../js/jquery-2.1.1.min.js"></script>
-  <script src="../../../js/modernizr-2.8.3.min.js"></script>
-  <script type="text/javascript" src="../../../js/highlight.pack.js"></script>
-  <script src="../../../js/theme.js"></script>
-  <script src="../../../js/jquery.cookie-1.4.1.min.js"></script>
-  <script src="../../../js/nav.js"></script> 
-
-  
-</head>
-
-<body class="wy-body-for-nav" role="document">
-
-  <div class="wy-grid-for-nav">
-
+<html lang="en" class="no-js">
+  <head>
     
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
-      <div class="wy-side-nav-search">
-        <a href="../../.." class="icon icon-home"> Helpmonks Developer Guides</a>
-        <div role="search">
-  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
-  </form>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="The Helpmonks developer documentation pages">
+      
+      
+        <link rel="canonical" href="http://developer.helpmonks.com/api/user/delete/">
+      
+      
+        <meta name="author" content="Nitai Aventaggiato">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-0.17.2, mkdocs-material-2.2.6">
+    
+    
+      
+        <title>Delete - Helpmonks Developer Guides</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/application.6525f7f6.css">
+      
+        <link rel="stylesheet" href="../../../assets/stylesheets/application-palette.792431c1.css">
+      
+    
+    
+      <script src="../../../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+    
+  </head>
+  
+    
+    
+    
+      <body data-md-color-primary="light-green" data-md-color-accent="light-green">
+    
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="http://developer.helpmonks.com" title="Helpmonks Developer Guides" class="md-header-nav__button md-logo">
+          
+            <img src="../../../images/icon_transparent_128.png" width="24" height="24">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                Helpmonks Developer Guides
+              </span>
+              <span class="md-header-nav__topic">
+                Delete
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="search"></label>
+  <div class="md-search__inner">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" required placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset">&#xE5CD;</button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
+          
+        
       </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
 
-      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-        <ul class="current">
-          
-            <li><ul class="subnav">
-    <li class="">
-        <a class="" href="../../.." id="Home" style="font-size:95%;font-weight:bold;">Home</a>
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href="../../.." title="Home" class="md-tabs__link">
+        Home
+      </a>
+    
+  </li>
+
+      
+        
+  
+  
+    
+    
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../overview/" title="Developer API" class="md-tabs__link">
+          Developer API
+        </a>
+      
     </li>
-    
-    <li class="paddingtop20"></li>
-</ul>
-<li>
+  
+
+  
+
+      
+        
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
           
-            <li><ul class="subnav">
-    <li class="current">
-        <a class="current"  id="Developer API" style="font-size:95%;font-weight:bold;">Developer API</a>
-    </li>
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    <span class="md-nav__button md-logo">
+      
+        <img src="../../../images/icon_transparent_128.png" width="24" height="24">
+      
+    </span>
+    Helpmonks Developer Guides
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
     
-        <li class="">
-            <a style="padding-left:50px;" class=""  id="Getting Started" onclick="showChildren('Getting Started')">Getting Started  <i class="fa fa-arrow-circle-down" style="padding-left:5px;font-size:13px;"></i></a>
-        </li>
-        
-        <div style="display:none" id="hidden_Getting Started">
-        
-            <li class="">
-                <a style="padding-left:70px;" class="" href="../../overview/" id="Overview">Overview </a>
-            </li>
-            
-            <div style="display:none" id="hidden_Getting StartedOverview">
-            
-            </div>
-        
-            <li class="">
-                <a style="padding-left:70px;" class="" href="../../authentication/" id="Authentication">Authentication </a>
-            </li>
-            
-            <div style="display:none" id="hidden_Getting StartedAuthentication">
-            
-            </div>
-        
-            <li class="">
-                <a style="padding-left:70px;" class="" href="../../syntax/" id="Query Syntax">Query Syntax </a>
-            </li>
-            
-            <div style="display:none" id="hidden_Getting StartedQuery Syntax">
-            
-            </div>
-        
-        </div>
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
     
-        <li class="current">
-            <a style="padding-left:50px;" class="current"  id="APIs" onclick="showChildren('APIs')">APIs  <i class="fa fa-arrow-circle-down" style="padding-left:5px;font-size:13px;"></i></a>
-        </li>
-        
-        <div style="display:none" id="hidden_APIs">
-        
-            <li class="">
-                <a style="padding-left:70px;" class=""  id="Conversation" onclick="showChildren('APIsConversation')">Conversation  <i class="fa fa-arrow-circle-down" style="padding-left:5px;font-size:13px;"></i></a>
-            </li>
-            
-            <div style="display:none" id="hidden_APIsConversation">
-            
-                <li class="">
-                    <a style="padding-left:90px;" class="" href="../../conversation/find/" id="Find">Find </a>
-                </li>
-            
-                <li class="">
-                    <a style="padding-left:90px;" class="" href="../../conversation/findone/" id="FindOne">FindOne </a>
-                </li>
-            
-                <li class="">
-                    <a style="padding-left:90px;" class="" href="../../conversation/findbyid/" id="FindById">FindById </a>
-                </li>
-            
-                <li class="">
-                    <a style="padding-left:90px;" class="" href="../../conversation/update/" id="Update">Update </a>
-                </li>
-            
-                <li class="">
-                    <a style="padding-left:90px;" class="" href="../../conversation/update_status/" id="Update Status">Update Status </a>
-                </li>
-            
-                <li class="">
-                    <a style="padding-left:90px;" class="" href="../../conversation/update_assignee/" id="Update Assignee">Update Assignee </a>
-                </li>
-            
-                <li class="">
-                    <a style="padding-left:90px;" class="" href="../../conversation/update_label/" id="Update Label">Update Label </a>
-                </li>
-            
-                <li class="">
-                    <a style="padding-left:90px;" class="" href="../../conversation/note_add/" id="Add Notes">Add Notes </a>
-                </li>
-            
-                <li class="">
-                    <a style="padding-left:90px;" class="" href="../../conversation/note_delete/" id="Delete Note">Delete Note </a>
-                </li>
-            
-                <li class="">
-                    <a style="padding-left:90px;" class="" href="../../conversation/delete/" id="Delete">Delete </a>
-                </li>
-            
-                <li class="">
-                    <a style="padding-left:90px;" class="" href="../../conversation/create/" id="Create">Create </a>
-                </li>
-            
-            </div>
-        
-            <li class="">
-                <a style="padding-left:70px;" class=""  id="Customer" onclick="showChildren('APIsCustomer')">Customer  <i class="fa fa-arrow-circle-down" style="padding-left:5px;font-size:13px;"></i></a>
-            </li>
-            
-            <div style="display:none" id="hidden_APIsCustomer">
-            
-                <li class="">
-                    <a style="padding-left:90px;" class="" href="../../customer/find/" id="Find">Find </a>
-                </li>
-            
-                <li class="">
-                    <a style="padding-left:90px;" class="" href="../../customer/findone/" id="FindOne">FindOne </a>
-                </li>
-            
-                <li class="">
-                    <a style="padding-left:90px;" class="" href="../../customer/findbyid/" id="FindById">FindById </a>
-                </li>
-            
-                <li class="">
-                    <a style="padding-left:90px;" class="" href="../../customer/delete/" id="Delete">Delete </a>
-                </li>
-            
-                <li class="">
-                    <a style="padding-left:90px;" class="" href="../../customer/update/" id="Update">Update </a>
-                </li>
-            
-                <li class="">
-                    <a style="padding-left:90px;" class="" href="../../customer/create/" id="Create">Create </a>
-                </li>
-            
-            </div>
-        
-            <li class="">
-                <a style="padding-left:70px;" class=""  id="Mailbox" onclick="showChildren('APIsMailbox')">Mailbox  <i class="fa fa-arrow-circle-down" style="padding-left:5px;font-size:13px;"></i></a>
-            </li>
-            
-            <div style="display:none" id="hidden_APIsMailbox">
-            
-                <li class="">
-                    <a style="padding-left:90px;" class="" href="../../mailbox/find/" id="Find">Find </a>
-                </li>
-            
-                <li class="">
-                    <a style="padding-left:90px;" class="" href="../../mailbox/findone/" id="FindOne">FindOne </a>
-                </li>
-            
-                <li class="">
-                    <a style="padding-left:90px;" class="" href="../../mailbox/findbyid/" id="FindById">FindById </a>
-                </li>
-            
-                <li class="">
-                    <a style="padding-left:90px;" class="" href="../../mailbox/create/" id="Create">Create </a>
-                </li>
-            
-            </div>
-        
-            <li class="">
-                <a style="padding-left:70px;" class=""  id="Label" onclick="showChildren('APIsLabel')">Label  <i class="fa fa-arrow-circle-down" style="padding-left:5px;font-size:13px;"></i></a>
-            </li>
-            
-            <div style="display:none" id="hidden_APIsLabel">
-            
-                <li class="">
-                    <a style="padding-left:90px;" class="" href="../../label/find/" id="Find">Find </a>
-                </li>
-            
-                <li class="">
-                    <a style="padding-left:90px;" class="" href="../../label/findone/" id="FindOne">FindOne </a>
-                </li>
-            
-                <li class="">
-                    <a style="padding-left:90px;" class="" href="../../label/findbyid/" id="FindById">FindById </a>
-                </li>
-            
-            </div>
-        
-            <li class="current">
-                <a style="padding-left:70px;" class="current"  id="User" onclick="showChildren('APIsUser')">User  <i class="fa fa-arrow-circle-down" style="padding-left:5px;font-size:13px;"></i></a>
-            </li>
-            
-            <div style="display:none" id="hidden_APIsUser">
-            
-                <li class="">
-                    <a style="padding-left:90px;" class="" href="../find/" id="Find">Find </a>
-                </li>
-            
-                <li class="">
-                    <a style="padding-left:90px;" class="" href="../findone/" id="FindOne">FindOne </a>
-                </li>
-            
-                <li class="">
-                    <a style="padding-left:90px;" class="" href="../findbyid/" id="FindById">FindById </a>
-                </li>
-            
-                <li class="current">
-                    <a style="padding-left:90px;" class="current" href="./" id="Delete">Delete </a>
-                </li>
-            
-                <li class="">
-                    <a style="padding-left:90px;" class="" href="../update/" id="Update">Update </a>
-                </li>
-            
-                <li class="">
-                    <a style="padding-left:90px;" class="" href="../create/" id="Create">Create </a>
-                </li>
-            
-                <li class="">
-                    <a style="padding-left:90px;" class="" href="../activate/" id="Activate">Activate </a>
-                </li>
-            
-                <li class="">
-                    <a style="padding-left:90px;" class="" href="../deactivate/" id="Deactivate">Deactivate </a>
-                </li>
-            
-            </div>
-        
-            <li class="">
-                <a style="padding-left:70px;" class="" href="../../search/" id="Search">Search </a>
-            </li>
-            
-            <div style="display:none" id="hidden_APIsSearch">
-            
-            </div>
-        
-        </div>
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-        <li class="">
-            <a style="padding-left:50px;" class=""  id="Data Models" onclick="showChildren('Data Models')">Data Models  <i class="fa fa-arrow-circle-down" style="padding-left:5px;font-size:13px;"></i></a>
-        </li>
-        
-        <div style="display:none" id="hidden_Data Models">
-        
-            <li class="">
-                <a style="padding-left:70px;" class="" href="../../models/conversation/" id="Conversations">Conversations </a>
-            </li>
-            
-            <div style="display:none" id="hidden_Data ModelsConversations">
-            
-            </div>
-        
-            <li class="">
-                <a style="padding-left:70px;" class="" href="../../models/customer/" id="Customer">Customer </a>
-            </li>
-            
-            <div style="display:none" id="hidden_Data ModelsCustomer">
-            
-            </div>
-        
-            <li class="">
-                <a style="padding-left:70px;" class="" href="../../models/mailbox/" id="Mailbox">Mailbox </a>
-            </li>
-            
-            <div style="display:none" id="hidden_Data ModelsMailbox">
-            
-            </div>
-        
-            <li class="">
-                <a style="padding-left:70px;" class="" href="../../models/label/" id="Label">Label </a>
-            </li>
-            
-            <div style="display:none" id="hidden_Data ModelsLabel">
-            
-            </div>
-        
-            <li class="">
-                <a style="padding-left:70px;" class="" href="../../models/user/" id="User">User </a>
-            </li>
-            
-            <div style="display:none" id="hidden_Data ModelsUser">
-            
-            </div>
-        
-        </div>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
     
-    <li class="paddingtop20"></li>
-</ul>
-<li>
+    <label class="md-nav__link" for="nav-2">
+      Developer API
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Developer API
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
           
-            <li><ul class="subnav">
-    <li class="">
-        <a class="" href="../../../about/" id="About Helpmonks" style="font-size:95%;font-weight:bold;">About Helpmonks</a>
-    </li>
-    
-    <li class="paddingtop20"></li>
-</ul>
-<li>
           
-        </ul>
-      </div>
-      &nbsp;
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-1" type="checkbox" id="nav-2-1">
+    
+    <label class="md-nav__link" for="nav-2-1">
+      Getting Started
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-1">
+        Getting Started
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../overview/" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../authentication/" title="Authentication" class="md-nav__link">
+      Authentication
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../syntax/" title="Query Syntax" class="md-nav__link">
+      Query Syntax
+    </a>
+  </li>
+
+        
+      </ul>
     </nav>
+  </li>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+        
+          
+          
+          
 
-      
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../../..">Helpmonks Developer Guides</a>
-      </nav>
+  
 
-      
-      <div class="wy-nav-content">
-        <div class="rst-content">
-          <div role="navigation" aria-label="breadcrumbs navigation">
-  <ul class="wy-breadcrumbs">
-    <li><a href="../../..">Docs</a> &raquo;</li>
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-2" type="checkbox" id="nav-2-2" checked>
+    
+    <label class="md-nav__link" for="nav-2-2">
+      APIs
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-2">
+        APIs
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-2-1" type="checkbox" id="nav-2-2-1">
+    
+    <label class="md-nav__link" for="nav-2-2-1">
+      Conversation
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-2-2-1">
+        Conversation
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../conversation/find/" title="Find" class="md-nav__link">
+      Find
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../conversation/findone/" title="FindOne" class="md-nav__link">
+      FindOne
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../conversation/findbyid/" title="FindById" class="md-nav__link">
+      FindById
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../conversation/update/" title="Update" class="md-nav__link">
+      Update
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../conversation/update_status/" title="Update Status" class="md-nav__link">
+      Update Status
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../conversation/update_assignee/" title="Update Assignee" class="md-nav__link">
+      Update Assignee
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../conversation/update_label/" title="Update Label" class="md-nav__link">
+      Update Label
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../conversation/note_add/" title="Add Notes" class="md-nav__link">
+      Add Notes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../conversation/note_delete/" title="Delete Note" class="md-nav__link">
+      Delete Note
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../conversation/delete/" title="Delete" class="md-nav__link">
+      Delete
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../conversation/create/" title="Create" class="md-nav__link">
+      Create
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-2-2" type="checkbox" id="nav-2-2-2">
+    
+    <label class="md-nav__link" for="nav-2-2-2">
+      Customer
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-2-2-2">
+        Customer
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../customer/find/" title="Find" class="md-nav__link">
+      Find
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../customer/findone/" title="FindOne" class="md-nav__link">
+      FindOne
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../customer/findbyid/" title="FindById" class="md-nav__link">
+      FindById
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../customer/delete/" title="Delete" class="md-nav__link">
+      Delete
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../customer/update/" title="Update" class="md-nav__link">
+      Update
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../customer/create/" title="Create" class="md-nav__link">
+      Create
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-2-3" type="checkbox" id="nav-2-2-3">
+    
+    <label class="md-nav__link" for="nav-2-2-3">
+      Mailbox
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-2-2-3">
+        Mailbox
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../mailbox/find/" title="Find" class="md-nav__link">
+      Find
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../mailbox/findone/" title="FindOne" class="md-nav__link">
+      FindOne
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../mailbox/findbyid/" title="FindById" class="md-nav__link">
+      FindById
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../mailbox/create/" title="Create" class="md-nav__link">
+      Create
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-2-4" type="checkbox" id="nav-2-2-4">
+    
+    <label class="md-nav__link" for="nav-2-2-4">
+      Label
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-2-2-4">
+        Label
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../label/find/" title="Find" class="md-nav__link">
+      Find
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../label/findone/" title="FindOne" class="md-nav__link">
+      FindOne
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../label/findbyid/" title="FindById" class="md-nav__link">
+      FindById
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-2-5" type="checkbox" id="nav-2-2-5" checked>
+    
+    <label class="md-nav__link" for="nav-2-2-5">
+      User
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-2-2-5">
+        User
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../find/" title="Find" class="md-nav__link">
+      Find
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../findone/" title="FindOne" class="md-nav__link">
+      FindOne
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../findbyid/" title="FindById" class="md-nav__link">
+      FindById
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
     
       
-        
-          <li>APIs &raquo;</li>
-        
-      
-        
-          <li>User &raquo;</li>
-        
-      
     
-    <li>Delete</li>
-    <li class="wy-breadcrumbs-aside">
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Delete
+      </label>
+    
+    <a href="./" title="Delete" class="md-nav__link md-nav__link--active">
+      Delete
+    </a>
+    
       
-    </li>
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#protocol" title="Protocol" class="md-nav__link">
+    Protocol
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#url" title="URL" class="md-nav__link">
+    URL
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parameters" title="Parameters" class="md-nav__link">
+    Parameters
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example" title="Example" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#returned-data" title="Returned data" class="md-nav__link">
+    Returned data
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../update/" title="Update" class="md-nav__link">
+      Update
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../create/" title="Create" class="md-nav__link">
+      Create
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../activate/" title="Activate" class="md-nav__link">
+      Activate
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../deactivate/" title="Deactivate" class="md-nav__link">
+      Deactivate
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../search/" title="Search" class="md-nav__link">
+      Search
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-3" type="checkbox" id="nav-2-3">
+    
+    <label class="md-nav__link" for="nav-2-3">
+      Data Models
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-3">
+        Data Models
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../models/conversation/" title="Conversations" class="md-nav__link">
+      Conversations
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../models/customer/" title="Customer" class="md-nav__link">
+      Customer
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../models/mailbox/" title="Mailbox" class="md-nav__link">
+      Mailbox
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../models/label/" title="Label" class="md-nav__link">
+      Label
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../models/user/" title="User" class="md-nav__link">
+      User
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../about/" title="About Helpmonks" class="md-nav__link">
+      About Helpmonks
+    </a>
+  </li>
+
+    
   </ul>
-  <hr/>
-</div>
-          <div role="main">
-            <div class="section">
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#protocol" title="Protocol" class="md-nav__link">
+    Protocol
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#url" title="URL" class="md-nav__link">
+    URL
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parameters" title="Parameters" class="md-nav__link">
+    Parameters
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example" title="Example" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#returned-data" title="Returned data" class="md-nav__link">
+    Returned data
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
               
+                
+                
                 <h1 id="user-delete">User Delete</h1>
 <h3 id="protocol">Protocol</h3>
 <p>GET</p>
@@ -416,62 +1103,86 @@
 
 <h3 id="returned-data">Returned data</h3>
 <p><em>Please refer to the <strong><a href="../../../api/models/user/">User Data Model</a></strong> to see the data structure being returned</em></p>
+                
+                  
+                
               
-            </div>
+              
+                
+              
+            </article>
           </div>
-          <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        </div>
+      </main>
       
-        <a href="../update/" class="btn btn-neutral float-right" title="Update">Next <span class="icon icon-circle-arrow-right"></span></a>
-      
-      
-        <a href="../findbyid/" class="btn btn-neutral" title="FindById"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-      
-    </div>
-  
-
-  <hr/>
-
-  <div role="contentinfo">
-    <!-- Copyright etc -->
+  <footer class="md-footer">
+    
+      <div class="md-footer-nav">
+        <nav class="md-footer-nav__inner md-grid">
+          
+            <a href="../findbyid/" title="FindById" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+              <div class="md-flex__cell md-flex__cell--shrink">
+                <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+              </div>
+              <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+                <span class="md-flex__ellipsis">
+                  <span class="md-footer-nav__direction">
+                    Previous
+                  </span>
+                  FindById
+                </span>
+              </div>
+            </a>
+          
+          
+            <a href="../update/" title="Update" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+              <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+                <span class="md-flex__ellipsis">
+                  <span class="md-footer-nav__direction">
+                    Next
+                  </span>
+                  Update
+                </span>
+              </div>
+              <div class="md-flex__cell md-flex__cell--shrink">
+                <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+              </div>
+            </a>
+          
+        </nav>
+      </div>
+    
+    <div class="md-footer-meta md-typeset">
+      <div class="md-footer-meta__inner md-grid">
+        <div class="md-footer-copyright" style="padding: 2rem 0;">
+          <a href="https://helpmonks.com/">Helpmonks - the email collaboration platform - hosted, cloud and on-premise</a>
+        </div>
+        
+          
+  <div class="md-footer-social">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+      <a href="https://twitter.com/helpmonks" class="md-footer-social__link fa fa-twitter"></a>
+    
+      <a href="https://facebook.com/helpmonks" class="md-footer-social__link fa fa-facebook"></a>
     
   </div>
 
-  
-</footer>
-	  
-        </div>
+        
       </div>
+    </div>
+  </footer>
 
-    </section>
-
-  </div>
-
-<!-- <div class="rst-versions" role="note" style="cursor: pointer">
-    <span class="rst-current-version" data-toggle="rst-current-version">
+    </div>
+    
+      <script src="../../../assets/javascripts/application.cae2244d.js"></script>
       
+      <script>app.initialize({version:"0.17.2",url:{base:"../../.."}})</script>
       
-        <span><a href="../findbyid/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+    
+    
       
-      
-        <span style="margin-left: 15px"><a href="../update/" style="color: #fcfcfc">Next &raquo;</a></span>
-      
-    </span>
-</div> -->
-
-<script type="text/javascript">
-  // If cookie is defined toggle the id
-  if (typeof $.cookie('docToggle') !== 'undefined') {
-      // Parse cookie which is an array
-      var _parsed_cookie = JSON.parse($.cookie('docToggle'));
-      // Loop over array and show hidden divs
-      $.each(_parsed_cookie, function(index, value) {
-          // Toggle
-          $("[id='hidden_" + value + "']").css('display','');
-      })
-  }
-</script>
-
-</body>
+    
+  </body>
 </html>

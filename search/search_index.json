@@ -1,0 +1,1364 @@
+{
+    "docs": [
+        {
+            "location": "/", 
+            "text": "Welcome to the Helpmonks Developer pages\n\n\nOn the following pages you will find the \nHelpmonks API documentation\n which allows you to create and manipulate your conversation, users and more with POST or GET requests.\n\n\nIn the future this documentation will also hold other developer related documentation.\n\n\nHelp\n\n\nIf you have any questions, please post a message to our \nHelpmonks Developer forum\n.", 
+            "title": "Home"
+        }, 
+        {
+            "location": "/#welcome-to-the-helpmonks-developer-pages", 
+            "text": "On the following pages you will find the  Helpmonks API documentation  which allows you to create and manipulate your conversation, users and more with POST or GET requests.  In the future this documentation will also hold other developer related documentation.", 
+            "title": "Welcome to the Helpmonks Developer pages"
+        }, 
+        {
+            "location": "/#help", 
+            "text": "If you have any questions, please post a message to our  Helpmonks Developer forum .", 
+            "title": "Help"
+        }, 
+        {
+            "location": "/api/overview/", 
+            "text": "Helpmonks API Overview\n\n\nThe Helpmonks API allows you to interact with your data stored in Helpmonks. You can, among many other methods, create a new conversation, update a conversation, create a customer record, create notes, interact with labels and search.\n\n\nAPI URL\n\n\nAPI requests should be done towards https://(yoursubdomain).helpmonks.com/(apimethod). Please refer to the API documentation for the correct URL.\n\n\nAPI Key\n\n\nPlease see \nAuthentication\n to learn how to create your API key and authenticate towards the Helpmonks API.\n\n\nData structure\n\n\nAll API methods are issues with a POST or a GET request. POST API methods expect a JSON structure in the body. Please see each individidual documentation to learn about the available parameters.\n\n\nAll API methods return a JSON data object in the format:\n\n\n{\n    \nsuccess\n : true / false,\n    \nerror\n : error object (only shown if success is false),\n    \nresults\n : result object or string\n}\n\n\n\n\nPlease see each individidual documentation to learn about the data in the results.\n\n\nExample for CURL\n\n\nGiven the above, you would use the following with CURL to send API requests to the Helpmonks API:\n\n\ncurl -X \nPOST\n \nhttps://domain.helpmonks.com/api/v1/conversation/create\n \\\n-H \nAuthorization: Basic Njc3ZjFiZWQ5MTUwNGQzNWE5YTQ1MjkxmU3OGFkYjE6KioqKiogSGlkZGVuIGNyWRlbnRpYWICoqKioq\n \\\n-H \nContent-Type: application/json; charset=utf-8\n \\\n-d \n{JSON BODY}\n\n\n\n\n\nHelp\n\n\nIf you have any questions, please post a message to our \nHelpmonks Developer forum\n.", 
+            "title": "Overview"
+        }, 
+        {
+            "location": "/api/overview/#helpmonks-api-overview", 
+            "text": "The Helpmonks API allows you to interact with your data stored in Helpmonks. You can, among many other methods, create a new conversation, update a conversation, create a customer record, create notes, interact with labels and search.", 
+            "title": "Helpmonks API Overview"
+        }, 
+        {
+            "location": "/api/overview/#api-url", 
+            "text": "API requests should be done towards https://(yoursubdomain).helpmonks.com/(apimethod). Please refer to the API documentation for the correct URL.", 
+            "title": "API URL"
+        }, 
+        {
+            "location": "/api/overview/#api-key", 
+            "text": "Please see  Authentication  to learn how to create your API key and authenticate towards the Helpmonks API.", 
+            "title": "API Key"
+        }, 
+        {
+            "location": "/api/overview/#data-structure", 
+            "text": "All API methods are issues with a POST or a GET request. POST API methods expect a JSON structure in the body. Please see each individidual documentation to learn about the available parameters.  All API methods return a JSON data object in the format:  {\n     success  : true / false,\n     error  : error object (only shown if success is false),\n     results  : result object or string\n}  Please see each individidual documentation to learn about the data in the results.", 
+            "title": "Data structure"
+        }, 
+        {
+            "location": "/api/overview/#example-for-curl", 
+            "text": "Given the above, you would use the following with CURL to send API requests to the Helpmonks API:  curl -X  POST   https://domain.helpmonks.com/api/v1/conversation/create  \\\n-H  Authorization: Basic Njc3ZjFiZWQ5MTUwNGQzNWE5YTQ1MjkxmU3OGFkYjE6KioqKiogSGlkZGVuIGNyWRlbnRpYWICoqKioq  \\\n-H  Content-Type: application/json; charset=utf-8  \\\n-d  {JSON BODY}", 
+            "title": "Example for CURL"
+        }, 
+        {
+            "location": "/api/overview/#help", 
+            "text": "If you have any questions, please post a message to our  Helpmonks Developer forum .", 
+            "title": "Help"
+        }, 
+        {
+            "location": "/api/authentication/", 
+            "text": "Authentication\n\n\nAll API requests have to contain an authentication header with the API key of a user. This is a standard \nBasic Authentication header\n and should be in the following format:\n\n\nauthentication: {\n    username : \nb4dc4a8c0a9543af8342b6c68b1af918\n \n-- your API key,\n    password : \np\n \n-- any string\n}\n\n\n\n\nAs authentication is done with the API key, but the Basic Authentication protocol requires a password, you can use any string value as a password.\n\n\nPlease see the documentation of your preferred language how to create and pass along the authentication header.\n\n\nObtaining your API key\n\n\nYou can generate one or more API keys in your profile within the Helpmonks application.\n\n\n\n\nPlease make sure to keep your API key a secret. A good practice is to renew your API key every 6 months.\n\n\nPermissions\n\n\nYour permissions within Helpmonks will also apply to the API, i.e. if you use the API key of a user who is an Administrator you will also have Administrator access with the API. On the other hand, a user with \nuser\n permissions will not be able to conduct certain actions withs the API. These API requests will receive a validation error message in the returning data structure.", 
+            "title": "Authentication"
+        }, 
+        {
+            "location": "/api/authentication/#authentication", 
+            "text": "All API requests have to contain an authentication header with the API key of a user. This is a standard  Basic Authentication header  and should be in the following format:  authentication: {\n    username :  b4dc4a8c0a9543af8342b6c68b1af918   -- your API key,\n    password :  p   -- any string\n}  As authentication is done with the API key, but the Basic Authentication protocol requires a password, you can use any string value as a password.  Please see the documentation of your preferred language how to create and pass along the authentication header.", 
+            "title": "Authentication"
+        }, 
+        {
+            "location": "/api/authentication/#obtaining-your-api-key", 
+            "text": "You can generate one or more API keys in your profile within the Helpmonks application.   Please make sure to keep your API key a secret. A good practice is to renew your API key every 6 months.", 
+            "title": "Obtaining your API key"
+        }, 
+        {
+            "location": "/api/authentication/#permissions", 
+            "text": "Your permissions within Helpmonks will also apply to the API, i.e. if you use the API key of a user who is an Administrator you will also have Administrator access with the API. On the other hand, a user with  user  permissions will not be able to conduct certain actions withs the API. These API requests will receive a validation error message in the returning data structure.", 
+            "title": "Permissions"
+        }, 
+        {
+            "location": "/api/syntax/", 
+            "text": "Query Syntax for the Helpmonks API\n\n\nHelpmonks utilizes the MongoDB database together with the Mongoose ORM framework. Thus, the Helpmonks API exposes the Mongoose query syntax directly. For you this means that you have the full query syntax to your disposel with the Helpmonks API.\n\n\nIf you are not familiar with the MongoDB query syntax we recommend a quick read of the \ncomparison between SQL queries and MongoDB queries\n.\n\n\nAs the query syntax is written in a JSON notation, it should already be familiar to a lot of developers and easy to learn.\n\n\nFind, FindOne and FindById\n\n\nEvery API section (Conversation, User, etc.) will contain at least a \nfind\n method. \nFind\n is the most versatile query syntax. \nFind\n accepts the following three parameters:\n\n\n\n    \n\n        \nName\n\n        \nValue\n\n        \nRequired\n\n    \n\n    \n\n        \nquery\n\n        \nAvailable column in object\n\n        \nYes\n\n    \n\n    \n\n        \nfields\n\n        \nAvailable column name\n\n        \nNo\n\n    \n\n    \n\n        \noptions\n\n        \nAvailable options like sort, slice, etc.\n\n        \nNo\n\n    \n\n\n\n\n\nquery\n\n\nIn the query object you define the columns you want to query against, i.e. they are similar to the SQL WHERE columns. Say, you want to query a users firstname and email address:\n\n\n{\n    query : { 'first_name' : 'Nitai', 'email' : 'nitai@helpmonks.com' }\n}\n\n\n\n\nThe above assumes that the data model for the collection has columns of \nfirst_name\n and \nemail\n\n\nfields\n\n\nThe \nfield\n value allows you to define the columns you want to have returned. \nNote: Each data model defines default fields to be returned and usually you don\nt need to explisitely define this\n \n\n\n{\n    fields : { 'first_name email' }\n}\n\n\n\n\nPlease note that you separate the column names with a space!\n\n\noptions\n\n\nThe \noptions\n allow you to further tailor your query. You use \noptions\n to filter, sort, etc. the query.\n\n\n{\n    options : { sort : { first_name: 'asc' } }\n}\n\n\n\n\nsort by \nfirst_name\n ascending\n\n\nExample Find Query Syntax\n\n\nGiven the above example, we would query a user in the Helpmonks API with the following POST request:\n\n\n{\n    query : { 'first_name' : 'Nitai', 'email' : 'nitai@helpmonks.com' },\n    fields : { 'first_name email' },\n    options : { sort : { first_name: 'asc' } }\n}\n\n\n\n\nOn the other hand, if you want to return all users you would do this:\n\n\n{\n    query: {}\n}\n\n\n\n\nAs the \nfields\n and \noptions\n parameters are optional the above would return all user records with the default fields and ordered as they are stored in the MongoDB database.\n\n\nFindOne\n\n\nAs the method name implicates, the \nfindOne\n methods will return only one record but utilizes the same syntax and the above \nfind\n. The difference is that when the \nfindOne\n executes, the first found document is returned!\n\n\nYou should use the \nfindOne\n whenever you are sure that only one record exists or are looking for an explisit user record. As a fact, the above find query is much faster with the \nfindOne\n method.\n\n\nIf you know the ID of a record, always use the \nfindById\n methods!\n\n\nFindByID\n\n\nAll API methods will return the found objects, each containing a unique ID (usually named \n_id\n). Hence, if you know the ID of a record it is recommend to always use the \nfindOne\n methods to query against the database. \n\n\nAs MongoDB indexes the ID of each record this query is also the most performant one and should be used whenever possible.", 
+            "title": "Query Syntax"
+        }, 
+        {
+            "location": "/api/syntax/#query-syntax-for-the-helpmonks-api", 
+            "text": "Helpmonks utilizes the MongoDB database together with the Mongoose ORM framework. Thus, the Helpmonks API exposes the Mongoose query syntax directly. For you this means that you have the full query syntax to your disposel with the Helpmonks API.  If you are not familiar with the MongoDB query syntax we recommend a quick read of the  comparison between SQL queries and MongoDB queries .  As the query syntax is written in a JSON notation, it should already be familiar to a lot of developers and easy to learn.", 
+            "title": "Query Syntax for the Helpmonks API"
+        }, 
+        {
+            "location": "/api/syntax/#find-findone-and-findbyid", 
+            "text": "Every API section (Conversation, User, etc.) will contain at least a  find  method.  Find  is the most versatile query syntax.  Find  accepts the following three parameters:  \n     \n         Name \n         Value \n         Required \n     \n     \n         query \n         Available column in object \n         Yes \n     \n     \n         fields \n         Available column name \n         No \n     \n     \n         options \n         Available options like sort, slice, etc. \n         No", 
+            "title": "Find, FindOne and FindById"
+        }, 
+        {
+            "location": "/api/syntax/#query", 
+            "text": "In the query object you define the columns you want to query against, i.e. they are similar to the SQL WHERE columns. Say, you want to query a users firstname and email address:  {\n    query : { 'first_name' : 'Nitai', 'email' : 'nitai@helpmonks.com' }\n}  The above assumes that the data model for the collection has columns of  first_name  and  email", 
+            "title": "query"
+        }, 
+        {
+            "location": "/api/syntax/#fields", 
+            "text": "The  field  value allows you to define the columns you want to have returned.  Note: Each data model defines default fields to be returned and usually you don t need to explisitely define this    {\n    fields : { 'first_name email' }\n}  Please note that you separate the column names with a space!", 
+            "title": "fields"
+        }, 
+        {
+            "location": "/api/syntax/#options", 
+            "text": "The  options  allow you to further tailor your query. You use  options  to filter, sort, etc. the query.  {\n    options : { sort : { first_name: 'asc' } }\n}  sort by  first_name  ascending", 
+            "title": "options"
+        }, 
+        {
+            "location": "/api/syntax/#example-find-query-syntax", 
+            "text": "Given the above example, we would query a user in the Helpmonks API with the following POST request:  {\n    query : { 'first_name' : 'Nitai', 'email' : 'nitai@helpmonks.com' },\n    fields : { 'first_name email' },\n    options : { sort : { first_name: 'asc' } }\n}  On the other hand, if you want to return all users you would do this:  {\n    query: {}\n}  As the  fields  and  options  parameters are optional the above would return all user records with the default fields and ordered as they are stored in the MongoDB database.", 
+            "title": "Example Find Query Syntax"
+        }, 
+        {
+            "location": "/api/syntax/#findone", 
+            "text": "As the method name implicates, the  findOne  methods will return only one record but utilizes the same syntax and the above  find . The difference is that when the  findOne  executes, the first found document is returned!  You should use the  findOne  whenever you are sure that only one record exists or are looking for an explisit user record. As a fact, the above find query is much faster with the  findOne  method.  If you know the ID of a record, always use the  findById  methods!", 
+            "title": "FindOne"
+        }, 
+        {
+            "location": "/api/syntax/#findbyid", 
+            "text": "All API methods will return the found objects, each containing a unique ID (usually named  _id ). Hence, if you know the ID of a record it is recommend to always use the  findOne  methods to query against the database.   As MongoDB indexes the ID of each record this query is also the most performant one and should be used whenever possible.", 
+            "title": "FindByID"
+        }, 
+        {
+            "location": "/api/conversation/find/", 
+            "text": "Conversation Find\n\n\nProtocol\n\n\nPOST\n\n\nURL\n\n\nhttps://(subdomain).helpmonks.com/api/v1/conversation/find\n\n\nParameters\n\n\n\n    \n\n        \nName\n\n        \nRequired\n\n        \nValue\n\n        \nComment\n\n    \n\n    \n\n        \nquery\n\n        \nYes\n\n        \nAvailable column in object\n\n        \n\n    \n\n    \n\n        \nfields\n\n        \nNo\n\n        \nAvailable column name\n\n        \n\n    \n\n    \n\n        \noptions\n\n        \nNo\n\n        \nAvailable options like sort, slice, etc.\n\n        \n\n    \n\n\n\n\nThe available fields are documented in the \nConversation Data Model\n. Refer to the \nQuery syntax documentation\n on how to query against your records\n\n\nExample\n\n\n{\n    query : { status : 'closed' },\n    fields : {},\n    options : { sort : { last_conversation_date: 'asc' } }\n}\n\n\n\n\nReturned data\n\n\nPlease refer to the \nConversation Data Model\n to see the data structure being returned", 
+            "title": "Find"
+        }, 
+        {
+            "location": "/api/conversation/find/#conversation-find", 
+            "text": "", 
+            "title": "Conversation Find"
+        }, 
+        {
+            "location": "/api/conversation/find/#protocol", 
+            "text": "POST", 
+            "title": "Protocol"
+        }, 
+        {
+            "location": "/api/conversation/find/#url", 
+            "text": "https://(subdomain).helpmonks.com/api/v1/conversation/find", 
+            "title": "URL"
+        }, 
+        {
+            "location": "/api/conversation/find/#parameters", 
+            "text": "Name \n         Required \n         Value \n         Comment \n     \n     \n         query \n         Yes \n         Available column in object \n         \n     \n     \n         fields \n         No \n         Available column name \n         \n     \n     \n         options \n         No \n         Available options like sort, slice, etc. \n         \n       The available fields are documented in the  Conversation Data Model . Refer to the  Query syntax documentation  on how to query against your records", 
+            "title": "Parameters"
+        }, 
+        {
+            "location": "/api/conversation/find/#example", 
+            "text": "{\n    query : { status : 'closed' },\n    fields : {},\n    options : { sort : { last_conversation_date: 'asc' } }\n}", 
+            "title": "Example"
+        }, 
+        {
+            "location": "/api/conversation/find/#returned-data", 
+            "text": "Please refer to the  Conversation Data Model  to see the data structure being returned", 
+            "title": "Returned data"
+        }, 
+        {
+            "location": "/api/conversation/findone/", 
+            "text": "Conversation FindOne\n\n\nProtocol\n\n\nPOST\n\n\nURL\n\n\nhttps://(subdomain).helpmonks.com/api/v1/conversation/findone\n\n\nParameters\n\n\n\n    \n\n        \nName\n\n        \nRequired\n\n        \nValue\n\n        \nComment\n\n    \n\n    \n\n        \nquery\n\n        \nYes\n\n        \nAvailable column in object\n\n        \n\n    \n\n    \n\n        \nfields\n\n        \nNo\n\n        \nAvailable column name\n\n        \n\n    \n\n    \n\n        \noptions\n\n        \nNo\n\n        \nAvailable options like sort, slice, etc.\n\n        \n\n    \n\n\n\n\nThe available fields are documented in the \nConversation Data Model\n. Refer to the \nQuery syntax documentation\n on how to query against your records\n\n\nExample\n\n\n{\n    query : { status : 'closed' },\n    fields : {},\n    options : { sort : { last_conversation_date: 'asc' } }\n}\n\n\n\n\nReturned data\n\n\nPlease refer to the \nConversation Data Model\n to see the data structure being returned", 
+            "title": "FindOne"
+        }, 
+        {
+            "location": "/api/conversation/findone/#conversation-findone", 
+            "text": "", 
+            "title": "Conversation FindOne"
+        }, 
+        {
+            "location": "/api/conversation/findone/#protocol", 
+            "text": "POST", 
+            "title": "Protocol"
+        }, 
+        {
+            "location": "/api/conversation/findone/#url", 
+            "text": "https://(subdomain).helpmonks.com/api/v1/conversation/findone", 
+            "title": "URL"
+        }, 
+        {
+            "location": "/api/conversation/findone/#parameters", 
+            "text": "Name \n         Required \n         Value \n         Comment \n     \n     \n         query \n         Yes \n         Available column in object \n         \n     \n     \n         fields \n         No \n         Available column name \n         \n     \n     \n         options \n         No \n         Available options like sort, slice, etc. \n         \n       The available fields are documented in the  Conversation Data Model . Refer to the  Query syntax documentation  on how to query against your records", 
+            "title": "Parameters"
+        }, 
+        {
+            "location": "/api/conversation/findone/#example", 
+            "text": "{\n    query : { status : 'closed' },\n    fields : {},\n    options : { sort : { last_conversation_date: 'asc' } }\n}", 
+            "title": "Example"
+        }, 
+        {
+            "location": "/api/conversation/findone/#returned-data", 
+            "text": "Please refer to the  Conversation Data Model  to see the data structure being returned", 
+            "title": "Returned data"
+        }, 
+        {
+            "location": "/api/conversation/findbyid/", 
+            "text": "Conversation FindById\n\n\nProtocol\n\n\nGET\n\n\nURL\n\n\nhttps://(subdomain).helpmonks.com/api/v1/conversation/findbyid/(id)\n\n\nParameters\n\n\n\n    \n\n        \nName\n\n        \nRequired\n\n        \nValue\n\n        \nComment\n\n    \n\n    \n\n        \nID\n\n        \nYes\n\n        \nObjectId\n\n        \n\n    \n\n\n\n\nThe available fields are documented in the \nConversation Data Model\n. Refer to the \nQuery syntax documentation\n on how to query against your records\n\n\nExample\n\n\nhttps://(subdomain).helpmonks.com/api/v1/conversation/findbyid/54708b4cd71ef2dbdb557b9d\n\n\n\n\nReturned data\n\n\nPlease refer to the \nConversation Data Model\n to see the data structure being returned", 
+            "title": "FindById"
+        }, 
+        {
+            "location": "/api/conversation/findbyid/#conversation-findbyid", 
+            "text": "", 
+            "title": "Conversation FindById"
+        }, 
+        {
+            "location": "/api/conversation/findbyid/#protocol", 
+            "text": "GET", 
+            "title": "Protocol"
+        }, 
+        {
+            "location": "/api/conversation/findbyid/#url", 
+            "text": "https://(subdomain).helpmonks.com/api/v1/conversation/findbyid/(id)", 
+            "title": "URL"
+        }, 
+        {
+            "location": "/api/conversation/findbyid/#parameters", 
+            "text": "Name \n         Required \n         Value \n         Comment \n     \n     \n         ID \n         Yes \n         ObjectId \n         \n       The available fields are documented in the  Conversation Data Model . Refer to the  Query syntax documentation  on how to query against your records", 
+            "title": "Parameters"
+        }, 
+        {
+            "location": "/api/conversation/findbyid/#example", 
+            "text": "https://(subdomain).helpmonks.com/api/v1/conversation/findbyid/54708b4cd71ef2dbdb557b9d", 
+            "title": "Example"
+        }, 
+        {
+            "location": "/api/conversation/findbyid/#returned-data", 
+            "text": "Please refer to the  Conversation Data Model  to see the data structure being returned", 
+            "title": "Returned data"
+        }, 
+        {
+            "location": "/api/conversation/update/", 
+            "text": "Conversation Update\n\n\nProtocol\n\n\nPOST\n\n\nURL\n\n\nhttps://(subdomain).helpmonks.com/api/v1/conversation/update\n\n\nParameters\n\n\n\n    \n\n        \nName\n\n        \nRequired\n\n        \nValue\n\n        \nComment\n\n    \n\n    \n\n        \nid\n\n        \nYes\n\n        \nObjectId of the conversation to update\n\n        \n\n    \n\n\n\n\nThe available fields are documented in the \nConversation Data Model\n. Refer to the \nQuery syntax documentation\n on how to query against your records\n\n\nExample\n\n\n{\n    id : '54708b4cd71ef2dbdb557b9d',\n    (add available fields here to update)\n}\n\n\n\n\nReturned data\n\n\nPlease refer to the \nConversation Data Model\n to see the data structure being returned\n\n\nNote\n\n\nYou can only update existing fields and not create new values, i.e. company user, etc.", 
+            "title": "Update"
+        }, 
+        {
+            "location": "/api/conversation/update/#conversation-update", 
+            "text": "", 
+            "title": "Conversation Update"
+        }, 
+        {
+            "location": "/api/conversation/update/#protocol", 
+            "text": "POST", 
+            "title": "Protocol"
+        }, 
+        {
+            "location": "/api/conversation/update/#url", 
+            "text": "https://(subdomain).helpmonks.com/api/v1/conversation/update", 
+            "title": "URL"
+        }, 
+        {
+            "location": "/api/conversation/update/#parameters", 
+            "text": "Name \n         Required \n         Value \n         Comment \n     \n     \n         id \n         Yes \n         ObjectId of the conversation to update \n         \n       The available fields are documented in the  Conversation Data Model . Refer to the  Query syntax documentation  on how to query against your records", 
+            "title": "Parameters"
+        }, 
+        {
+            "location": "/api/conversation/update/#example", 
+            "text": "{\n    id : '54708b4cd71ef2dbdb557b9d',\n    (add available fields here to update)\n}", 
+            "title": "Example"
+        }, 
+        {
+            "location": "/api/conversation/update/#returned-data", 
+            "text": "Please refer to the  Conversation Data Model  to see the data structure being returned", 
+            "title": "Returned data"
+        }, 
+        {
+            "location": "/api/conversation/update/#note", 
+            "text": "You can only update existing fields and not create new values, i.e. company user, etc.", 
+            "title": "Note"
+        }, 
+        {
+            "location": "/api/conversation/update_status/", 
+            "text": "Conversation Update Status\n\n\nProtocol\n\n\nGET\n\n\nURL\n\n\nhttps://(subdomain).helpmonks.com/api/v1/conversation/status/(id)/(status)\n\n\nParameters\n\n\n\n    \n\n        \nName\n\n        \nRequired\n\n        \nValue\n\n        \nComment\n\n    \n\n    \n\n        \nid\n\n        \nYes\n\n        \nObjectId\n\n        \n\n    \n\n    \n\n        \nstatus\n\n        \nYes\n\n        \nNew status\n\n        \nValid status\ns are \ninbox\n, \nclosed\n, \nspam\n or \narchieved\n\n    \n\n\n\n\nExample\n\n\nhttps://(subdomain).helpmonks.com/api/v1/conversation/status/54708b4cd71ef2dbdb557b9d/closed\n\n\n\n\nReturned data\n\n\nPlease refer to the \nConversation Data Model\n to see the data structure being returned", 
+            "title": "Update Status"
+        }, 
+        {
+            "location": "/api/conversation/update_status/#conversation-update-status", 
+            "text": "", 
+            "title": "Conversation Update Status"
+        }, 
+        {
+            "location": "/api/conversation/update_status/#protocol", 
+            "text": "GET", 
+            "title": "Protocol"
+        }, 
+        {
+            "location": "/api/conversation/update_status/#url", 
+            "text": "https://(subdomain).helpmonks.com/api/v1/conversation/status/(id)/(status)", 
+            "title": "URL"
+        }, 
+        {
+            "location": "/api/conversation/update_status/#parameters", 
+            "text": "Name \n         Required \n         Value \n         Comment \n     \n     \n         id \n         Yes \n         ObjectId \n         \n     \n     \n         status \n         Yes \n         New status \n         Valid status s are  inbox ,  closed ,  spam  or  archieved", 
+            "title": "Parameters"
+        }, 
+        {
+            "location": "/api/conversation/update_status/#example", 
+            "text": "https://(subdomain).helpmonks.com/api/v1/conversation/status/54708b4cd71ef2dbdb557b9d/closed", 
+            "title": "Example"
+        }, 
+        {
+            "location": "/api/conversation/update_status/#returned-data", 
+            "text": "Please refer to the  Conversation Data Model  to see the data structure being returned", 
+            "title": "Returned data"
+        }, 
+        {
+            "location": "/api/conversation/update_assignee/", 
+            "text": "Conversation Update Assignee\n\n\nProtocol\n\n\nPOST\n\n\nURL\n\n\nhttps://(subdomain).helpmonks.com/api/v1/conversation/update/assignee\n\n\nParameters\n\n\n\n    \n\n        \nName\n\n        \nRequired\n\n        \nValue\n\n        \nComment\n\n    \n\n    \n\n        \nid\n\n        \nYes\n\n        \nObjectId of the conversation to update\n\n        \n\n    \n\n    \n\n        \nuser_id\n\n        \nYes\n\n        \nObjectId of the Helpmonks user\n\n        \n\n    \n\n\n\n\nThe available fields are documented in the \nConversation Data Model\n. Refer to the \nQuery syntax documentation\n on how to query against your records\n\n\nExample\n\n\n{ \n    \nid\n : \n569ed97edfeec6ccffb6c2ec\n,\n    \nuser_id\n : \n57c1e0f6c4be9b0a00d6b0cb\n\n}\n\n\n\n\nReturned data\n\n\nPlease refer to the \nConversation Data Model\n to see the data structure being returned", 
+            "title": "Update Assignee"
+        }, 
+        {
+            "location": "/api/conversation/update_assignee/#conversation-update-assignee", 
+            "text": "", 
+            "title": "Conversation Update Assignee"
+        }, 
+        {
+            "location": "/api/conversation/update_assignee/#protocol", 
+            "text": "POST", 
+            "title": "Protocol"
+        }, 
+        {
+            "location": "/api/conversation/update_assignee/#url", 
+            "text": "https://(subdomain).helpmonks.com/api/v1/conversation/update/assignee", 
+            "title": "URL"
+        }, 
+        {
+            "location": "/api/conversation/update_assignee/#parameters", 
+            "text": "Name \n         Required \n         Value \n         Comment \n     \n     \n         id \n         Yes \n         ObjectId of the conversation to update \n         \n     \n     \n         user_id \n         Yes \n         ObjectId of the Helpmonks user \n         \n       The available fields are documented in the  Conversation Data Model . Refer to the  Query syntax documentation  on how to query against your records", 
+            "title": "Parameters"
+        }, 
+        {
+            "location": "/api/conversation/update_assignee/#example", 
+            "text": "{ \n     id  :  569ed97edfeec6ccffb6c2ec ,\n     user_id  :  57c1e0f6c4be9b0a00d6b0cb \n}", 
+            "title": "Example"
+        }, 
+        {
+            "location": "/api/conversation/update_assignee/#returned-data", 
+            "text": "Please refer to the  Conversation Data Model  to see the data structure being returned", 
+            "title": "Returned data"
+        }, 
+        {
+            "location": "/api/conversation/update_label/", 
+            "text": "Conversation Update Label\n\n\nProtocol\n\n\nPOST\n\n\nURL\n\n\nhttps://(subdomain).helpmonks.com/api/v1/conversation/label\n\n\nParameters\n\n\n\n    \n\n        \nName\n\n        \nRequired\n\n        \nValue\n\n        \nComment\n\n    \n\n    \n\n        \nid\n\n        \nYes\n\n        \nObjectId of the conversation to update\n\n        \n\n    \n\n    \n\n        \nlabel\n\n        \nYes\n\n        \nAn array of labels\n\n        \n\n    \n\n    \n\n        \nreplace\n\n        \nNo\n\n        \nReplace or append the labels\n\n        \ntrue or false / if false will append labels. Default is false.\n\n    \n\n\n\n\nThe available fields are documented in the \nConversation Data Model\n. Refer to the \nQuery syntax documentation\n on how to query against your records\n\n\nExample\n\n\n{ \n    \nid\n : \n569ed97edfeec6ccffb6c2ec\n,\n    \nlabel\n : [\nSLA\n],\n    \nreplace\n : true\n}\n\n\n\n\nReturned data\n\n\nPlease refer to the \nConversation Data Model\n to see the data structure being returned", 
+            "title": "Update Label"
+        }, 
+        {
+            "location": "/api/conversation/update_label/#conversation-update-label", 
+            "text": "", 
+            "title": "Conversation Update Label"
+        }, 
+        {
+            "location": "/api/conversation/update_label/#protocol", 
+            "text": "POST", 
+            "title": "Protocol"
+        }, 
+        {
+            "location": "/api/conversation/update_label/#url", 
+            "text": "https://(subdomain).helpmonks.com/api/v1/conversation/label", 
+            "title": "URL"
+        }, 
+        {
+            "location": "/api/conversation/update_label/#parameters", 
+            "text": "Name \n         Required \n         Value \n         Comment \n     \n     \n         id \n         Yes \n         ObjectId of the conversation to update \n         \n     \n     \n         label \n         Yes \n         An array of labels \n         \n     \n     \n         replace \n         No \n         Replace or append the labels \n         true or false / if false will append labels. Default is false. \n       The available fields are documented in the  Conversation Data Model . Refer to the  Query syntax documentation  on how to query against your records", 
+            "title": "Parameters"
+        }, 
+        {
+            "location": "/api/conversation/update_label/#example", 
+            "text": "{ \n     id  :  569ed97edfeec6ccffb6c2ec ,\n     label  : [ SLA ],\n     replace  : true\n}", 
+            "title": "Example"
+        }, 
+        {
+            "location": "/api/conversation/update_label/#returned-data", 
+            "text": "Please refer to the  Conversation Data Model  to see the data structure being returned", 
+            "title": "Returned data"
+        }, 
+        {
+            "location": "/api/conversation/note_add/", 
+            "text": "Conversation Add Note\n\n\nProtocol\n\n\nPOST\n\n\nURL\n\n\nhttps://(subdomain).helpmonks.com/api/v1/conversation/note/add\n\n\nParameters\n\n\n\n    \n\n        \nName\n\n        \nRequired\n\n        \nValue\n\n        \nComment\n\n    \n\n    \n\n        \nid\n\n        \nYes\n\n        \nObjectId of the conversation to update\n\n        \n\n    \n\n    \n\n        \nnotes\n\n        \nYes\n\n        \nObject that containd notes to add\n\n        \n\n    \n\n\n\n\nThe available fields are documented in the \nConversation Data Model\n. Refer to the \nQuery syntax documentation\n on how to query against your records\n\n\nExample\n\n\n{ \n    \nid\n : \n569ed97edfeec6ccffb6c2ec\n,\n    \nnotes\n : [ \n        { \n            \nnote\n : \nA note from the API\n\n        }\n    ]\n}\n\n\n\n\nReturned data\n\n\nPlease refer to the \nConversation Data Model\n to see the data structure being returned", 
+            "title": "Add Notes"
+        }, 
+        {
+            "location": "/api/conversation/note_add/#conversation-add-note", 
+            "text": "", 
+            "title": "Conversation Add Note"
+        }, 
+        {
+            "location": "/api/conversation/note_add/#protocol", 
+            "text": "POST", 
+            "title": "Protocol"
+        }, 
+        {
+            "location": "/api/conversation/note_add/#url", 
+            "text": "https://(subdomain).helpmonks.com/api/v1/conversation/note/add", 
+            "title": "URL"
+        }, 
+        {
+            "location": "/api/conversation/note_add/#parameters", 
+            "text": "Name \n         Required \n         Value \n         Comment \n     \n     \n         id \n         Yes \n         ObjectId of the conversation to update \n         \n     \n     \n         notes \n         Yes \n         Object that containd notes to add \n         \n       The available fields are documented in the  Conversation Data Model . Refer to the  Query syntax documentation  on how to query against your records", 
+            "title": "Parameters"
+        }, 
+        {
+            "location": "/api/conversation/note_add/#example", 
+            "text": "{ \n     id  :  569ed97edfeec6ccffb6c2ec ,\n     notes  : [ \n        { \n             note  :  A note from the API \n        }\n    ]\n}", 
+            "title": "Example"
+        }, 
+        {
+            "location": "/api/conversation/note_add/#returned-data", 
+            "text": "Please refer to the  Conversation Data Model  to see the data structure being returned", 
+            "title": "Returned data"
+        }, 
+        {
+            "location": "/api/conversation/note_delete/", 
+            "text": "Conversation Delete Note\n\n\nProtocol\n\n\nGET\n\n\nURL\n\n\nhttps://(subdomain).helpmonks.com/api/v1/conversation/note/delete/(id)\n\n\nParameters\n\n\n\n    \n\n        \nName\n\n        \nRequired\n\n        \nValue\n\n        \nComment\n\n    \n\n    \n\n        \nID\n\n        \nYes\n\n        \nObjectId of the note\n\n        \n\n    \n\n\n\n\nThe available fields are documented in the \nConversation Data Model\n. Refer to the \nQuery syntax documentation\n on how to query against your records\n\n\nExample\n\n\nhttps://(subdomain).helpmonks.com/api/v1/conversation/note/delete/54708b4cd71ef2dbdb557b9d\n\n\n\n\nReturned data\n\n\nPlease refer to the \nConversation Data Model\n to see the data structure being returned", 
+            "title": "Delete Note"
+        }, 
+        {
+            "location": "/api/conversation/note_delete/#conversation-delete-note", 
+            "text": "", 
+            "title": "Conversation Delete Note"
+        }, 
+        {
+            "location": "/api/conversation/note_delete/#protocol", 
+            "text": "GET", 
+            "title": "Protocol"
+        }, 
+        {
+            "location": "/api/conversation/note_delete/#url", 
+            "text": "https://(subdomain).helpmonks.com/api/v1/conversation/note/delete/(id)", 
+            "title": "URL"
+        }, 
+        {
+            "location": "/api/conversation/note_delete/#parameters", 
+            "text": "Name \n         Required \n         Value \n         Comment \n     \n     \n         ID \n         Yes \n         ObjectId of the note \n         \n       The available fields are documented in the  Conversation Data Model . Refer to the  Query syntax documentation  on how to query against your records", 
+            "title": "Parameters"
+        }, 
+        {
+            "location": "/api/conversation/note_delete/#example", 
+            "text": "https://(subdomain).helpmonks.com/api/v1/conversation/note/delete/54708b4cd71ef2dbdb557b9d", 
+            "title": "Example"
+        }, 
+        {
+            "location": "/api/conversation/note_delete/#returned-data", 
+            "text": "Please refer to the  Conversation Data Model  to see the data structure being returned", 
+            "title": "Returned data"
+        }, 
+        {
+            "location": "/api/conversation/delete/", 
+            "text": "Conversation Delete\n\n\nProtocol\n\n\nGET\n\n\nURL\n\n\nhttps://(subdomain).helpmonks.com/api/v1/conversation/delete/(id)\n\n\nParameters\n\n\n\n    \n\n        \nName\n\n        \nRequired\n\n        \nValue\n\n        \nComment\n\n    \n\n    \n\n        \nID\n\n        \nYes\n\n        \nObjectId of the conversation\n\n        \n\n    \n\n\n\n\nThe available fields are documented in the \nConversation Data Model\n. Refer to the \nQuery syntax documentation\n on how to query against your records\n\n\nExample\n\n\nhttps://(subdomain).helpmonks.com/api/v1/conversation/delete/54708b4cd71ef2dbdb557b9d\n\n\n\n\nReturned data\n\n\nPlease refer to the \nConversation Data Model\n to see the data structure being returned", 
+            "title": "Delete"
+        }, 
+        {
+            "location": "/api/conversation/delete/#conversation-delete", 
+            "text": "", 
+            "title": "Conversation Delete"
+        }, 
+        {
+            "location": "/api/conversation/delete/#protocol", 
+            "text": "GET", 
+            "title": "Protocol"
+        }, 
+        {
+            "location": "/api/conversation/delete/#url", 
+            "text": "https://(subdomain).helpmonks.com/api/v1/conversation/delete/(id)", 
+            "title": "URL"
+        }, 
+        {
+            "location": "/api/conversation/delete/#parameters", 
+            "text": "Name \n         Required \n         Value \n         Comment \n     \n     \n         ID \n         Yes \n         ObjectId of the conversation \n         \n       The available fields are documented in the  Conversation Data Model . Refer to the  Query syntax documentation  on how to query against your records", 
+            "title": "Parameters"
+        }, 
+        {
+            "location": "/api/conversation/delete/#example", 
+            "text": "https://(subdomain).helpmonks.com/api/v1/conversation/delete/54708b4cd71ef2dbdb557b9d", 
+            "title": "Example"
+        }, 
+        {
+            "location": "/api/conversation/delete/#returned-data", 
+            "text": "Please refer to the  Conversation Data Model  to see the data structure being returned", 
+            "title": "Returned data"
+        }, 
+        {
+            "location": "/api/conversation/create/", 
+            "text": "Conversation Create\n\n\nThis allows you to import existing converations and add them to your Helpmonks shared inbox.\n\n\nProtocol\n\n\nPOST\n\n\nURL\n\n\nhttps://(subdomain).helpmonks.com/api/v1/conversation/create\n\n\nParameters\n\n\n\n    \n\n        \nName\n\n        \nRequired\n\n        \nValue\n\n        \nComment\n\n    \n\n    \n\n        \nbody\n\n        \nYes\n\n        \nContaining objects of new conversation\n\n        \n\n    \n\n\n\n\nThe available fields are documented in the \nConversation Data Model\n. Refer to the \nQuery syntax documentation\n on how to query against your records\n\n\nExample\n\n\n{ \n  \nstatus\n: \ninbox\n,\n  \nmailbox_id\n: \n54b14a700e3db642552771ab\n,\n  \nassignee\n: null,\n  \nemails\n: [\n    {\n      \nsubject\n: \nNEW\n,\n      \nbody\n: \nThis should send it to the customer\n,\n      \nfrom\n: {\n        \ncompany_user_id\n: null,\n        \nuser_id\n: \n54708b4ad71ef2dbdb557b78\n\n      }\n    }\n  ],\n  \nlabels\n: [\n    \n54708b4cd71ef2dbdb557b88\n,\n    \n54708b4cd71ef2dbdb557b89\n\n  ]\n}\n\n\n\n\nUsing user data instead of ObjectId for company_user\n\n\nThe company_user_id object also accepts a user object in addition to a ObjectID. If a user object is provided the system will add the user or will look up the user with the email address.\n\n\nUsing a user object would look like this:\n\n\n...\n\nfrom\n: {\n  \ncompany_user_id\n: {\n    \nemail\n : \nemail@user.com\n,\n    \nfirst_name\n : \nAwesome\n,\n    \nlast_name\n : \nCustomer\n\n  },\n  \nuser_id\n: null\n}\n...\n\n\n\n\nLabels\n\n\nYou can add labels (one or many) at the same time as creating the conversation. The label(s) have to exist. You provide label(s) in an array. For example:\n\n\n...\n\nlabels\n : [\n  \nHelpmonks\n,\n  \nAwesome\n\n]\n...\n\n\n\n\nThe lookup for the label is not case-sensitive.\n\n\nReturned data\n\n\nPlease refer to the \nConversation Data Model\n to see the data structure being returned", 
+            "title": "Create"
+        }, 
+        {
+            "location": "/api/conversation/create/#conversation-create", 
+            "text": "This allows you to import existing converations and add them to your Helpmonks shared inbox.", 
+            "title": "Conversation Create"
+        }, 
+        {
+            "location": "/api/conversation/create/#protocol", 
+            "text": "POST", 
+            "title": "Protocol"
+        }, 
+        {
+            "location": "/api/conversation/create/#url", 
+            "text": "https://(subdomain).helpmonks.com/api/v1/conversation/create", 
+            "title": "URL"
+        }, 
+        {
+            "location": "/api/conversation/create/#parameters", 
+            "text": "Name \n         Required \n         Value \n         Comment \n     \n     \n         body \n         Yes \n         Containing objects of new conversation \n         \n       The available fields are documented in the  Conversation Data Model . Refer to the  Query syntax documentation  on how to query against your records", 
+            "title": "Parameters"
+        }, 
+        {
+            "location": "/api/conversation/create/#example", 
+            "text": "{ \n   status :  inbox ,\n   mailbox_id :  54b14a700e3db642552771ab ,\n   assignee : null,\n   emails : [\n    {\n       subject :  NEW ,\n       body :  This should send it to the customer ,\n       from : {\n         company_user_id : null,\n         user_id :  54708b4ad71ef2dbdb557b78 \n      }\n    }\n  ],\n   labels : [\n     54708b4cd71ef2dbdb557b88 ,\n     54708b4cd71ef2dbdb557b89 \n  ]\n}", 
+            "title": "Example"
+        }, 
+        {
+            "location": "/api/conversation/create/#using-user-data-instead-of-objectid-for-company_user", 
+            "text": "The company_user_id object also accepts a user object in addition to a ObjectID. If a user object is provided the system will add the user or will look up the user with the email address.  Using a user object would look like this:  ... from : {\n   company_user_id : {\n     email  :  email@user.com ,\n     first_name  :  Awesome ,\n     last_name  :  Customer \n  },\n   user_id : null\n}\n...", 
+            "title": "Using user data instead of ObjectId for company_user"
+        }, 
+        {
+            "location": "/api/conversation/create/#labels", 
+            "text": "You can add labels (one or many) at the same time as creating the conversation. The label(s) have to exist. You provide label(s) in an array. For example:  ... labels  : [\n   Helpmonks ,\n   Awesome \n]\n...  The lookup for the label is not case-sensitive.", 
+            "title": "Labels"
+        }, 
+        {
+            "location": "/api/conversation/create/#returned-data", 
+            "text": "Please refer to the  Conversation Data Model  to see the data structure being returned", 
+            "title": "Returned data"
+        }, 
+        {
+            "location": "/api/customer/find/", 
+            "text": "Customer Find\n\n\nProtocol\n\n\nPOST\n\n\nURL\n\n\nhttps://(subdomain).helpmonks.com/api/v1/company_user/find\n\n\nParameters\n\n\n\n    \n\n        \nName\n\n        \nRequired\n\n        \nValue\n\n        \nComment\n\n    \n\n    \n\n        \nquery\n\n        \nYes\n\n        \nAvailable column in object\n\n        \n\n    \n\n    \n\n        \nfields\n\n        \nNo\n\n        \nAvailable column name\n\n        \n\n    \n\n    \n\n        \noptions\n\n        \nNo\n\n        \nAvailable options like sort, slice, etc.\n\n        \n\n    \n\n\n\n\nThe available fields are documented in the \nCustomer Data Model\n. Refer to the \nQuery syntax documentation\n on how to query against your records\n\n\nExample\n\n\n{\n    query : { 'first_name' : 'Nitai', 'email' : 'nitai@helpmonks.com' },\n    fields : { 'first_name email' },\n    options : { sort : { first_name: 'asc' } }\n}\n\n\n\n\nReturned data\n\n\nPlease refer to the \nCustomer Data Model\n to see the data structure being returned", 
+            "title": "Find"
+        }, 
+        {
+            "location": "/api/customer/find/#customer-find", 
+            "text": "", 
+            "title": "Customer Find"
+        }, 
+        {
+            "location": "/api/customer/find/#protocol", 
+            "text": "POST", 
+            "title": "Protocol"
+        }, 
+        {
+            "location": "/api/customer/find/#url", 
+            "text": "https://(subdomain).helpmonks.com/api/v1/company_user/find", 
+            "title": "URL"
+        }, 
+        {
+            "location": "/api/customer/find/#parameters", 
+            "text": "Name \n         Required \n         Value \n         Comment \n     \n     \n         query \n         Yes \n         Available column in object \n         \n     \n     \n         fields \n         No \n         Available column name \n         \n     \n     \n         options \n         No \n         Available options like sort, slice, etc. \n         \n       The available fields are documented in the  Customer Data Model . Refer to the  Query syntax documentation  on how to query against your records", 
+            "title": "Parameters"
+        }, 
+        {
+            "location": "/api/customer/find/#example", 
+            "text": "{\n    query : { 'first_name' : 'Nitai', 'email' : 'nitai@helpmonks.com' },\n    fields : { 'first_name email' },\n    options : { sort : { first_name: 'asc' } }\n}", 
+            "title": "Example"
+        }, 
+        {
+            "location": "/api/customer/find/#returned-data", 
+            "text": "Please refer to the  Customer Data Model  to see the data structure being returned", 
+            "title": "Returned data"
+        }, 
+        {
+            "location": "/api/customer/findone/", 
+            "text": "Customer FindOne\n\n\nProtocol\n\n\nPOST\n\n\nURL\n\n\nhttps://(subdomain).helpmonks.com/api/v1/company_user/findone\n\n\nParameters\n\n\n\n    \n\n        \nName\n\n        \nRequired\n\n        \nValue\n\n        \nComment\n\n    \n\n    \n\n        \nquery\n\n        \nYes\n\n        \nAvailable column in object\n\n        \n\n    \n\n    \n\n        \nfields\n\n        \nNo\n\n        \nAvailable column name\n\n        \n\n    \n\n    \n\n        \noptions\n\n        \nNo\n\n        \nAvailable options like sort, slice, etc.\n\n        \n\n    \n\n\n\n\nThe available fields are documented in the \nCustomer Data Model\n. Refer to the \nQuery syntax documentation\n on how to query against your records\n\n\nExample\n\n\n{\n    query : { 'first_name' : 'Nitai', 'email' : 'nitai@helpmonks.com' },\n    fields : { 'first_name email' },\n    options : { sort : { first_name: 'asc' } }\n}\n\n\n\n\nReturned data\n\n\nPlease refer to the \nCustomer Data Model\n to see the data structure being returned", 
+            "title": "FindOne"
+        }, 
+        {
+            "location": "/api/customer/findone/#customer-findone", 
+            "text": "", 
+            "title": "Customer FindOne"
+        }, 
+        {
+            "location": "/api/customer/findone/#protocol", 
+            "text": "POST", 
+            "title": "Protocol"
+        }, 
+        {
+            "location": "/api/customer/findone/#url", 
+            "text": "https://(subdomain).helpmonks.com/api/v1/company_user/findone", 
+            "title": "URL"
+        }, 
+        {
+            "location": "/api/customer/findone/#parameters", 
+            "text": "Name \n         Required \n         Value \n         Comment \n     \n     \n         query \n         Yes \n         Available column in object \n         \n     \n     \n         fields \n         No \n         Available column name \n         \n     \n     \n         options \n         No \n         Available options like sort, slice, etc. \n         \n       The available fields are documented in the  Customer Data Model . Refer to the  Query syntax documentation  on how to query against your records", 
+            "title": "Parameters"
+        }, 
+        {
+            "location": "/api/customer/findone/#example", 
+            "text": "{\n    query : { 'first_name' : 'Nitai', 'email' : 'nitai@helpmonks.com' },\n    fields : { 'first_name email' },\n    options : { sort : { first_name: 'asc' } }\n}", 
+            "title": "Example"
+        }, 
+        {
+            "location": "/api/customer/findone/#returned-data", 
+            "text": "Please refer to the  Customer Data Model  to see the data structure being returned", 
+            "title": "Returned data"
+        }, 
+        {
+            "location": "/api/customer/findbyid/", 
+            "text": "Customer FindById\n\n\nProtocol\n\n\nGET\n\n\nURL\n\n\nhttps://(subdomain).helpmonks.com/api/v1/company_user/findbyid/(id)\n\n\nParameters\n\n\n\n    \n\n        \nName\n\n        \nRequired\n\n        \nValue\n\n        \nComment\n\n    \n\n    \n\n        \nID\n\n        \nYes\n\n        \nObjectId\n\n        \n\n    \n\n\n\n\nThe available fields are documented in the \nCustomer Data Model\n. Refer to the \nQuery syntax documentation\n on how to query against your records\n\n\nExample\n\n\nhttps://(subdomain).helpmonks.com/api/v1/company_user/findbyid/54708b4cd71ef2dbdb557b9d\n\n\n\n\nReturned data\n\n\nPlease refer to the \nCustomer Data Model\n to see the data structure being returned", 
+            "title": "FindById"
+        }, 
+        {
+            "location": "/api/customer/findbyid/#customer-findbyid", 
+            "text": "", 
+            "title": "Customer FindById"
+        }, 
+        {
+            "location": "/api/customer/findbyid/#protocol", 
+            "text": "GET", 
+            "title": "Protocol"
+        }, 
+        {
+            "location": "/api/customer/findbyid/#url", 
+            "text": "https://(subdomain).helpmonks.com/api/v1/company_user/findbyid/(id)", 
+            "title": "URL"
+        }, 
+        {
+            "location": "/api/customer/findbyid/#parameters", 
+            "text": "Name \n         Required \n         Value \n         Comment \n     \n     \n         ID \n         Yes \n         ObjectId \n         \n       The available fields are documented in the  Customer Data Model . Refer to the  Query syntax documentation  on how to query against your records", 
+            "title": "Parameters"
+        }, 
+        {
+            "location": "/api/customer/findbyid/#example", 
+            "text": "https://(subdomain).helpmonks.com/api/v1/company_user/findbyid/54708b4cd71ef2dbdb557b9d", 
+            "title": "Example"
+        }, 
+        {
+            "location": "/api/customer/findbyid/#returned-data", 
+            "text": "Please refer to the  Customer Data Model  to see the data structure being returned", 
+            "title": "Returned data"
+        }, 
+        {
+            "location": "/api/customer/delete/", 
+            "text": "Customer Delete\n\n\nProtocol\n\n\nGET\n\n\nURL\n\n\nhttps://(subdomain).helpmonks.com/api/v1/company_user/delete/(id)\n\n\nParameters\n\n\n\n    \n\n        \nName\n\n        \nRequired\n\n        \nValue\n\n        \nComment\n\n    \n\n    \n\n        \nID\n\n        \nYes\n\n        \nObjectId\n\n        \n\n    \n\n\n\n\nThe available fields are documented in the \nCustomer Data Model\n. Refer to the \nQuery syntax documentation\n on how to query against your records\n\n\nExample\n\n\nhttps://(subdomain).helpmonks.com/api/v1/company_user/delete/54708b4cd71ef2dbdb557b9d\n\n\n\n\nReturned data\n\n\nPlease refer to the \nCustomer Data Model\n to see the data structure being returned", 
+            "title": "Delete"
+        }, 
+        {
+            "location": "/api/customer/delete/#customer-delete", 
+            "text": "", 
+            "title": "Customer Delete"
+        }, 
+        {
+            "location": "/api/customer/delete/#protocol", 
+            "text": "GET", 
+            "title": "Protocol"
+        }, 
+        {
+            "location": "/api/customer/delete/#url", 
+            "text": "https://(subdomain).helpmonks.com/api/v1/company_user/delete/(id)", 
+            "title": "URL"
+        }, 
+        {
+            "location": "/api/customer/delete/#parameters", 
+            "text": "Name \n         Required \n         Value \n         Comment \n     \n     \n         ID \n         Yes \n         ObjectId \n         \n       The available fields are documented in the  Customer Data Model . Refer to the  Query syntax documentation  on how to query against your records", 
+            "title": "Parameters"
+        }, 
+        {
+            "location": "/api/customer/delete/#example", 
+            "text": "https://(subdomain).helpmonks.com/api/v1/company_user/delete/54708b4cd71ef2dbdb557b9d", 
+            "title": "Example"
+        }, 
+        {
+            "location": "/api/customer/delete/#returned-data", 
+            "text": "Please refer to the  Customer Data Model  to see the data structure being returned", 
+            "title": "Returned data"
+        }, 
+        {
+            "location": "/api/customer/update/", 
+            "text": "Customer Update\n\n\nProtocol\n\n\nPOST\n\n\nURL\n\n\nhttps://(subdomain).helpmonks.com/api/v1/company_user/update\n\n\nParameters\n\n\n\n    \n\n        \nName\n\n        \nRequired\n\n        \nValue\n\n        \nComment\n\n    \n\n    \n\n        \ncustomer\n\n        \nYes\n\n        \nObject containing the ID of the user and fields to update\n\n        \n\n    \n\n\n\n\nThe available fields are documented in the \nCustomer Data Model\n. Refer to the \nQuery syntax documentation\n on how to query against your records\n\n\nExample\n\n\n{\n    customer : { \n        'id' : '54708b4cd71ef2dbdb557b9d', \n        'email' : 'nitai@helpmonks.com',\n        \nfirst_name\n : \nNitai\n\n    }\n}\n\n\n\n\nReturned data\n\n\nPlease refer to the \nCustomer Data Model\n to see the data structure being returned", 
+            "title": "Update"
+        }, 
+        {
+            "location": "/api/customer/update/#customer-update", 
+            "text": "", 
+            "title": "Customer Update"
+        }, 
+        {
+            "location": "/api/customer/update/#protocol", 
+            "text": "POST", 
+            "title": "Protocol"
+        }, 
+        {
+            "location": "/api/customer/update/#url", 
+            "text": "https://(subdomain).helpmonks.com/api/v1/company_user/update", 
+            "title": "URL"
+        }, 
+        {
+            "location": "/api/customer/update/#parameters", 
+            "text": "Name \n         Required \n         Value \n         Comment \n     \n     \n         customer \n         Yes \n         Object containing the ID of the user and fields to update \n         \n       The available fields are documented in the  Customer Data Model . Refer to the  Query syntax documentation  on how to query against your records", 
+            "title": "Parameters"
+        }, 
+        {
+            "location": "/api/customer/update/#example", 
+            "text": "{\n    customer : { \n        'id' : '54708b4cd71ef2dbdb557b9d', \n        'email' : 'nitai@helpmonks.com',\n         first_name  :  Nitai \n    }\n}", 
+            "title": "Example"
+        }, 
+        {
+            "location": "/api/customer/update/#returned-data", 
+            "text": "Please refer to the  Customer Data Model  to see the data structure being returned", 
+            "title": "Returned data"
+        }, 
+        {
+            "location": "/api/customer/create/", 
+            "text": "Customer Create\n\n\nProtocol\n\n\nPOST\n\n\nURL\n\n\nhttps://(subdomain).helpmonks.com/api/v1/company_user/create\n\n\nParameters\n\n\n\n    \n\n        \nName\n\n        \nRequired\n\n        \nValue\n\n        \nComment\n\n    \n\n    \n\n        \ncustomer\n\n        \nYes\n\n        \nObject containing the fields for this customer\n\n        \n\n    \n\n\n\n\nThe available fields are documented in the \nCustomer Data Model\n. Refer to the \nQuery syntax documentation\n on how to query against your records\n\n\nExample\n\n\n{\n    customer : { \n        \nemail\n : \ncustomer@domain.com\n,\n        \nfirst_name\n : \nCustomer\n,\n        \nlast_name\n : \nAwesome\n,\n        \nnotes\n : \nThis is an awesome customer\n\n    }\n}\n\n\n\n\nReturned data\n\n\nPlease refer to the \nCustomer Data Model\n to see the data structure being returned", 
+            "title": "Create"
+        }, 
+        {
+            "location": "/api/customer/create/#customer-create", 
+            "text": "", 
+            "title": "Customer Create"
+        }, 
+        {
+            "location": "/api/customer/create/#protocol", 
+            "text": "POST", 
+            "title": "Protocol"
+        }, 
+        {
+            "location": "/api/customer/create/#url", 
+            "text": "https://(subdomain).helpmonks.com/api/v1/company_user/create", 
+            "title": "URL"
+        }, 
+        {
+            "location": "/api/customer/create/#parameters", 
+            "text": "Name \n         Required \n         Value \n         Comment \n     \n     \n         customer \n         Yes \n         Object containing the fields for this customer \n         \n       The available fields are documented in the  Customer Data Model . Refer to the  Query syntax documentation  on how to query against your records", 
+            "title": "Parameters"
+        }, 
+        {
+            "location": "/api/customer/create/#example", 
+            "text": "{\n    customer : { \n         email  :  customer@domain.com ,\n         first_name  :  Customer ,\n         last_name  :  Awesome ,\n         notes  :  This is an awesome customer \n    }\n}", 
+            "title": "Example"
+        }, 
+        {
+            "location": "/api/customer/create/#returned-data", 
+            "text": "Please refer to the  Customer Data Model  to see the data structure being returned", 
+            "title": "Returned data"
+        }, 
+        {
+            "location": "/api/mailbox/find/", 
+            "text": "Mailbox Find\n\n\nProtocol\n\n\nPOST\n\n\nURL\n\n\nhttps://(subdomain).helpmonks.com/api/v1/mailbox/find\n\n\nParameters\n\n\n\n    \n\n        \nName\n\n        \nRequired\n\n        \nValue\n\n        \nComment\n\n    \n\n    \n\n        \nquery\n\n        \nYes\n\n        \nAvailable column in object\n\n        \n\n    \n\n    \n\n        \nfields\n\n        \nNo\n\n        \nAvailable column name\n\n        \n\n    \n\n    \n\n        \noptions\n\n        \nNo\n\n        \nAvailable options like sort, slice, etc.\n\n        \n\n    \n\n\n\n\nThe available fields are documented in the \nMailbox Data Model\n. Refer to the \nQuery syntax documentation\n on how to query against your records\n\n\nExample\n\n\n{\n    query : { 'name' : 'Support' },\n    fields : {},\n    options : {}\n}\n\n\n\n\nReturned data\n\n\nPlease refer to the \nMailbox Data Model\n to see the data structure being returned", 
+            "title": "Find"
+        }, 
+        {
+            "location": "/api/mailbox/find/#mailbox-find", 
+            "text": "", 
+            "title": "Mailbox Find"
+        }, 
+        {
+            "location": "/api/mailbox/find/#protocol", 
+            "text": "POST", 
+            "title": "Protocol"
+        }, 
+        {
+            "location": "/api/mailbox/find/#url", 
+            "text": "https://(subdomain).helpmonks.com/api/v1/mailbox/find", 
+            "title": "URL"
+        }, 
+        {
+            "location": "/api/mailbox/find/#parameters", 
+            "text": "Name \n         Required \n         Value \n         Comment \n     \n     \n         query \n         Yes \n         Available column in object \n         \n     \n     \n         fields \n         No \n         Available column name \n         \n     \n     \n         options \n         No \n         Available options like sort, slice, etc. \n         \n       The available fields are documented in the  Mailbox Data Model . Refer to the  Query syntax documentation  on how to query against your records", 
+            "title": "Parameters"
+        }, 
+        {
+            "location": "/api/mailbox/find/#example", 
+            "text": "{\n    query : { 'name' : 'Support' },\n    fields : {},\n    options : {}\n}", 
+            "title": "Example"
+        }, 
+        {
+            "location": "/api/mailbox/find/#returned-data", 
+            "text": "Please refer to the  Mailbox Data Model  to see the data structure being returned", 
+            "title": "Returned data"
+        }, 
+        {
+            "location": "/api/mailbox/findone/", 
+            "text": "Mailbox FindOne\n\n\nProtocol\n\n\nPOST\n\n\nURL\n\n\nhttps://(subdomain).helpmonks.com/api/v1/mailbox/findone\n\n\nParameters\n\n\n\n    \n\n        \nName\n\n        \nRequired\n\n        \nValue\n\n        \nComment\n\n    \n\n    \n\n        \nquery\n\n        \nYes\n\n        \nAvailable column in object\n\n        \n\n    \n\n    \n\n        \nfields\n\n        \nNo\n\n        \nAvailable column name\n\n        \n\n    \n\n    \n\n        \noptions\n\n        \nNo\n\n        \nAvailable options like sort, slice, etc.\n\n        \n\n    \n\n\n\n\nThe available fields are documented in the \nMailbox Data Model\n. Refer to the \nQuery syntax documentation\n on how to query against your records\n\n\nExample\n\n\n{\n    query : { 'name' : 'Support' },\n    fields : { 'name' },\n    options : { sort : { name: 'asc' } }\n}\n\n\n\n\nReturned data\n\n\nPlease refer to the \nMailbox Data Model\n to see the data structure being returned", 
+            "title": "FindOne"
+        }, 
+        {
+            "location": "/api/mailbox/findone/#mailbox-findone", 
+            "text": "", 
+            "title": "Mailbox FindOne"
+        }, 
+        {
+            "location": "/api/mailbox/findone/#protocol", 
+            "text": "POST", 
+            "title": "Protocol"
+        }, 
+        {
+            "location": "/api/mailbox/findone/#url", 
+            "text": "https://(subdomain).helpmonks.com/api/v1/mailbox/findone", 
+            "title": "URL"
+        }, 
+        {
+            "location": "/api/mailbox/findone/#parameters", 
+            "text": "Name \n         Required \n         Value \n         Comment \n     \n     \n         query \n         Yes \n         Available column in object \n         \n     \n     \n         fields \n         No \n         Available column name \n         \n     \n     \n         options \n         No \n         Available options like sort, slice, etc. \n         \n       The available fields are documented in the  Mailbox Data Model . Refer to the  Query syntax documentation  on how to query against your records", 
+            "title": "Parameters"
+        }, 
+        {
+            "location": "/api/mailbox/findone/#example", 
+            "text": "{\n    query : { 'name' : 'Support' },\n    fields : { 'name' },\n    options : { sort : { name: 'asc' } }\n}", 
+            "title": "Example"
+        }, 
+        {
+            "location": "/api/mailbox/findone/#returned-data", 
+            "text": "Please refer to the  Mailbox Data Model  to see the data structure being returned", 
+            "title": "Returned data"
+        }, 
+        {
+            "location": "/api/mailbox/findbyid/", 
+            "text": "Mailbox FindById\n\n\nProtocol\n\n\nGET\n\n\nURL\n\n\nhttps://(subdomain).helpmonks.com/api/v1/user/mailbox/findbyid/(id)\n\n\nParameters\n\n\n\n    \n\n        \nName\n\n        \nRequired\n\n        \nValue\n\n        \nComment\n\n    \n\n    \n\n        \nID\n\n        \nYes\n\n        \nObjectId\n\n        \n\n    \n\n\n\n\nThe available fields are documented in the \nMailbox Data Model\n. Refer to the \nQuery syntax documentation\n on how to query against your records\n\n\nExample\n\n\nhttps://(subdomain).helpmonks.com/api/v1/mailbox/findbyid/54708b4cd71ef2dbdb557b9d\n\n\n\n\nReturned data\n\n\nPlease refer to the \nMailbox Data Model\n to see the data structure being returned", 
+            "title": "FindById"
+        }, 
+        {
+            "location": "/api/mailbox/findbyid/#mailbox-findbyid", 
+            "text": "", 
+            "title": "Mailbox FindById"
+        }, 
+        {
+            "location": "/api/mailbox/findbyid/#protocol", 
+            "text": "GET", 
+            "title": "Protocol"
+        }, 
+        {
+            "location": "/api/mailbox/findbyid/#url", 
+            "text": "https://(subdomain).helpmonks.com/api/v1/user/mailbox/findbyid/(id)", 
+            "title": "URL"
+        }, 
+        {
+            "location": "/api/mailbox/findbyid/#parameters", 
+            "text": "Name \n         Required \n         Value \n         Comment \n     \n     \n         ID \n         Yes \n         ObjectId \n         \n       The available fields are documented in the  Mailbox Data Model . Refer to the  Query syntax documentation  on how to query against your records", 
+            "title": "Parameters"
+        }, 
+        {
+            "location": "/api/mailbox/findbyid/#example", 
+            "text": "https://(subdomain).helpmonks.com/api/v1/mailbox/findbyid/54708b4cd71ef2dbdb557b9d", 
+            "title": "Example"
+        }, 
+        {
+            "location": "/api/mailbox/findbyid/#returned-data", 
+            "text": "Please refer to the  Mailbox Data Model  to see the data structure being returned", 
+            "title": "Returned data"
+        }, 
+        {
+            "location": "/api/mailbox/create/", 
+            "text": "Mailbox Create\n\n\nAvailability\n\n\nAvailable as of Sept. 12th, 2017. Version 1.6.3\n\n\nProtocol\n\n\nPOST\n\n\nURL\n\n\nhttps://(subdomain).helpmonks.com/api/v1/mailbox/create\n\n\nParameters\n\n\n\n    \n\n        \nName\n\n        \nRequired\n\n        \nValue\n\n        \nComment\n\n    \n\n    \n\n        \nname\n\n        \nYes\n\n        \nName of the mailbox\n\n        \nString\n\n    \n\n    \n\n        \nemail\n\n        \nYes\n\n        \nEmail-address of the mailbox\n\n        \nString\n\n    \n\n    \n\n        \nfrom\n\n        \nNo\n\n        \nDefine from whom to send replies: mailbox or user\n\n        \nString\n\n    \n\n    \n\n        \nusers\n\n        \nNo\n\n        \nAn array of users of the mailbox\n\n        \nArray with ObjectId\n\n    \n\n    \n\n        \nactive\n\n        \nNo\n\n        \nIf mailbox should be active. Value is true or false.\n\n        \nBoolean\n\n    \n\n\n\n\nImportant Note\n\n\nIn order to see the newly created mailbox, users need to sign out of Helpmonks!\n\n\nExample\n\n\n{\n    \nname\n : \nSupport Mailbox\n,\n    \nemail\n : \nsupport@domain.com\n\n}\n\n\n\n\nReturned data\n\n\nPlease refer to the \nMailbox Data Model\n to see the data structure being returned", 
+            "title": "Create"
+        }, 
+        {
+            "location": "/api/mailbox/create/#mailbox-create", 
+            "text": "", 
+            "title": "Mailbox Create"
+        }, 
+        {
+            "location": "/api/mailbox/create/#availability", 
+            "text": "Available as of Sept. 12th, 2017. Version 1.6.3", 
+            "title": "Availability"
+        }, 
+        {
+            "location": "/api/mailbox/create/#protocol", 
+            "text": "POST", 
+            "title": "Protocol"
+        }, 
+        {
+            "location": "/api/mailbox/create/#url", 
+            "text": "https://(subdomain).helpmonks.com/api/v1/mailbox/create", 
+            "title": "URL"
+        }, 
+        {
+            "location": "/api/mailbox/create/#parameters", 
+            "text": "Name \n         Required \n         Value \n         Comment \n     \n     \n         name \n         Yes \n         Name of the mailbox \n         String \n     \n     \n         email \n         Yes \n         Email-address of the mailbox \n         String \n     \n     \n         from \n         No \n         Define from whom to send replies: mailbox or user \n         String \n     \n     \n         users \n         No \n         An array of users of the mailbox \n         Array with ObjectId \n     \n     \n         active \n         No \n         If mailbox should be active. Value is true or false. \n         Boolean", 
+            "title": "Parameters"
+        }, 
+        {
+            "location": "/api/mailbox/create/#important-note", 
+            "text": "In order to see the newly created mailbox, users need to sign out of Helpmonks!", 
+            "title": "Important Note"
+        }, 
+        {
+            "location": "/api/mailbox/create/#example", 
+            "text": "{\n     name  :  Support Mailbox ,\n     email  :  support@domain.com \n}", 
+            "title": "Example"
+        }, 
+        {
+            "location": "/api/mailbox/create/#returned-data", 
+            "text": "Please refer to the  Mailbox Data Model  to see the data structure being returned", 
+            "title": "Returned data"
+        }, 
+        {
+            "location": "/api/label/find/", 
+            "text": "Label Find\n\n\nProtocol\n\n\nPOST\n\n\nURL\n\n\nhttps://(subdomain).helpmonks.com/api/v1/label/find\n\n\nParameters\n\n\n\n    \n\n        \nName\n\n        \nRequired\n\n        \nValue\n\n        \nComment\n\n    \n\n    \n\n        \nquery\n\n        \nYes\n\n        \nAvailable column in object\n\n        \n\n    \n\n    \n\n        \nfields\n\n        \nNo\n\n        \nAvailable column name\n\n        \n\n    \n\n    \n\n        \noptions\n\n        \nNo\n\n        \nAvailable options like sort, slice, etc.\n\n        \n\n    \n\n\n\n\nThe available fields are documented in the \nLabel Data Model\n. Refer to the \nQuery syntax documentation\n on how to query against your records\n\n\nExample\n\n\n{\n    query : { 'name' : 'Followup' },\n    fields : {},\n    options : {}\n}\n\n\n\n\nReturned data\n\n\nPlease refer to the \nLabel Data Model\n to see the data structure being returned", 
+            "title": "Find"
+        }, 
+        {
+            "location": "/api/label/find/#label-find", 
+            "text": "", 
+            "title": "Label Find"
+        }, 
+        {
+            "location": "/api/label/find/#protocol", 
+            "text": "POST", 
+            "title": "Protocol"
+        }, 
+        {
+            "location": "/api/label/find/#url", 
+            "text": "https://(subdomain).helpmonks.com/api/v1/label/find", 
+            "title": "URL"
+        }, 
+        {
+            "location": "/api/label/find/#parameters", 
+            "text": "Name \n         Required \n         Value \n         Comment \n     \n     \n         query \n         Yes \n         Available column in object \n         \n     \n     \n         fields \n         No \n         Available column name \n         \n     \n     \n         options \n         No \n         Available options like sort, slice, etc. \n         \n       The available fields are documented in the  Label Data Model . Refer to the  Query syntax documentation  on how to query against your records", 
+            "title": "Parameters"
+        }, 
+        {
+            "location": "/api/label/find/#example", 
+            "text": "{\n    query : { 'name' : 'Followup' },\n    fields : {},\n    options : {}\n}", 
+            "title": "Example"
+        }, 
+        {
+            "location": "/api/label/find/#returned-data", 
+            "text": "Please refer to the  Label Data Model  to see the data structure being returned", 
+            "title": "Returned data"
+        }, 
+        {
+            "location": "/api/label/findone/", 
+            "text": "Label FindOne\n\n\nProtocol\n\n\nPOST\n\n\nURL\n\n\nhttps://(subdomain).helpmonks.com/api/v1/label/findone\n\n\nParameters\n\n\n\n    \n\n        \nName\n\n        \nRequired\n\n        \nValue\n\n        \nComment\n\n    \n\n    \n\n        \nquery\n\n        \nYes\n\n        \nAvailable column in object\n\n        \n\n    \n\n    \n\n        \nfields\n\n        \nNo\n\n        \nAvailable column name\n\n        \n\n    \n\n    \n\n        \noptions\n\n        \nNo\n\n        \nAvailable options like sort, slice, etc.\n\n        \n\n    \n\n\n\n\nThe available fields are documented in the \nLabel Data Model\n. Refer to the \nQuery syntax documentation\n on how to query against your records\n\n\nExample\n\n\n{\n    query : { 'name' : 'Followup' },\n    fields : { 'name' },\n    options : { sort : { name: 'asc' } }\n}\n\n\n\n\nReturned data\n\n\nPlease refer to the \nLabel Data Model\n to see the data structure being returned", 
+            "title": "FindOne"
+        }, 
+        {
+            "location": "/api/label/findone/#label-findone", 
+            "text": "", 
+            "title": "Label FindOne"
+        }, 
+        {
+            "location": "/api/label/findone/#protocol", 
+            "text": "POST", 
+            "title": "Protocol"
+        }, 
+        {
+            "location": "/api/label/findone/#url", 
+            "text": "https://(subdomain).helpmonks.com/api/v1/label/findone", 
+            "title": "URL"
+        }, 
+        {
+            "location": "/api/label/findone/#parameters", 
+            "text": "Name \n         Required \n         Value \n         Comment \n     \n     \n         query \n         Yes \n         Available column in object \n         \n     \n     \n         fields \n         No \n         Available column name \n         \n     \n     \n         options \n         No \n         Available options like sort, slice, etc. \n         \n       The available fields are documented in the  Label Data Model . Refer to the  Query syntax documentation  on how to query against your records", 
+            "title": "Parameters"
+        }, 
+        {
+            "location": "/api/label/findone/#example", 
+            "text": "{\n    query : { 'name' : 'Followup' },\n    fields : { 'name' },\n    options : { sort : { name: 'asc' } }\n}", 
+            "title": "Example"
+        }, 
+        {
+            "location": "/api/label/findone/#returned-data", 
+            "text": "Please refer to the  Label Data Model  to see the data structure being returned", 
+            "title": "Returned data"
+        }, 
+        {
+            "location": "/api/label/findbyid/", 
+            "text": "Label FindById\n\n\nProtocol\n\n\nGET\n\n\nURL\n\n\nhttps://(subdomain).helpmonks.com/api/v1/user/label/findbyid/(id)\n\n\nParameters\n\n\n\n    \n\n        \nName\n\n        \nRequired\n\n        \nValue\n\n        \nComment\n\n    \n\n    \n\n        \nID\n\n        \nYes\n\n        \nObjectId\n\n        \n\n    \n\n\n\n\nThe available fields are documented in the \nLabel Data Model\n. Refer to the \nQuery syntax documentation\n on how to query against your records\n\n\nExample\n\n\nhttps://(subdomain).helpmonks.com/api/v1/label/findbyid/54708b4cd71ef2dbdb557b9d\n\n\n\n\nReturned data\n\n\nPlease refer to the \nLabel Data Model\n to see the data structure being returned", 
+            "title": "FindById"
+        }, 
+        {
+            "location": "/api/label/findbyid/#label-findbyid", 
+            "text": "", 
+            "title": "Label FindById"
+        }, 
+        {
+            "location": "/api/label/findbyid/#protocol", 
+            "text": "GET", 
+            "title": "Protocol"
+        }, 
+        {
+            "location": "/api/label/findbyid/#url", 
+            "text": "https://(subdomain).helpmonks.com/api/v1/user/label/findbyid/(id)", 
+            "title": "URL"
+        }, 
+        {
+            "location": "/api/label/findbyid/#parameters", 
+            "text": "Name \n         Required \n         Value \n         Comment \n     \n     \n         ID \n         Yes \n         ObjectId \n         \n       The available fields are documented in the  Label Data Model . Refer to the  Query syntax documentation  on how to query against your records", 
+            "title": "Parameters"
+        }, 
+        {
+            "location": "/api/label/findbyid/#example", 
+            "text": "https://(subdomain).helpmonks.com/api/v1/label/findbyid/54708b4cd71ef2dbdb557b9d", 
+            "title": "Example"
+        }, 
+        {
+            "location": "/api/label/findbyid/#returned-data", 
+            "text": "Please refer to the  Label Data Model  to see the data structure being returned", 
+            "title": "Returned data"
+        }, 
+        {
+            "location": "/api/user/find/", 
+            "text": "User Find\n\n\nProtocol\n\n\nPOST\n\n\nURL\n\n\nhttps://(subdomain).helpmonks.com/api/v1/user/find\n\n\nParameters\n\n\n\n    \n\n        \nName\n\n        \nRequired\n\n        \nValue\n\n        \nComment\n\n    \n\n    \n\n        \nquery\n\n        \nYes\n\n        \nAvailable column in object\n\n        \n\n    \n\n    \n\n        \nfields\n\n        \nNo\n\n        \nAvailable column name\n\n        \n\n    \n\n    \n\n        \noptions\n\n        \nNo\n\n        \nAvailable options like sort, slice, etc.\n\n        \n\n    \n\n\n\n\nThe available fields are documented in the \nUser Data Model\n. Refer to the \nQuery syntax documentation\n on how to query against your records\n\n\nExample\n\n\n{\n    query : { 'first_name' : 'Nitai', 'email' : 'nitai@helpmonks.com' },\n    fields : { 'first_name email' },\n    options : { sort : { first_name: 'asc' } }\n}\n\n\n\n\nReturned data\n\n\nPlease refer to the \nUser Data Model\n to see the data structure being returned", 
+            "title": "Find"
+        }, 
+        {
+            "location": "/api/user/find/#user-find", 
+            "text": "", 
+            "title": "User Find"
+        }, 
+        {
+            "location": "/api/user/find/#protocol", 
+            "text": "POST", 
+            "title": "Protocol"
+        }, 
+        {
+            "location": "/api/user/find/#url", 
+            "text": "https://(subdomain).helpmonks.com/api/v1/user/find", 
+            "title": "URL"
+        }, 
+        {
+            "location": "/api/user/find/#parameters", 
+            "text": "Name \n         Required \n         Value \n         Comment \n     \n     \n         query \n         Yes \n         Available column in object \n         \n     \n     \n         fields \n         No \n         Available column name \n         \n     \n     \n         options \n         No \n         Available options like sort, slice, etc. \n         \n       The available fields are documented in the  User Data Model . Refer to the  Query syntax documentation  on how to query against your records", 
+            "title": "Parameters"
+        }, 
+        {
+            "location": "/api/user/find/#example", 
+            "text": "{\n    query : { 'first_name' : 'Nitai', 'email' : 'nitai@helpmonks.com' },\n    fields : { 'first_name email' },\n    options : { sort : { first_name: 'asc' } }\n}", 
+            "title": "Example"
+        }, 
+        {
+            "location": "/api/user/find/#returned-data", 
+            "text": "Please refer to the  User Data Model  to see the data structure being returned", 
+            "title": "Returned data"
+        }, 
+        {
+            "location": "/api/user/findone/", 
+            "text": "User FindOne\n\n\nProtocol\n\n\nPOST\n\n\nURL\n\n\nhttps://(subdomain).helpmonks.com/api/v1/user/findone\n\n\nParameters\n\n\n\n    \n\n        \nName\n\n        \nRequired\n\n        \nValue\n\n        \nComment\n\n    \n\n    \n\n        \nquery\n\n        \nYes\n\n        \nAvailable column in object\n\n        \n\n    \n\n    \n\n        \nfields\n\n        \nNo\n\n        \nAvailable column name\n\n        \n\n    \n\n    \n\n        \noptions\n\n        \nNo\n\n        \nAvailable options like sort, slice, etc.\n\n        \n\n    \n\n\n\n\nThe available fields are documented in the \nUser Data Model\n. Refer to the \nQuery syntax documentation\n on how to query against your records\n\n\nExample\n\n\n{\n    query : { 'first_name' : 'Nitai', 'email' : 'nitai@helpmonks.com' },\n    fields : { 'first_name email' },\n    options : { sort : { first_name: 'asc' } }\n}\n\n\n\n\nReturned data\n\n\nPlease refer to the \nUser Data Model\n to see the data structure being returned", 
+            "title": "FindOne"
+        }, 
+        {
+            "location": "/api/user/findone/#user-findone", 
+            "text": "", 
+            "title": "User FindOne"
+        }, 
+        {
+            "location": "/api/user/findone/#protocol", 
+            "text": "POST", 
+            "title": "Protocol"
+        }, 
+        {
+            "location": "/api/user/findone/#url", 
+            "text": "https://(subdomain).helpmonks.com/api/v1/user/findone", 
+            "title": "URL"
+        }, 
+        {
+            "location": "/api/user/findone/#parameters", 
+            "text": "Name \n         Required \n         Value \n         Comment \n     \n     \n         query \n         Yes \n         Available column in object \n         \n     \n     \n         fields \n         No \n         Available column name \n         \n     \n     \n         options \n         No \n         Available options like sort, slice, etc. \n         \n       The available fields are documented in the  User Data Model . Refer to the  Query syntax documentation  on how to query against your records", 
+            "title": "Parameters"
+        }, 
+        {
+            "location": "/api/user/findone/#example", 
+            "text": "{\n    query : { 'first_name' : 'Nitai', 'email' : 'nitai@helpmonks.com' },\n    fields : { 'first_name email' },\n    options : { sort : { first_name: 'asc' } }\n}", 
+            "title": "Example"
+        }, 
+        {
+            "location": "/api/user/findone/#returned-data", 
+            "text": "Please refer to the  User Data Model  to see the data structure being returned", 
+            "title": "Returned data"
+        }, 
+        {
+            "location": "/api/user/findbyid/", 
+            "text": "User FindById\n\n\nProtocol\n\n\nGET\n\n\nURL\n\n\nhttps://(subdomain).helpmonks.com/api/v1/user/findbyid/(id)\n\n\nParameters\n\n\n\n    \n\n        \nName\n\n        \nRequired\n\n        \nValue\n\n        \nComment\n\n    \n\n    \n\n        \nID\n\n        \nYes\n\n        \nObjectId\n\n        \n\n    \n\n\n\n\nThe available fields are documented in the \nUser Data Model\n. Refer to the \nQuery syntax documentation\n on how to query against your records\n\n\nExample\n\n\nhttps://(subdomain).helpmonks.com/api/v1/user/findbyid/54708b4cd71ef2dbdb557b9d\n\n\n\n\nReturned data\n\n\nPlease refer to the \nUser Data Model\n to see the data structure being returned", 
+            "title": "FindById"
+        }, 
+        {
+            "location": "/api/user/findbyid/#user-findbyid", 
+            "text": "", 
+            "title": "User FindById"
+        }, 
+        {
+            "location": "/api/user/findbyid/#protocol", 
+            "text": "GET", 
+            "title": "Protocol"
+        }, 
+        {
+            "location": "/api/user/findbyid/#url", 
+            "text": "https://(subdomain).helpmonks.com/api/v1/user/findbyid/(id)", 
+            "title": "URL"
+        }, 
+        {
+            "location": "/api/user/findbyid/#parameters", 
+            "text": "Name \n         Required \n         Value \n         Comment \n     \n     \n         ID \n         Yes \n         ObjectId \n         \n       The available fields are documented in the  User Data Model . Refer to the  Query syntax documentation  on how to query against your records", 
+            "title": "Parameters"
+        }, 
+        {
+            "location": "/api/user/findbyid/#example", 
+            "text": "https://(subdomain).helpmonks.com/api/v1/user/findbyid/54708b4cd71ef2dbdb557b9d", 
+            "title": "Example"
+        }, 
+        {
+            "location": "/api/user/findbyid/#returned-data", 
+            "text": "Please refer to the  User Data Model  to see the data structure being returned", 
+            "title": "Returned data"
+        }, 
+        {
+            "location": "/api/user/delete/", 
+            "text": "User Delete\n\n\nProtocol\n\n\nGET\n\n\nURL\n\n\nhttps://(subdomain).helpmonks.com/api/v1/user/delete/(id)\n\n\nParameters\n\n\n\n    \n\n        \nName\n\n        \nRequired\n\n        \nValue\n\n        \nComment\n\n    \n\n    \n\n        \nID\n\n        \nYes\n\n        \nObjectId\n\n        \n\n    \n\n\n\n\nThe available fields are documented in the \nUser Data Model\n. Refer to the \nQuery syntax documentation\n on how to query against your records\n\n\nExample\n\n\nhttps://(subdomain).helpmonks.com/api/v1/user/delete/54708b4cd71ef2dbdb557b9d\n\n\n\n\nReturned data\n\n\nPlease refer to the \nUser Data Model\n to see the data structure being returned", 
+            "title": "Delete"
+        }, 
+        {
+            "location": "/api/user/delete/#user-delete", 
+            "text": "", 
+            "title": "User Delete"
+        }, 
+        {
+            "location": "/api/user/delete/#protocol", 
+            "text": "GET", 
+            "title": "Protocol"
+        }, 
+        {
+            "location": "/api/user/delete/#url", 
+            "text": "https://(subdomain).helpmonks.com/api/v1/user/delete/(id)", 
+            "title": "URL"
+        }, 
+        {
+            "location": "/api/user/delete/#parameters", 
+            "text": "Name \n         Required \n         Value \n         Comment \n     \n     \n         ID \n         Yes \n         ObjectId \n         \n       The available fields are documented in the  User Data Model . Refer to the  Query syntax documentation  on how to query against your records", 
+            "title": "Parameters"
+        }, 
+        {
+            "location": "/api/user/delete/#example", 
+            "text": "https://(subdomain).helpmonks.com/api/v1/user/delete/54708b4cd71ef2dbdb557b9d", 
+            "title": "Example"
+        }, 
+        {
+            "location": "/api/user/delete/#returned-data", 
+            "text": "Please refer to the  User Data Model  to see the data structure being returned", 
+            "title": "Returned data"
+        }, 
+        {
+            "location": "/api/user/update/", 
+            "text": "User Update\n\n\nProtocol\n\n\nPOST\n\n\nURL\n\n\nhttps://(subdomain).helpmonks.com/api/v1/user/update\n\n\nParameters\n\n\n\n    \n\n        \nName\n\n        \nRequired\n\n        \nValue\n\n        \nComment\n\n    \n\n    \n\n        \nuser\n\n        \nYes\n\n        \nObject containing the ID of the user and fields to update\n\n        \n\n    \n\n\n\n\nThe available fields are documented in the \nUser Data Model\n. Refer to the \nQuery syntax documentation\n on how to query against your records\n\n\nExample\n\n\n{\n    user : { \n        'id' : '54708b4cd71ef2dbdb557b9d', \n        'email' : 'nitai@helpmonks.com',\n        \nfirst_name\n : \nNitai\n\n    }\n}\n\n\n\n\nReturned data\n\n\nPlease refer to the \nUser Data Model\n to see the data structure being returned", 
+            "title": "Update"
+        }, 
+        {
+            "location": "/api/user/update/#user-update", 
+            "text": "", 
+            "title": "User Update"
+        }, 
+        {
+            "location": "/api/user/update/#protocol", 
+            "text": "POST", 
+            "title": "Protocol"
+        }, 
+        {
+            "location": "/api/user/update/#url", 
+            "text": "https://(subdomain).helpmonks.com/api/v1/user/update", 
+            "title": "URL"
+        }, 
+        {
+            "location": "/api/user/update/#parameters", 
+            "text": "Name \n         Required \n         Value \n         Comment \n     \n     \n         user \n         Yes \n         Object containing the ID of the user and fields to update \n         \n       The available fields are documented in the  User Data Model . Refer to the  Query syntax documentation  on how to query against your records", 
+            "title": "Parameters"
+        }, 
+        {
+            "location": "/api/user/update/#example", 
+            "text": "{\n    user : { \n        'id' : '54708b4cd71ef2dbdb557b9d', \n        'email' : 'nitai@helpmonks.com',\n         first_name  :  Nitai \n    }\n}", 
+            "title": "Example"
+        }, 
+        {
+            "location": "/api/user/update/#returned-data", 
+            "text": "Please refer to the  User Data Model  to see the data structure being returned", 
+            "title": "Returned data"
+        }, 
+        {
+            "location": "/api/user/create/", 
+            "text": "User Create\n\n\nProtocol\n\n\nPOST\n\n\nURL\n\n\nhttps://(subdomain).helpmonks.com/api/v1/user/create\n\n\nParameters\n\n\n\n    \n\n        \nName\n\n        \nRequired\n\n        \nValue\n\n        \nComment\n\n    \n\n    \n\n        \nuser\n\n        \nYes\n\n        \nObject containing the fields for this user\n\n        \n\n    \n\n\n\n\nThe available fields are documented in the \nUser Data Model\n. Refer to the \nQuery syntax documentation\n on how to query against your records\n\n\nExample\n\n\n{\n    user : { \n        \nemail\n : \nuser@domain.com\n,\n        \nfirst_name\n : \nUser\n,\n        \nlast_name\n : \nAwesome\n\n    }\n}\n\n\n\n\nReturned data\n\n\nPlease refer to the \nUser Data Model\n to see the data structure being returned", 
+            "title": "Create"
+        }, 
+        {
+            "location": "/api/user/create/#user-create", 
+            "text": "", 
+            "title": "User Create"
+        }, 
+        {
+            "location": "/api/user/create/#protocol", 
+            "text": "POST", 
+            "title": "Protocol"
+        }, 
+        {
+            "location": "/api/user/create/#url", 
+            "text": "https://(subdomain).helpmonks.com/api/v1/user/create", 
+            "title": "URL"
+        }, 
+        {
+            "location": "/api/user/create/#parameters", 
+            "text": "Name \n         Required \n         Value \n         Comment \n     \n     \n         user \n         Yes \n         Object containing the fields for this user \n         \n       The available fields are documented in the  User Data Model . Refer to the  Query syntax documentation  on how to query against your records", 
+            "title": "Parameters"
+        }, 
+        {
+            "location": "/api/user/create/#example", 
+            "text": "{\n    user : { \n         email  :  user@domain.com ,\n         first_name  :  User ,\n         last_name  :  Awesome \n    }\n}", 
+            "title": "Example"
+        }, 
+        {
+            "location": "/api/user/create/#returned-data", 
+            "text": "Please refer to the  User Data Model  to see the data structure being returned", 
+            "title": "Returned data"
+        }, 
+        {
+            "location": "/api/user/activate/", 
+            "text": "User Activate\n\n\nProtocol\n\n\nGET\n\n\nURL\n\n\nhttps://(subdomain).helpmonks.com/api/v1/user/activate/(id)\n\n\nParameters\n\n\n\n    \n\n        \nName\n\n        \nRequired\n\n        \nValue\n\n        \nComment\n\n    \n\n    \n\n        \nID\n\n        \nYes\n\n        \nObjectId\n\n        \n\n    \n\n\n\n\nThe available fields are documented in the \nUser Data Model\n. Refer to the \nQuery syntax documentation\n on how to query against your records\n\n\nExample\n\n\nhttps://(subdomain).helpmonks.com/api/v1/user/activate/findbyid/54708b4cd71ef2dbdb557b9d\n\n\n\n\nReturned data\n\n\nPlease refer to the \nUser Data Model\n to see the data structure being returned", 
+            "title": "Activate"
+        }, 
+        {
+            "location": "/api/user/activate/#user-activate", 
+            "text": "", 
+            "title": "User Activate"
+        }, 
+        {
+            "location": "/api/user/activate/#protocol", 
+            "text": "GET", 
+            "title": "Protocol"
+        }, 
+        {
+            "location": "/api/user/activate/#url", 
+            "text": "https://(subdomain).helpmonks.com/api/v1/user/activate/(id)", 
+            "title": "URL"
+        }, 
+        {
+            "location": "/api/user/activate/#parameters", 
+            "text": "Name \n         Required \n         Value \n         Comment \n     \n     \n         ID \n         Yes \n         ObjectId \n         \n       The available fields are documented in the  User Data Model . Refer to the  Query syntax documentation  on how to query against your records", 
+            "title": "Parameters"
+        }, 
+        {
+            "location": "/api/user/activate/#example", 
+            "text": "https://(subdomain).helpmonks.com/api/v1/user/activate/findbyid/54708b4cd71ef2dbdb557b9d", 
+            "title": "Example"
+        }, 
+        {
+            "location": "/api/user/activate/#returned-data", 
+            "text": "Please refer to the  User Data Model  to see the data structure being returned", 
+            "title": "Returned data"
+        }, 
+        {
+            "location": "/api/user/deactivate/", 
+            "text": "User De-Activate\n\n\nProtocol\n\n\nGET\n\n\nURL\n\n\nhttps://(subdomain).helpmonks.com/api/v1/user/deactivate/(id)\n\n\nParameters\n\n\n\n    \n\n        \nName\n\n        \nRequired\n\n        \nValue\n\n        \nComment\n\n    \n\n    \n\n        \nID\n\n        \nYes\n\n        \nObjectId\n\n        \n\n    \n\n\n\n\nThe available fields are documented in the \nUser Data Model\n. Refer to the \nQuery syntax documentation\n on how to query against your records\n\n\nExample\n\n\nhttps://(subdomain).helpmonks.com/api/v1/user/deactivate/findbyid/54708b4cd71ef2dbdb557b9d\n\n\n\n\nReturned data\n\n\nPlease refer to the \nUser Data Model\n to see the data structure being returned", 
+            "title": "Deactivate"
+        }, 
+        {
+            "location": "/api/user/deactivate/#user-de-activate", 
+            "text": "", 
+            "title": "User De-Activate"
+        }, 
+        {
+            "location": "/api/user/deactivate/#protocol", 
+            "text": "GET", 
+            "title": "Protocol"
+        }, 
+        {
+            "location": "/api/user/deactivate/#url", 
+            "text": "https://(subdomain).helpmonks.com/api/v1/user/deactivate/(id)", 
+            "title": "URL"
+        }, 
+        {
+            "location": "/api/user/deactivate/#parameters", 
+            "text": "Name \n         Required \n         Value \n         Comment \n     \n     \n         ID \n         Yes \n         ObjectId \n         \n       The available fields are documented in the  User Data Model . Refer to the  Query syntax documentation  on how to query against your records", 
+            "title": "Parameters"
+        }, 
+        {
+            "location": "/api/user/deactivate/#example", 
+            "text": "https://(subdomain).helpmonks.com/api/v1/user/deactivate/findbyid/54708b4cd71ef2dbdb557b9d", 
+            "title": "Example"
+        }, 
+        {
+            "location": "/api/user/deactivate/#returned-data", 
+            "text": "Please refer to the  User Data Model  to see the data structure being returned", 
+            "title": "Returned data"
+        }, 
+        {
+            "location": "/api/search/", 
+            "text": "Search\n\n\nProtocol\n\n\nPOST\n\n\nURL\n\n\nhttps://(subdomain).helpmonks.com/api/v1/search\n\n\nParameters\n\n\n\n    \n\n        \nName\n\n        \nRequired\n\n        \nValue\n\n        \nComment\n\n    \n\n    \n\n        \nsearch_text\n\n        \nYes\n\n        \nText to search with\n\n        \n\n    \n\n    \n\n        \npage_no\n\n        \nNo\n\n        \nPage number\n\n        \nDefaults to \n0\n (zero)\n\n    \n\n    \n\n        \nnum_per_page\n\n        \nNo\n\n        \nHow many results to show per page\n\n        \nDefaults to 50\n\n    \n\n    \n\n        \nsearch_mailboxes\n\n        \nNo\n\n        \nMailbox Ids to search in\n\n        \nAvailable as of Jan. 10th, 2018\n\n    \n\n    \n\n        \nsearch_status\n\n        \nNo\n\n        \nInbox, Assigned, Archived, Closed\n\n        \nAvailable as of Jan. 10th, 2018\n\n    \n\n    \n\n        \nsearch_labels\n\n        \nNo\n\n        \nLabel Ids to search in\n\n        \nAvailable as of Jan. 10th, 2018\n\n    \n\n    \n\n        \nsearch_get_trash\n\n        \nNo\n\n        \nTo include conversations in the Trash and Spam folder. true/false\n\n        \nAvailable as of Jan. 10th, 2018\n\n    \n\n\n\n\nExample\n\n\n{\n    search_text : \nHelpmonks\n,\n    search_status : \nClosed\n,\n    page_no : 0,\n    num_per_page : 50\n}\n\n\n\n\nThe above will search all conversations for \nHelpmonks\n and will return 50 results per page. Subsequent results might be retieved by passing in page_no = 1.\n\n\nReturned data\n\n\nThe returning data load will contain all the found results with additional information like amount of found results, users and email conversations.\n\n\n{\n  \npage_no\n: 1,\n  \nnum_per_page\n: 50,\n  \nsearch_text\n: \nnitai\n,\n  \nusers\n: [\n    {\n      \n_id\n: \n564760c8217d2dbb4bda0084\n,\n      \nfirst_name\n: \nJack\n,\n      \nlast_name\n: \nBauer\n,\n      \ngroups\n: []\n    },\n    {\n      \n_id\n: \n564760c6217d2dbb4bda007e\n,\n      \nfirst_name\n: \nNitai\n,\n      \nlast_name\n: \nAventaggiato\n,\n      \ngroups\n: [\n        \n564760c6217d2dbb4bda006d\n\n      ]\n    }\n  ],\n  \nemails\n: [\n    {\n      \nassignee\n: null,\n      \n_id\n: \n571a324596dd2892ce316aea\n,\n      \ncompany_id\n: {\n        \n_id\n: \n5678b6d822cf931e303701b4\n,\n        \nsla_details\n: {\n          \nend_date\n: \n2015-12-19T07:00:00.000Z\n,\n          \nstart_date\n: \n2014-12-19T07:00:00.000Z\n,\n          \nsla_id\n: {\n            \n_id\n: \n564760c9217d2dbb4bda0094\n,\n            \nresponse_time_in_minutes\n: 3\n          }\n        }\n      },\n      \nhost_id\n: \n564760c6217d2dbb4bda0066\n,\n      \nstatus\n: \ninbox\n,\n      \nlast_communication_date\n: \n2016-04-24T23:45:59.493Z\n,\n      \nmailbox_id\n: \n564760c6217d2dbb4bda0077\n,\n      \nsender_timezone_offset\n: \n+0000\n,\n      \n__v\n: 0,\n      \naudit_info\n: {\n        \ncreated_date\n: \n2016-04-22T14:16:37.614Z\n,\n        \ncreated_by\n: \n564760c5217d2dbb4bda0059\n,\n        \nmodified_date\n: \n2016-04-24T23:45:59.501Z\n,\n        \nmodified_by\n: \n564760c6217d2dbb4bda007d\n\n      },\n      \ndrafts\n: [],\n      \nhas_attachments\n: false,\n      \nreminders\n: [],\n      \nactions\n: [\n        {\n          \nexcerpt\n: \nNitai assigned to Jack Bauer\n,\n          \nbody\n: \nNitai assigned to Jack Bauer\n,\n          \nfrom\n: \n564760c6217d2dbb4bda007d\n,\n          \n_id\n: \n5714e9d97411a84b59ea4711\n,\n          \nsubject\n: \naction\n,\n          \ntimestamp\n: \n2016-04-18T14:06:17.820Z\n\n        }\n      ],\n      \nnotes\n: [\n        {\n          \nexcerpt\n: \nNote me\n,\n          \nbody\n: \nNote me\nbr\n,\n          \nfrom\n: \n564760c6217d2dbb4bda007d\n,\n          \n_id\n: \n56a4235387977ba011a9ed38\n,\n          \nis_public\n: true,\n          \nsubject\n: \nnote\n,\n          \ntimestamp\n: \n2016-01-24T01:05:23.622Z\n\n        }\n      ],\n      \nemails\n: [\n        {\n          \nsubject\n: \nSome Subject\n,\n          \nexcerpt\n: \nAn excerpt\n,\n          \nbody\n: \nThe body\n,\n          \ncc\n: \n,\n          \nmessage_id\n: \nCAAX3qO7ZfSZ5aJVem2Csh=SwUPo4YsaU=JHiBNnjHkVsTzr4UA@mail.gmail.com\n,\n          \n_id\n: \n571a324596dd2892ce316aeb\n,\n          \nattachments\n: [\n            {\n              \ncontentType\n: \nimage/jpeg\n,\n              \nfileName\n: \nIMG_0919.JPG\n,\n              \ngeneratedFileName\n: \nIMG_0919.JPG\n,\n              \ncontentId\n: \n2f06048e92749326fe1efc2163b0ea84\n,\n              \nchecksum\n: \n2f06048e92749326fe1efc2163b0ea84\n,\n              \nlength\n: 594504,\n              \ns3url\n: \nhttps://s3.amazonaws.com/...\n,\n              \n_id\n: \n5714e9d97411a84b59ea4713\n\n            }\n          ],\n          \nis_forward\n: false,\n          \nfrom\n: {\n            \ncompany_user_id\n: {\n              \n_id\n: \n565909f583d5cb5023098dee\n,\n              \nemail\n: \nnitai@razuna.com\n,\n              \nfirst_name\n: \n,\n              \nlast_name\n: \n\n            },\n            \nuser_id\n: null\n          },\n          \ntimestamp\n: \n2016-04-22T14:16:12.000Z\n\n        }\n      ],\n      \nlabels\n: []\n    }\n  ],\n  \nmailbox_ids\n: [\n    \n564760c6217d2dbb4bda0077\n,\n    \n564760c6217d2dbb4bda0076\n,\n    \n564760c6217d2dbb4bda0075\n\n  ],\n  \nnum_records_found\n: 26\n}", 
+            "title": "Search"
+        }, 
+        {
+            "location": "/api/search/#search", 
+            "text": "", 
+            "title": "Search"
+        }, 
+        {
+            "location": "/api/search/#protocol", 
+            "text": "POST", 
+            "title": "Protocol"
+        }, 
+        {
+            "location": "/api/search/#url", 
+            "text": "https://(subdomain).helpmonks.com/api/v1/search", 
+            "title": "URL"
+        }, 
+        {
+            "location": "/api/search/#parameters", 
+            "text": "Name \n         Required \n         Value \n         Comment \n     \n     \n         search_text \n         Yes \n         Text to search with \n         \n     \n     \n         page_no \n         No \n         Page number \n         Defaults to  0  (zero) \n     \n     \n         num_per_page \n         No \n         How many results to show per page \n         Defaults to 50 \n     \n     \n         search_mailboxes \n         No \n         Mailbox Ids to search in \n         Available as of Jan. 10th, 2018 \n     \n     \n         search_status \n         No \n         Inbox, Assigned, Archived, Closed \n         Available as of Jan. 10th, 2018 \n     \n     \n         search_labels \n         No \n         Label Ids to search in \n         Available as of Jan. 10th, 2018 \n     \n     \n         search_get_trash \n         No \n         To include conversations in the Trash and Spam folder. true/false \n         Available as of Jan. 10th, 2018", 
+            "title": "Parameters"
+        }, 
+        {
+            "location": "/api/search/#example", 
+            "text": "{\n    search_text :  Helpmonks ,\n    search_status :  Closed ,\n    page_no : 0,\n    num_per_page : 50\n}  The above will search all conversations for  Helpmonks  and will return 50 results per page. Subsequent results might be retieved by passing in page_no = 1.", 
+            "title": "Example"
+        }, 
+        {
+            "location": "/api/search/#returned-data", 
+            "text": "The returning data load will contain all the found results with additional information like amount of found results, users and email conversations.  {\n   page_no : 1,\n   num_per_page : 50,\n   search_text :  nitai ,\n   users : [\n    {\n       _id :  564760c8217d2dbb4bda0084 ,\n       first_name :  Jack ,\n       last_name :  Bauer ,\n       groups : []\n    },\n    {\n       _id :  564760c6217d2dbb4bda007e ,\n       first_name :  Nitai ,\n       last_name :  Aventaggiato ,\n       groups : [\n         564760c6217d2dbb4bda006d \n      ]\n    }\n  ],\n   emails : [\n    {\n       assignee : null,\n       _id :  571a324596dd2892ce316aea ,\n       company_id : {\n         _id :  5678b6d822cf931e303701b4 ,\n         sla_details : {\n           end_date :  2015-12-19T07:00:00.000Z ,\n           start_date :  2014-12-19T07:00:00.000Z ,\n           sla_id : {\n             _id :  564760c9217d2dbb4bda0094 ,\n             response_time_in_minutes : 3\n          }\n        }\n      },\n       host_id :  564760c6217d2dbb4bda0066 ,\n       status :  inbox ,\n       last_communication_date :  2016-04-24T23:45:59.493Z ,\n       mailbox_id :  564760c6217d2dbb4bda0077 ,\n       sender_timezone_offset :  +0000 ,\n       __v : 0,\n       audit_info : {\n         created_date :  2016-04-22T14:16:37.614Z ,\n         created_by :  564760c5217d2dbb4bda0059 ,\n         modified_date :  2016-04-24T23:45:59.501Z ,\n         modified_by :  564760c6217d2dbb4bda007d \n      },\n       drafts : [],\n       has_attachments : false,\n       reminders : [],\n       actions : [\n        {\n           excerpt :  Nitai assigned to Jack Bauer ,\n           body :  Nitai assigned to Jack Bauer ,\n           from :  564760c6217d2dbb4bda007d ,\n           _id :  5714e9d97411a84b59ea4711 ,\n           subject :  action ,\n           timestamp :  2016-04-18T14:06:17.820Z \n        }\n      ],\n       notes : [\n        {\n           excerpt :  Note me ,\n           body :  Note me br ,\n           from :  564760c6217d2dbb4bda007d ,\n           _id :  56a4235387977ba011a9ed38 ,\n           is_public : true,\n           subject :  note ,\n           timestamp :  2016-01-24T01:05:23.622Z \n        }\n      ],\n       emails : [\n        {\n           subject :  Some Subject ,\n           excerpt :  An excerpt ,\n           body :  The body ,\n           cc :  ,\n           message_id :  CAAX3qO7ZfSZ5aJVem2Csh=SwUPo4YsaU=JHiBNnjHkVsTzr4UA@mail.gmail.com ,\n           _id :  571a324596dd2892ce316aeb ,\n           attachments : [\n            {\n               contentType :  image/jpeg ,\n               fileName :  IMG_0919.JPG ,\n               generatedFileName :  IMG_0919.JPG ,\n               contentId :  2f06048e92749326fe1efc2163b0ea84 ,\n               checksum :  2f06048e92749326fe1efc2163b0ea84 ,\n               length : 594504,\n               s3url :  https://s3.amazonaws.com/... ,\n               _id :  5714e9d97411a84b59ea4713 \n            }\n          ],\n           is_forward : false,\n           from : {\n             company_user_id : {\n               _id :  565909f583d5cb5023098dee ,\n               email :  nitai@razuna.com ,\n               first_name :  ,\n               last_name :  \n            },\n             user_id : null\n          },\n           timestamp :  2016-04-22T14:16:12.000Z \n        }\n      ],\n       labels : []\n    }\n  ],\n   mailbox_ids : [\n     564760c6217d2dbb4bda0077 ,\n     564760c6217d2dbb4bda0076 ,\n     564760c6217d2dbb4bda0075 \n  ],\n   num_records_found : 26\n}", 
+            "title": "Returned data"
+        }, 
+        {
+            "location": "/api/models/conversation/", 
+            "text": "Data Model for Conversation\n\n\nThis is the data model for records in the returning data structure. You also use this model to query against the records.\n\n\n{\n    '_id' : ObjectId, // READONLY\n    'host_id' : ObjectId,\n    'last_communication_date' : Date,\n    'status' : String, // one of these: 'inbox' 'assigned' 'archived' 'closed' 'spam' 'trash'\n    'mailbox_id' : ObjectId, // REQUIRED\n    'assignee' : ObjectId,\n    'labels' : [\n        ObjectId\n    ],\n    'emails' : [{\n        'timestamp' : Date, // default : Date.now\n        'subject' : String,\n        'excerpt' : String,\n        'body' : String,\n        'sanitized' : String,\n        'responded_to' : String,\n        'from' : {\n            'user_id' : ObjectId, // See note below\n            'company_user_id' : ObjectId // See note below\n        },\n        'cc' : String,\n        'bcc' : String,\n        'to' : ObjectId,\n        'is_forward' : Boolean, // default: false\n        'attachments' : [{\n            'contentType' : String,\n            'fileName' : String,\n            'generatedFileName' : String,\n            'contentId' : String,\n            'checksum' : String,\n            'length' : Number,\n            's3url' : String\n        }],\n        'message_id' : String\n    }],\n    'notes' : [{\n        'timestamp' : Date, // default : Date.now\n        'subject' : String, // default : 'note'\n        'excerpt' : String,\n        'body' : String,\n        'from' : ObjectId,\n        'is_public' : Boolean, // default: true\n    }],\n    'actions' : [{\n        'user_id' : ObjectId,\n        'timestamp' : Date, // default : Date.now\n        'subject' : String, // default : 'action'\n        'excerpt' : String,\n        'body' : String,\n        'from' : ObjectId,\n        'forward_id' : ObjectId\n    }],\n    'reminders' : [{\n        'reminder_date' : Date, // REQUIRED\n        'user_id' : ObjectId, // REQUIRED\n    }],\n    'has_attachments' : Boolean, // default: false,\n    'sender_timezone_offset' : String,\n    'company_id' : ObjectId,\n    'communication_with' : [\n        ObjectId\n    ]\n}\n\n\n\n\nNote\n\n\nThe \nemails.from\n must either contain a \nuser_id\n or a \ncompany_user_id\n value.\n\n\nThe \ncommunication_with\n field can only contain valid company_user id\ns. It\ns being used to show with whom you have the conversation with in the Helpmonks app.", 
+            "title": "Conversations"
+        }, 
+        {
+            "location": "/api/models/conversation/#data-model-for-conversation", 
+            "text": "This is the data model for records in the returning data structure. You also use this model to query against the records.  {\n    '_id' : ObjectId, // READONLY\n    'host_id' : ObjectId,\n    'last_communication_date' : Date,\n    'status' : String, // one of these: 'inbox' 'assigned' 'archived' 'closed' 'spam' 'trash'\n    'mailbox_id' : ObjectId, // REQUIRED\n    'assignee' : ObjectId,\n    'labels' : [\n        ObjectId\n    ],\n    'emails' : [{\n        'timestamp' : Date, // default : Date.now\n        'subject' : String,\n        'excerpt' : String,\n        'body' : String,\n        'sanitized' : String,\n        'responded_to' : String,\n        'from' : {\n            'user_id' : ObjectId, // See note below\n            'company_user_id' : ObjectId // See note below\n        },\n        'cc' : String,\n        'bcc' : String,\n        'to' : ObjectId,\n        'is_forward' : Boolean, // default: false\n        'attachments' : [{\n            'contentType' : String,\n            'fileName' : String,\n            'generatedFileName' : String,\n            'contentId' : String,\n            'checksum' : String,\n            'length' : Number,\n            's3url' : String\n        }],\n        'message_id' : String\n    }],\n    'notes' : [{\n        'timestamp' : Date, // default : Date.now\n        'subject' : String, // default : 'note'\n        'excerpt' : String,\n        'body' : String,\n        'from' : ObjectId,\n        'is_public' : Boolean, // default: true\n    }],\n    'actions' : [{\n        'user_id' : ObjectId,\n        'timestamp' : Date, // default : Date.now\n        'subject' : String, // default : 'action'\n        'excerpt' : String,\n        'body' : String,\n        'from' : ObjectId,\n        'forward_id' : ObjectId\n    }],\n    'reminders' : [{\n        'reminder_date' : Date, // REQUIRED\n        'user_id' : ObjectId, // REQUIRED\n    }],\n    'has_attachments' : Boolean, // default: false,\n    'sender_timezone_offset' : String,\n    'company_id' : ObjectId,\n    'communication_with' : [\n        ObjectId\n    ]\n}", 
+            "title": "Data Model for Conversation"
+        }, 
+        {
+            "location": "/api/models/conversation/#note", 
+            "text": "The  emails.from  must either contain a  user_id  or a  company_user_id  value.  The  communication_with  field can only contain valid company_user id s. It s being used to show with whom you have the conversation with in the Helpmonks app.", 
+            "title": "Note"
+        }, 
+        {
+            "location": "/api/models/customer/", 
+            "text": "Data Model for Customer\n\n\nThis is the data model for records in the returning data structure. You also use this model to query against the records.\n\n\n{\n    '_id' : ObjectId, // READONLY\n    'host_id' : ObjectId, // REQURIED\n    'company_id' : ObjectId,\n    'email' : String, // REQUIRED\n    'first_name' : String,\n    'middle_name' : String,\n    'last_name' : String,\n    'notes' : String,\n    'last_correspondence_date' : Date,\n    'last_email_chain_id' : ObjectId\n}", 
+            "title": "Customer"
+        }, 
+        {
+            "location": "/api/models/customer/#data-model-for-customer", 
+            "text": "This is the data model for records in the returning data structure. You also use this model to query against the records.  {\n    '_id' : ObjectId, // READONLY\n    'host_id' : ObjectId, // REQURIED\n    'company_id' : ObjectId,\n    'email' : String, // REQUIRED\n    'first_name' : String,\n    'middle_name' : String,\n    'last_name' : String,\n    'notes' : String,\n    'last_correspondence_date' : Date,\n    'last_email_chain_id' : ObjectId\n}", 
+            "title": "Data Model for Customer"
+        }, 
+        {
+            "location": "/api/models/mailbox/", 
+            "text": "Data Model for Mailbox\n\n\nThis is the data model for records in the returning data structure. You also use this model to query against the records.\n\n\n{\n    '_id' : ObjectId, // READONLY\n    'active' : Boolean, // REQUIRED\n    'name' : String,\n    'host_id' : ObjectId, // REQUIRED\n    'email' : String, // UNIQUE\n    'forward_to' : String,\n    'alias' : String,\n    'from' : String,\n    'parse_implicit_forward' : Boolean, // default : true\n    'signature' : String, // default : ''\n    'sending_via' : {\n        'custom' : Boolean, // REQUIRED\n        'server' : String, // default : ''\n        'username' : String, // default : ''\n        'password' : String, // default : ''\n        'port' : String, // default : ''\n        'is_ssl' : Boolean, // default : false\n    },\n    'users' : [ \n        ObjectId\n    ],\n    'auto_reply' : {\n        'enabled' : Boolean, // default : false\n        'subject' : String, // default : ''\n        'message' : String, // default : ''\n    },\n    'label_explorer' : Boolean // default : false\n    'notifications' : {\n        'new_message' : Boolean, // default : true\n        'comments' : Boolean, // default : true\n        'replies' : Boolean, // default : true\n        'assignment' : Boolean, // default : true\n    },\n    'email_template' : String, // REQUIRED default : 'simple',\n    'default_status' : String // REQUIRED default : 'unchanged'\n}", 
+            "title": "Mailbox"
+        }, 
+        {
+            "location": "/api/models/mailbox/#data-model-for-mailbox", 
+            "text": "This is the data model for records in the returning data structure. You also use this model to query against the records.  {\n    '_id' : ObjectId, // READONLY\n    'active' : Boolean, // REQUIRED\n    'name' : String,\n    'host_id' : ObjectId, // REQUIRED\n    'email' : String, // UNIQUE\n    'forward_to' : String,\n    'alias' : String,\n    'from' : String,\n    'parse_implicit_forward' : Boolean, // default : true\n    'signature' : String, // default : ''\n    'sending_via' : {\n        'custom' : Boolean, // REQUIRED\n        'server' : String, // default : ''\n        'username' : String, // default : ''\n        'password' : String, // default : ''\n        'port' : String, // default : ''\n        'is_ssl' : Boolean, // default : false\n    },\n    'users' : [ \n        ObjectId\n    ],\n    'auto_reply' : {\n        'enabled' : Boolean, // default : false\n        'subject' : String, // default : ''\n        'message' : String, // default : ''\n    },\n    'label_explorer' : Boolean // default : false\n    'notifications' : {\n        'new_message' : Boolean, // default : true\n        'comments' : Boolean, // default : true\n        'replies' : Boolean, // default : true\n        'assignment' : Boolean, // default : true\n    },\n    'email_template' : String, // REQUIRED default : 'simple',\n    'default_status' : String // REQUIRED default : 'unchanged'\n}", 
+            "title": "Data Model for Mailbox"
+        }, 
+        {
+            "location": "/api/models/label/", 
+            "text": "Data Model for Label\n\n\nThis is the data model for records in the returning data structure. You also use this model to query against the records.\n\n\n{\n    '_id' : ObjectId, // READONLY\n    'name' : String,\n    'host_id' : ObjectId, // REQUIRED\n    'parent_id' : ObjectId,\n    'children' Boolean, // REQUIRED\n    'ancestors' : {\n        'path' : [{\n            _id : false,\n            'id' : ObjectId, // REQUIRED\n            'name' : String, REQUIRED\n        }]\n    },\n    'active_mailboxes' : [\n        {\n            _id : false,\n            'id' : ObjectId\n            'show' : Boolean, // default : true\n        }\n    ]\n}", 
+            "title": "Label"
+        }, 
+        {
+            "location": "/api/models/label/#data-model-for-label", 
+            "text": "This is the data model for records in the returning data structure. You also use this model to query against the records.  {\n    '_id' : ObjectId, // READONLY\n    'name' : String,\n    'host_id' : ObjectId, // REQUIRED\n    'parent_id' : ObjectId,\n    'children' Boolean, // REQUIRED\n    'ancestors' : {\n        'path' : [{\n            _id : false,\n            'id' : ObjectId, // REQUIRED\n            'name' : String, REQUIRED\n        }]\n    },\n    'active_mailboxes' : [\n        {\n            _id : false,\n            'id' : ObjectId\n            'show' : Boolean, // default : true\n        }\n    ]\n}", 
+            "title": "Data Model for Label"
+        }, 
+        {
+            "location": "/api/models/user/", 
+            "text": "Data Model for User\n\n\nThis is the data model for records in the returning data structure. You also use this model to query against the records.\n\n\n{\n    '_id' : ObjectId, // READONLY\n    'host_id' : ObjectId\n    'template_id' : ObjectId,\n    'password' : String,\n    'first_name' : String, // REQUIRED\n    'last_name' : String, // REQUIRED\n    'is_active' : Boolean, // REQUIRED default : true\n    'email' : String, // REQUIRED\n    'groups' : [\n        String\n    ],\n    'fields' : [{\n        _id : false,\n        'field_id' : Number,\n        'field_name' : String,\n        'value' : Mixed\n    }],\n    'last_login_date' : Date,\n    'time' : {\n        'time_zone' : String, // default : 'America/New_York'\n        'time_format' : String, // default : '12'\n    },\n    'uuid_for_password' : String,\n    'notifications' : [{\n        '_id' : false,\n        'mailbox_id' : ObjectId,\n        'new_message' : Boolean // default : true\n        'comments' : Boolean, // default : true\n        'replies' : Boolean, // default : true\n        'assignment' : Boolean, // default : true\n    }],\n    'email_quote_count' : Number, // default : '7'\n    'signature' : String,\n    'api_keys' : [{\n        'api_key' : String,\n        'active' : Boolean, // default : true\n        'date_create' : Date\n    }]\n}", 
+            "title": "User"
+        }, 
+        {
+            "location": "/api/models/user/#data-model-for-user", 
+            "text": "This is the data model for records in the returning data structure. You also use this model to query against the records.  {\n    '_id' : ObjectId, // READONLY\n    'host_id' : ObjectId\n    'template_id' : ObjectId,\n    'password' : String,\n    'first_name' : String, // REQUIRED\n    'last_name' : String, // REQUIRED\n    'is_active' : Boolean, // REQUIRED default : true\n    'email' : String, // REQUIRED\n    'groups' : [\n        String\n    ],\n    'fields' : [{\n        _id : false,\n        'field_id' : Number,\n        'field_name' : String,\n        'value' : Mixed\n    }],\n    'last_login_date' : Date,\n    'time' : {\n        'time_zone' : String, // default : 'America/New_York'\n        'time_format' : String, // default : '12'\n    },\n    'uuid_for_password' : String,\n    'notifications' : [{\n        '_id' : false,\n        'mailbox_id' : ObjectId,\n        'new_message' : Boolean // default : true\n        'comments' : Boolean, // default : true\n        'replies' : Boolean, // default : true\n        'assignment' : Boolean, // default : true\n    }],\n    'email_quote_count' : Number, // default : '7'\n    'signature' : String,\n    'api_keys' : [{\n        'api_key' : String,\n        'active' : Boolean, // default : true\n        'date_create' : Date\n    }]\n}", 
+            "title": "Data Model for User"
+        }, 
+        {
+            "location": "/about/", 
+            "text": "About Helpmonks\n\n\nHelpmonks\n is a team email management solution and has already helped over 1000 successful organizations to manage their team email flow.\n\n\nCreate your very own Helpmonks account today on the \nHelpmonks Website\n for free.", 
+            "title": "About Helpmonks"
+        }, 
+        {
+            "location": "/about/#about-helpmonks", 
+            "text": "Helpmonks  is a team email management solution and has already helped over 1000 successful organizations to manage their team email flow.  Create your very own Helpmonks account today on the  Helpmonks Website  for free.", 
+            "title": "About Helpmonks"
+        }
+    ]
+}
