@@ -1,16 +1,29 @@
 site_name: Helpmonks Developer Guides
-theme_dir: readthedocshm
+theme:
+  name: material
+  custom_dir: theme_hm
+  palette:
+    primary: 'light green'
+    accent: 'light green'
+  logo: 'images/icon_transparent_128.png'
+  feature:
+    tabs: true
 site_url: http://developer.helpmonks.com
-site_description: These are the Helpmonks developer documentation pages
+site_description: The Helpmonks developer documentation pages
 site_author: Nitai Aventaggiato
 markdown_extensions:
   - smarty
   - toc
 extra:
   version: 1.0
+  social:
+    - type: 'twitter'
+      link: 'https://twitter.com/helpmonks'
+    - type: 'facebook'
+      link: 'https://facebook.com/helpmonks'
 pages:
 - 'Home': 'index.md'
-- 'Developer API': 
+- 'Developer API':
   - 'Getting Started':
     - 'Overview': 'api/overview.md'
     - 'Authentication': 'api/authentication.md'
@@ -60,4 +73,4 @@ pages:
     - 'Mailbox' : 'api/models/mailbox.md'
     - 'Label' : 'api/models/label.md'
     - 'User' : 'api/models/user.md'
-- 'About Helpmonks': 'about.md' 
+- 'About Helpmonks': 'about.md'
