@@ -26,7 +26,9 @@ This is the data model for records in the returning data structure. You also use
         },
         'cc' : String,
         'bcc' : String,
-        'to' : ObjectId,
+        'to' : [
+            ObjectId
+        ],
         'is_forward' : Boolean, // default: false
         'attachments' : [{
             'contentType' : String,
