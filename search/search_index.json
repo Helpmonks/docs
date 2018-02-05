@@ -1359,6 +1359,281 @@
             "location": "/about/#about-helpmonks", 
             "text": "Helpmonks  is a team email management solution and has already helped over 1000 successful organizations to manage their team email flow.  Create your very own Helpmonks account today on the  Helpmonks Website  for free.", 
             "title": "About Helpmonks"
+        }, 
+        {
+            "location": "/sso/introduction/", 
+            "text": "Single-Sign-On Introduction\n\n\nThe Helpmonks Single-Sign-On allows you to sign in as users to their Helpmonks accounts. This mainly enables third party vendors to embbed Helpmonks into their systems or for customers that wish to enable Single-Sign-On for their users.\n\n\nSingle-Sign-On API URL\n\n\nSingle-Sign-On API requests should be done towards https://(yoursubdomain).helpmonks.com/p/sso. Please refer to the individidual guides in this section for the correct URL.\n\n\nAuthentication\n\n\nThe current Single-Sign-On implementation is based on oAuth2. In order to access an account you first need to create an oAuth Access key pair. The Access key pair consists of an \naccess_id\n and an \naccess_secret\n. You then use the Single-Sign-On API to retrieve an \naccess_token\n for each user.\n\n\nPlease continue on to the \nAuthentication\n guide.\n\n\nHelp\n\n\nIf you have any questions, please post a message to our \nHelpmonks Developer forum\n.", 
+            "title": "Introduction"
+        }, 
+        {
+            "location": "/sso/introduction/#single-sign-on-introduction", 
+            "text": "The Helpmonks Single-Sign-On allows you to sign in as users to their Helpmonks accounts. This mainly enables third party vendors to embbed Helpmonks into their systems or for customers that wish to enable Single-Sign-On for their users.", 
+            "title": "Single-Sign-On Introduction"
+        }, 
+        {
+            "location": "/sso/introduction/#single-sign-on-api-url", 
+            "text": "Single-Sign-On API requests should be done towards https://(yoursubdomain).helpmonks.com/p/sso. Please refer to the individidual guides in this section for the correct URL.", 
+            "title": "Single-Sign-On API URL"
+        }, 
+        {
+            "location": "/sso/introduction/#authentication", 
+            "text": "The current Single-Sign-On implementation is based on oAuth2. In order to access an account you first need to create an oAuth Access key pair. The Access key pair consists of an  access_id  and an  access_secret . You then use the Single-Sign-On API to retrieve an  access_token  for each user.  Please continue on to the  Authentication  guide.", 
+            "title": "Authentication"
+        }, 
+        {
+            "location": "/sso/introduction/#help", 
+            "text": "If you have any questions, please post a message to our  Helpmonks Developer forum .", 
+            "title": "Help"
+        }, 
+        {
+            "location": "/sso/authentication/", 
+            "text": "Authentication\n\n\nEnable Single-Sign-On for your account\n\n\nFirst let\ns check that you enabled the SSO (Single-Sign-On) plugin (please note that the SSO plugin is only available in our \nGO FURTHER\n plan). To do so, go to the plugin section in your Helpmonks account (you need to be an Administrator). If you see \nSSO\n in the left navigation you are good and can go to the next section.\n\n\nTo enable the SSO plugin, please click on the \nPlugins directory\n button in the right corner. Then from the list of plugins, go to the \nSSO\n plugin and enable it in the detail section.\n\n\n\n\nCreate an oAuth Access Key\n\n\nIn order to access any account, you need a \noAuth Access Key\n pair, consisting of an \naccess_id\n and an \naccess_token\n. To create a new key, click on the \nCreate a new access key\n button.\n\n\nYou should then see in the list of Access Keys your new Access key pair. You can create as many keys as you need. Please keep in mind that these keys will give you full access to a user and to his Helpmonks account.\n\n\nNEVER SHARE YOUR SECRET ACCESS KEY!\n\n\nCreate an Access Token\n\n\nNow that you have a key, you can go ahead and create \nAccess Tokens\n for your user accounts.\n\n\nHead over to the \nSingle-Sign-On\n API guide.", 
+            "title": "Authentication"
+        }, 
+        {
+            "location": "/sso/authentication/#authentication", 
+            "text": "", 
+            "title": "Authentication"
+        }, 
+        {
+            "location": "/sso/authentication/#enable-single-sign-on-for-your-account", 
+            "text": "First let s check that you enabled the SSO (Single-Sign-On) plugin (please note that the SSO plugin is only available in our  GO FURTHER  plan). To do so, go to the plugin section in your Helpmonks account (you need to be an Administrator). If you see  SSO  in the left navigation you are good and can go to the next section.  To enable the SSO plugin, please click on the  Plugins directory  button in the right corner. Then from the list of plugins, go to the  SSO  plugin and enable it in the detail section.", 
+            "title": "Enable Single-Sign-On for your account"
+        }, 
+        {
+            "location": "/sso/authentication/#create-an-oauth-access-key", 
+            "text": "In order to access any account, you need a  oAuth Access Key  pair, consisting of an  access_id  and an  access_token . To create a new key, click on the  Create a new access key  button.  You should then see in the list of Access Keys your new Access key pair. You can create as many keys as you need. Please keep in mind that these keys will give you full access to a user and to his Helpmonks account.  NEVER SHARE YOUR SECRET ACCESS KEY!", 
+            "title": "Create an oAuth Access Key"
+        }, 
+        {
+            "location": "/sso/authentication/#create-an-access-token", 
+            "text": "Now that you have a key, you can go ahead and create  Access Tokens  for your user accounts.  Head over to the  Single-Sign-On  API guide.", 
+            "title": "Create an Access Token"
+        }, 
+        {
+            "location": "/sso/token_create/", 
+            "text": "Create an Access Token\n\n\nWill return a new access_token for the user\n\n\nAPI endpoint\n\n\nhttps://subdomain.helpmonks.com/p/sso/oauth/create_token\n\n\n\n\nParameters\n\n\n\n    \n\n        \nName\n\n        \nRequired\n\n        \nValue\n\n        \nComment\n\n    \n\n    \n\n        \naccess_id\n\n        \nYes\n\n        \nString\n\n        \n\n    \n\n    \n\n        \naccess_secret\n\n        \nYes\n\n        \nString\n\n        \n\n    \n\n    \n\n        \nuser_email\n\n        \nYes\n\n        \nString\n\n        \n\n    \n\n\n\n\n\nExample\n\n\nPOST : https://subdomain.helpmonks.com/p/sso/oauth/create_token\n{\n    \naccess_id\n : \nbedcdbb55b31ff7bacd9cb4b4e99abfc\n,\n    \naccess_secret\n : \n13dee613cbc84826a33cc4c7effd17ee179ef0d1a06f4be\n,\n    \nuser_email\n : \nawesome@user.com\n\n}\n\n\n\n\nResult\n\n\n{\n    \naccess_token\n: \n71ff80d51fd57fdf9c11172230762b64\n,\n    \nuser\n: {\n        \nid\n: \n5a3ddc31bc3056898f52752d\n,\n        \nemail\n: \nawesome@user.com\n,\n        \nfirst_name\n: \nAwesome\n,\n        \nlast_name\n: \nMonk\n\n    },\n    \naccess_id\n: \nbedcdbb55b31ff7bacd9cb4b4e99abfc\n\n}\n\n\n\n\nThe result contains the access_token which you can now use to \nlog into the users Helpmonks account\n or use for other SSO API calls.\n\n\nStatuscode\n\n\nOn success will return 200\n\n\nAuthenticating with invalid credentials will return 401\n\n\nErrors will return 500", 
+            "title": "Create Token"
+        }, 
+        {
+            "location": "/sso/token_create/#create-an-access-token", 
+            "text": "Will return a new access_token for the user", 
+            "title": "Create an Access Token"
+        }, 
+        {
+            "location": "/sso/token_create/#api-endpoint", 
+            "text": "https://subdomain.helpmonks.com/p/sso/oauth/create_token", 
+            "title": "API endpoint"
+        }, 
+        {
+            "location": "/sso/token_create/#parameters", 
+            "text": "Name \n         Required \n         Value \n         Comment \n     \n     \n         access_id \n         Yes \n         String \n         \n     \n     \n         access_secret \n         Yes \n         String \n         \n     \n     \n         user_email \n         Yes \n         String", 
+            "title": "Parameters"
+        }, 
+        {
+            "location": "/sso/token_create/#example", 
+            "text": "POST : https://subdomain.helpmonks.com/p/sso/oauth/create_token\n{\n     access_id  :  bedcdbb55b31ff7bacd9cb4b4e99abfc ,\n     access_secret  :  13dee613cbc84826a33cc4c7effd17ee179ef0d1a06f4be ,\n     user_email  :  awesome@user.com \n}", 
+            "title": "Example"
+        }, 
+        {
+            "location": "/sso/token_create/#result", 
+            "text": "{\n     access_token :  71ff80d51fd57fdf9c11172230762b64 ,\n     user : {\n         id :  5a3ddc31bc3056898f52752d ,\n         email :  awesome@user.com ,\n         first_name :  Awesome ,\n         last_name :  Monk \n    },\n     access_id :  bedcdbb55b31ff7bacd9cb4b4e99abfc \n}  The result contains the access_token which you can now use to  log into the users Helpmonks account  or use for other SSO API calls.", 
+            "title": "Result"
+        }, 
+        {
+            "location": "/sso/token_create/#statuscode", 
+            "text": "On success will return 200  Authenticating with invalid credentials will return 401  Errors will return 500", 
+            "title": "Statuscode"
+        }, 
+        {
+            "location": "/sso/token_update/", 
+            "text": "Delete an Access Token\n\n\nWill remove the access_token of the user\n\n\nAPI endpoint\n\n\nhttps://subdomain.helpmonks.com/p/sso/oauth/remove_token\n\n\n\n\nParameters\n\n\n\n    \n\n        \nName\n\n        \nRequired\n\n        \nValue\n\n        \nComment\n\n    \n\n    \n\n        \naccess_id\n\n        \nYes\n\n        \nString\n\n        \n\n    \n\n    \n\n        \naccess_token\n\n        \nYes\n\n        \nString\n\n        \nExisting token of the user\n\n    \n\n\n\n\n\nExample\n\n\nPOST : https://subdomain.helpmonks.com/p/sso/oauth/remove_token\n{\n    \naccess_id\n : \nbedcdbb55b31ff7bacd9cb4b4e99abfc\n,\n    \naccess_token\n : \n71ff80d51fd57fdf9c11172230762b64\n\n}\n\n\n\n\nResult\n\n\nAccess token has been removed\n\n\n\n\nStatuscode\n\n\nOn success will return 200\n\n\nAuthenticating with invalid credentials will return 401\n\n\nErrors will return 500", 
+            "title": "Update Token"
+        }, 
+        {
+            "location": "/sso/token_update/#delete-an-access-token", 
+            "text": "Will remove the access_token of the user", 
+            "title": "Delete an Access Token"
+        }, 
+        {
+            "location": "/sso/token_update/#api-endpoint", 
+            "text": "https://subdomain.helpmonks.com/p/sso/oauth/remove_token", 
+            "title": "API endpoint"
+        }, 
+        {
+            "location": "/sso/token_update/#parameters", 
+            "text": "Name \n         Required \n         Value \n         Comment \n     \n     \n         access_id \n         Yes \n         String \n         \n     \n     \n         access_token \n         Yes \n         String \n         Existing token of the user", 
+            "title": "Parameters"
+        }, 
+        {
+            "location": "/sso/token_update/#example", 
+            "text": "POST : https://subdomain.helpmonks.com/p/sso/oauth/remove_token\n{\n     access_id  :  bedcdbb55b31ff7bacd9cb4b4e99abfc ,\n     access_token  :  71ff80d51fd57fdf9c11172230762b64 \n}", 
+            "title": "Example"
+        }, 
+        {
+            "location": "/sso/token_update/#result", 
+            "text": "Access token has been removed", 
+            "title": "Result"
+        }, 
+        {
+            "location": "/sso/token_update/#statuscode", 
+            "text": "On success will return 200  Authenticating with invalid credentials will return 401  Errors will return 500", 
+            "title": "Statuscode"
+        }, 
+        {
+            "location": "/sso/token_get/", 
+            "text": "Get an Access Token\n\n\nWill return an existing access_token of a user\n\n\nAPI endpoint\n\n\nhttps://subdomain.helpmonks.com/p/sso/oauth/get_token\n\n\n\n\nParameters\n\n\n\n    \n\n        \nName\n\n        \nRequired\n\n        \nValue\n\n        \nComment\n\n    \n\n    \n\n        \naccess_id\n\n        \nYes\n\n        \nString\n\n        \n\n    \n\n    \n\n        \nuser_email\n\n        \nYes\n\n        \nString\n\n        \n\n    \n\n\n\n\n\nExample\n\n\nPOST : https://subdomain.helpmonks.com/p/sso/oauth/get_token\n{\n    \naccess_id\n : \nbedcdbb55b31ff7bacd9cb4b4e99abfc\n,\n    \nuser_email\n : \nawesome@user.com\n\n}\n\n\n\n\nResult\n\n\n71ff80d51fd57fdf9c11172230762b64\n\n\n\n\nThe result contains the access_token which you can now use to \nlog into the users Helpmonks account\n or use for other SSO API calls.\n\n\nStatuscode\n\n\nOn success will return 200\n\n\nAuthenticating with invalid credentials will return 401\n\n\nErrors will return 500", 
+            "title": "Get Token"
+        }, 
+        {
+            "location": "/sso/token_get/#get-an-access-token", 
+            "text": "Will return an existing access_token of a user", 
+            "title": "Get an Access Token"
+        }, 
+        {
+            "location": "/sso/token_get/#api-endpoint", 
+            "text": "https://subdomain.helpmonks.com/p/sso/oauth/get_token", 
+            "title": "API endpoint"
+        }, 
+        {
+            "location": "/sso/token_get/#parameters", 
+            "text": "Name \n         Required \n         Value \n         Comment \n     \n     \n         access_id \n         Yes \n         String \n         \n     \n     \n         user_email \n         Yes \n         String", 
+            "title": "Parameters"
+        }, 
+        {
+            "location": "/sso/token_get/#example", 
+            "text": "POST : https://subdomain.helpmonks.com/p/sso/oauth/get_token\n{\n     access_id  :  bedcdbb55b31ff7bacd9cb4b4e99abfc ,\n     user_email  :  awesome@user.com \n}", 
+            "title": "Example"
+        }, 
+        {
+            "location": "/sso/token_get/#result", 
+            "text": "71ff80d51fd57fdf9c11172230762b64  The result contains the access_token which you can now use to  log into the users Helpmonks account  or use for other SSO API calls.", 
+            "title": "Result"
+        }, 
+        {
+            "location": "/sso/token_get/#statuscode", 
+            "text": "On success will return 200  Authenticating with invalid credentials will return 401  Errors will return 500", 
+            "title": "Statuscode"
+        }, 
+        {
+            "location": "/sso/token_check/", 
+            "text": "Check for an existing Access Token\n\n\nWill return if the access token is valid or not\n\n\nAPI endpoint\n\n\nhttps://subdomain.helpmonks.com/p/sso/oauth/check_token\n\n\n\n\nParameters\n\n\n\n    \n\n        \nName\n\n        \nRequired\n\n        \nValue\n\n        \nComment\n\n    \n\n    \n\n        \naccess_id\n\n        \nYes\n\n        \nString\n\n        \n\n    \n\n    \n\n        \naccess_token\n\n        \nYes\n\n        \nString\n\n        \nThe token of the user\n\n    \n\n\n\n\n\nExample\n\n\nPOST : https://subdomain.helpmonks.com/p/sso/oauth/check_token\n{\n    \naccess_id\n : \nbedcdbb55b31ff7bacd9cb4b4e99abfc\n,\n    \naccess_token\n : \n71ff80d51fd57fdf9c11172230762b64\n\n}\n\n\n\n\nResult\n\n\nThe access token is valid\n\n\n\n\nStatuscode\n\n\nOn success will return 200\n\n\nAuthenticating with invalid credentials will return 401\n\n\nErrors will return 500", 
+            "title": "Check Token"
+        }, 
+        {
+            "location": "/sso/token_check/#check-for-an-existing-access-token", 
+            "text": "Will return if the access token is valid or not", 
+            "title": "Check for an existing Access Token"
+        }, 
+        {
+            "location": "/sso/token_check/#api-endpoint", 
+            "text": "https://subdomain.helpmonks.com/p/sso/oauth/check_token", 
+            "title": "API endpoint"
+        }, 
+        {
+            "location": "/sso/token_check/#parameters", 
+            "text": "Name \n         Required \n         Value \n         Comment \n     \n     \n         access_id \n         Yes \n         String \n         \n     \n     \n         access_token \n         Yes \n         String \n         The token of the user", 
+            "title": "Parameters"
+        }, 
+        {
+            "location": "/sso/token_check/#example", 
+            "text": "POST : https://subdomain.helpmonks.com/p/sso/oauth/check_token\n{\n     access_id  :  bedcdbb55b31ff7bacd9cb4b4e99abfc ,\n     access_token  :  71ff80d51fd57fdf9c11172230762b64 \n}", 
+            "title": "Example"
+        }, 
+        {
+            "location": "/sso/token_check/#result", 
+            "text": "The access token is valid", 
+            "title": "Result"
+        }, 
+        {
+            "location": "/sso/token_check/#statuscode", 
+            "text": "On success will return 200  Authenticating with invalid credentials will return 401  Errors will return 500", 
+            "title": "Statuscode"
+        }, 
+        {
+            "location": "/sso/token_delete/", 
+            "text": "Update an Access Token\n\n\nWill create a new access_token for the user\n\n\nAPI endpoint\n\n\nhttps://subdomain.helpmonks.com/p/sso/oauth/update_token\n\n\n\n\nParameters\n\n\n\n    \n\n        \nName\n\n        \nRequired\n\n        \nValue\n\n        \nComment\n\n    \n\n    \n\n        \naccess_id\n\n        \nYes\n\n        \nString\n\n        \n\n    \n\n    \n\n        \naccess_token\n\n        \nYes\n\n        \nString\n\n        \nExisting token of the user\n\n    \n\n\n\n\n\nExample\n\n\nPOST : https://subdomain.helpmonks.com/p/sso/oauth/update_token\n{\n    \naccess_id\n : \nbedcdbb55b31ff7bacd9cb4b4e99abfc\n,\n    \naccess_token\n : \n71ff80d51fd57fdf9c11172230762b64\n\n}\n\n\n\n\nResult\n\n\na76c3a8b969d38649ffb77e469ccff6a\n\n\n\n\nThe result contains the access_token which you can now use to \nlog into the users Helpmonks account\n or use for other SSO API calls.\n\n\nStatuscode\n\n\nOn success will return 200\n\n\nAuthenticating with invalid credentials will return 401\n\n\nErrors will return 500", 
+            "title": "Delete Token"
+        }, 
+        {
+            "location": "/sso/token_delete/#update-an-access-token", 
+            "text": "Will create a new access_token for the user", 
+            "title": "Update an Access Token"
+        }, 
+        {
+            "location": "/sso/token_delete/#api-endpoint", 
+            "text": "https://subdomain.helpmonks.com/p/sso/oauth/update_token", 
+            "title": "API endpoint"
+        }, 
+        {
+            "location": "/sso/token_delete/#parameters", 
+            "text": "Name \n         Required \n         Value \n         Comment \n     \n     \n         access_id \n         Yes \n         String \n         \n     \n     \n         access_token \n         Yes \n         String \n         Existing token of the user", 
+            "title": "Parameters"
+        }, 
+        {
+            "location": "/sso/token_delete/#example", 
+            "text": "POST : https://subdomain.helpmonks.com/p/sso/oauth/update_token\n{\n     access_id  :  bedcdbb55b31ff7bacd9cb4b4e99abfc ,\n     access_token  :  71ff80d51fd57fdf9c11172230762b64 \n}", 
+            "title": "Example"
+        }, 
+        {
+            "location": "/sso/token_delete/#result", 
+            "text": "a76c3a8b969d38649ffb77e469ccff6a  The result contains the access_token which you can now use to  log into the users Helpmonks account  or use for other SSO API calls.", 
+            "title": "Result"
+        }, 
+        {
+            "location": "/sso/token_delete/#statuscode", 
+            "text": "On success will return 200  Authenticating with invalid credentials will return 401  Errors will return 500", 
+            "title": "Statuscode"
+        }, 
+        {
+            "location": "/sso/login/", 
+            "text": "Single-Sign-On Login\n\n\nWith a valid access_token and your access_id you can now log into the users Helpmonks account\n\n\nSingle-Sign-On Login endpoint\n\n\nTo log into Helpmonks use:\n\n\nhttps://subdomain.helpmonks.com/auth/sso/login\n\n\n\n\nParameters\n\n\n\n    \n\n        \nName\n\n        \nRequired\n\n        \nValue\n\n        \nComment\n\n    \n\n    \n\n        \naccess_id\n\n        \nYes\n\n        \nString\n\n        \n\n    \n\n    \n\n        \naccess_token\n\n        \nYes\n\n        \nString\n\n        \n\n    \n\n\n\n\n\nExample\n\n\nhttps://subdomain.helpmonks.com/auth/sso/login? \\\naccess_id=bedcdbb55b31ff7bacd9cb4b4e99abfc \\\n\naccess_token=a76c3a8b969d38649ffb77e469ccff6a\n\n\n\n\nHelp\n\n\nIf you have any questions, please post a message to our \nHelpmonks Developer forum\n.", 
+            "title": "SSO Login"
+        }, 
+        {
+            "location": "/sso/login/#single-sign-on-login", 
+            "text": "With a valid access_token and your access_id you can now log into the users Helpmonks account", 
+            "title": "Single-Sign-On Login"
+        }, 
+        {
+            "location": "/sso/login/#single-sign-on-login-endpoint", 
+            "text": "To log into Helpmonks use:  https://subdomain.helpmonks.com/auth/sso/login", 
+            "title": "Single-Sign-On Login endpoint"
+        }, 
+        {
+            "location": "/sso/login/#parameters", 
+            "text": "Name \n         Required \n         Value \n         Comment \n     \n     \n         access_id \n         Yes \n         String \n         \n     \n     \n         access_token \n         Yes \n         String", 
+            "title": "Parameters"
+        }, 
+        {
+            "location": "/sso/login/#example", 
+            "text": "https://subdomain.helpmonks.com/auth/sso/login? \\\naccess_id=bedcdbb55b31ff7bacd9cb4b4e99abfc \\ access_token=a76c3a8b969d38649ffb77e469ccff6a", 
+            "title": "Example"
+        }, 
+        {
+            "location": "/sso/login/#help", 
+            "text": "If you have any questions, please post a message to our  Helpmonks Developer forum .", 
+            "title": "Help"
+        }, 
+        {
+            "location": "/sso/access_token/", 
+            "text": "Manage existing access tokens\n\n\nYou can either use the \nSingle-Sign-On\n API to manage access tokens of users or use the panel in SSO plugin\n\n\nManage access tokens in Helpmonks\n\n\nGo to your SSO plugin page where you will see all existing access tokens of each user. Here you can remove or update the access token.\n\n\n\n\nHelp\n\n\nIf you have any questions, please post a message to our \nHelpmonks Developer forum\n.", 
+            "title": "Manage Access Tokens"
+        }, 
+        {
+            "location": "/sso/access_token/#manage-existing-access-tokens", 
+            "text": "You can either use the  Single-Sign-On  API to manage access tokens of users or use the panel in SSO plugin", 
+            "title": "Manage existing access tokens"
+        }, 
+        {
+            "location": "/sso/access_token/#manage-access-tokens-in-helpmonks", 
+            "text": "Go to your SSO plugin page where you will see all existing access tokens of each user. Here you can remove or update the access token.", 
+            "title": "Manage access tokens in Helpmonks"
+        }, 
+        {
+            "location": "/sso/access_token/#help", 
+            "text": "If you have any questions, please post a message to our  Helpmonks Developer forum .", 
+            "title": "Help"
         }
     ]
 }
