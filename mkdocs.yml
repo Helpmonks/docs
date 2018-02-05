@@ -74,3 +74,14 @@ pages:
     - 'Label' : 'api/models/label.md'
     - 'User' : 'api/models/user.md'
 - 'About Helpmonks': 'about.md'
+- 'Single-Sign-On':
+  - 'Introduction' : 'sso/introduction.md'
+  - 'Authentication' : 'sso/authentication.md'
+  - 'SSO API' :
+    - 'Create Token' : 'sso/token_create.md'
+    - 'Update Token' : 'sso/token_update.md'
+    - 'Get Token' : 'sso/token_get.md'
+    - 'Check Token' : 'sso/token_check.md'
+    - 'Delete Token' : 'sso/token_delete.md'
+  - 'SSO Login' : 'sso/login.md'
+  - 'Manage Access Tokens' : 'sso/access_token.md'
