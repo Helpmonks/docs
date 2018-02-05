@@ -1255,10 +1255,10 @@
               
                 
                 
-                <h1 id="update-an-access-token">Update an Access Token</h1>
-<p>Will create a new access_token for the user</p>
+                <h1 id="delete-an-access-token">Delete an Access Token</h1>
+<p>Will remove the access_token of the user</p>
 <h3 id="api-endpoint">API endpoint</h3>
-<pre><code>https://subdomain.helpmonks.com/p/sso/oauth/update_token
+<pre><code>https://subdomain.helpmonks.com/p/sso/oauth/remove_token
 </code></pre>
 
 <h3 id="parameters">Parameters</h3>
@@ -1284,7 +1284,7 @@
 </table>
 
 <h2 id="example">Example</h2>
-<pre><code>POST : https://subdomain.helpmonks.com/p/sso/oauth/update_token
+<pre><code>POST : https://subdomain.helpmonks.com/p/sso/oauth/remove_token
 {
     &quot;access_id&quot; : &quot;bedcdbb55b31ff7bacd9cb4b4e99abfc&quot;,
     &quot;access_token&quot; : &quot;71ff80d51fd57fdf9c11172230762b64&quot;
@@ -1292,10 +1292,9 @@
 </code></pre>
 
 <h3 id="result">Result</h3>
-<pre><code>a76c3a8b969d38649ffb77e469ccff6a
+<pre><code>Access token has been removed
 </code></pre>
 
-<p>The result contains the access_token which you can now use to <a href="../../sso/login/">log into the users Helpmonks account</a> or use for other SSO API calls.</p>
 <h3 id="statuscode">Statuscode</h3>
 <p>On success will return 200</p>
 <p>Authenticating with invalid credentials will return 401</p>

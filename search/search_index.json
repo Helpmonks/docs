@@ -1447,17 +1447,17 @@
         }, 
         {
             "location": "/sso/token_update/", 
-            "text": "Delete an Access Token\n\n\nWill remove the access_token of the user\n\n\nAPI endpoint\n\n\nhttps://subdomain.helpmonks.com/p/sso/oauth/remove_token\n\n\n\n\nParameters\n\n\n\n    \n\n        \nName\n\n        \nRequired\n\n        \nValue\n\n        \nComment\n\n    \n\n    \n\n        \naccess_id\n\n        \nYes\n\n        \nString\n\n        \n\n    \n\n    \n\n        \naccess_token\n\n        \nYes\n\n        \nString\n\n        \nExisting token of the user\n\n    \n\n\n\n\n\nExample\n\n\nPOST : https://subdomain.helpmonks.com/p/sso/oauth/remove_token\n{\n    \naccess_id\n : \nbedcdbb55b31ff7bacd9cb4b4e99abfc\n,\n    \naccess_token\n : \n71ff80d51fd57fdf9c11172230762b64\n\n}\n\n\n\n\nResult\n\n\nAccess token has been removed\n\n\n\n\nStatuscode\n\n\nOn success will return 200\n\n\nAuthenticating with invalid credentials will return 401\n\n\nErrors will return 500", 
+            "text": "Update an Access Token\n\n\nWill create a new access_token for the user\n\n\nAPI endpoint\n\n\nhttps://subdomain.helpmonks.com/p/sso/oauth/update_token\n\n\n\n\nParameters\n\n\n\n    \n\n        \nName\n\n        \nRequired\n\n        \nValue\n\n        \nComment\n\n    \n\n    \n\n        \naccess_id\n\n        \nYes\n\n        \nString\n\n        \n\n    \n\n    \n\n        \naccess_token\n\n        \nYes\n\n        \nString\n\n        \nExisting token of the user\n\n    \n\n\n\n\n\nExample\n\n\nPOST : https://subdomain.helpmonks.com/p/sso/oauth/update_token\n{\n    \naccess_id\n : \nbedcdbb55b31ff7bacd9cb4b4e99abfc\n,\n    \naccess_token\n : \n71ff80d51fd57fdf9c11172230762b64\n\n}\n\n\n\n\nResult\n\n\na76c3a8b969d38649ffb77e469ccff6a\n\n\n\n\nThe result contains the access_token which you can now use to \nlog into the users Helpmonks account\n or use for other SSO API calls.\n\n\nStatuscode\n\n\nOn success will return 200\n\n\nAuthenticating with invalid credentials will return 401\n\n\nErrors will return 500", 
             "title": "Update Token"
         }, 
         {
-            "location": "/sso/token_update/#delete-an-access-token", 
-            "text": "Will remove the access_token of the user", 
-            "title": "Delete an Access Token"
+            "location": "/sso/token_update/#update-an-access-token", 
+            "text": "Will create a new access_token for the user", 
+            "title": "Update an Access Token"
         }, 
         {
             "location": "/sso/token_update/#api-endpoint", 
-            "text": "https://subdomain.helpmonks.com/p/sso/oauth/remove_token", 
+            "text": "https://subdomain.helpmonks.com/p/sso/oauth/update_token", 
             "title": "API endpoint"
         }, 
         {
@@ -1467,12 +1467,12 @@
         }, 
         {
             "location": "/sso/token_update/#example", 
-            "text": "POST : https://subdomain.helpmonks.com/p/sso/oauth/remove_token\n{\n     access_id  :  bedcdbb55b31ff7bacd9cb4b4e99abfc ,\n     access_token  :  71ff80d51fd57fdf9c11172230762b64 \n}", 
+            "text": "POST : https://subdomain.helpmonks.com/p/sso/oauth/update_token\n{\n     access_id  :  bedcdbb55b31ff7bacd9cb4b4e99abfc ,\n     access_token  :  71ff80d51fd57fdf9c11172230762b64 \n}", 
             "title": "Example"
         }, 
         {
             "location": "/sso/token_update/#result", 
-            "text": "Access token has been removed", 
+            "text": "a76c3a8b969d38649ffb77e469ccff6a  The result contains the access_token which you can now use to  log into the users Helpmonks account  or use for other SSO API calls.", 
             "title": "Result"
         }, 
         {
@@ -1552,17 +1552,17 @@
         }, 
         {
             "location": "/sso/token_delete/", 
-            "text": "Update an Access Token\n\n\nWill create a new access_token for the user\n\n\nAPI endpoint\n\n\nhttps://subdomain.helpmonks.com/p/sso/oauth/update_token\n\n\n\n\nParameters\n\n\n\n    \n\n        \nName\n\n        \nRequired\n\n        \nValue\n\n        \nComment\n\n    \n\n    \n\n        \naccess_id\n\n        \nYes\n\n        \nString\n\n        \n\n    \n\n    \n\n        \naccess_token\n\n        \nYes\n\n        \nString\n\n        \nExisting token of the user\n\n    \n\n\n\n\n\nExample\n\n\nPOST : https://subdomain.helpmonks.com/p/sso/oauth/update_token\n{\n    \naccess_id\n : \nbedcdbb55b31ff7bacd9cb4b4e99abfc\n,\n    \naccess_token\n : \n71ff80d51fd57fdf9c11172230762b64\n\n}\n\n\n\n\nResult\n\n\na76c3a8b969d38649ffb77e469ccff6a\n\n\n\n\nThe result contains the access_token which you can now use to \nlog into the users Helpmonks account\n or use for other SSO API calls.\n\n\nStatuscode\n\n\nOn success will return 200\n\n\nAuthenticating with invalid credentials will return 401\n\n\nErrors will return 500", 
+            "text": "Delete an Access Token\n\n\nWill remove the access_token of the user\n\n\nAPI endpoint\n\n\nhttps://subdomain.helpmonks.com/p/sso/oauth/remove_token\n\n\n\n\nParameters\n\n\n\n    \n\n        \nName\n\n        \nRequired\n\n        \nValue\n\n        \nComment\n\n    \n\n    \n\n        \naccess_id\n\n        \nYes\n\n        \nString\n\n        \n\n    \n\n    \n\n        \naccess_token\n\n        \nYes\n\n        \nString\n\n        \nExisting token of the user\n\n    \n\n\n\n\n\nExample\n\n\nPOST : https://subdomain.helpmonks.com/p/sso/oauth/remove_token\n{\n    \naccess_id\n : \nbedcdbb55b31ff7bacd9cb4b4e99abfc\n,\n    \naccess_token\n : \n71ff80d51fd57fdf9c11172230762b64\n\n}\n\n\n\n\nResult\n\n\nAccess token has been removed\n\n\n\n\nStatuscode\n\n\nOn success will return 200\n\n\nAuthenticating with invalid credentials will return 401\n\n\nErrors will return 500", 
             "title": "Delete Token"
         }, 
         {
-            "location": "/sso/token_delete/#update-an-access-token", 
-            "text": "Will create a new access_token for the user", 
-            "title": "Update an Access Token"
+            "location": "/sso/token_delete/#delete-an-access-token", 
+            "text": "Will remove the access_token of the user", 
+            "title": "Delete an Access Token"
         }, 
         {
             "location": "/sso/token_delete/#api-endpoint", 
-            "text": "https://subdomain.helpmonks.com/p/sso/oauth/update_token", 
+            "text": "https://subdomain.helpmonks.com/p/sso/oauth/remove_token", 
             "title": "API endpoint"
         }, 
         {
@@ -1572,12 +1572,12 @@
         }, 
         {
             "location": "/sso/token_delete/#example", 
-            "text": "POST : https://subdomain.helpmonks.com/p/sso/oauth/update_token\n{\n     access_id  :  bedcdbb55b31ff7bacd9cb4b4e99abfc ,\n     access_token  :  71ff80d51fd57fdf9c11172230762b64 \n}", 
+            "text": "POST : https://subdomain.helpmonks.com/p/sso/oauth/remove_token\n{\n     access_id  :  bedcdbb55b31ff7bacd9cb4b4e99abfc ,\n     access_token  :  71ff80d51fd57fdf9c11172230762b64 \n}", 
             "title": "Example"
         }, 
         {
             "location": "/sso/token_delete/#result", 
-            "text": "a76c3a8b969d38649ffb77e469ccff6a  The result contains the access_token which you can now use to  log into the users Helpmonks account  or use for other SSO API calls.", 
+            "text": "Access token has been removed", 
             "title": "Result"
         }, 
         {
