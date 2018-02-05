@@ -1,6 +1,6 @@
-# Update an Access Token
+# Delete an Access Token
 
-Will create a new access_token for the user
+Will remove the access_token of the user
 
 ### API endpoint
 
@@ -44,10 +44,8 @@ POST : https://subdomain.helpmonks.com/p/sso/oauth/remove_token
 ### Result
 
 ```
-a76c3a8b969d38649ffb77e469ccff6a
+Access token has been removed
 ```
-
-The result contains the access_token which you can now use to [log into the users Helpmonks account](/sso/login/) or use for other SSO API calls.
 
 ### Statuscode
 
