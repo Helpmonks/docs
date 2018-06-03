@@ -1,8 +1,10 @@
-# Single-Sign-On Introduction
+# oAuth Introduction
 
-The Helpmonks Single-Sign-On allows you to sign in as users to their Helpmonks accounts. This mainly enables third party vendors to embbed Helpmonks into their systems or for customers that wish to enable Single-Sign-On for their users.
+The Helpmonks Single-Sign-On plugin allows you to sign in as users to their Helpmonks accounts. This mainly enables third party vendors to embbed Helpmonks into their systems or for customers that wish to enable Single-Sign-On for their users.
 
-## Single-Sign-On API URL
+**If you want to enable login with an identity provider (OneLogin, Auth0, Azure, etc.) please use the [SAML login functionality](/saml/introduction/)**
+
+## oAuth API URL
 
 Single-Sign-On API requests should be done towards https://(yoursubdomain).helpmonks.com/p/sso. Please refer to the individidual guides in this section for the correct URL.
 
@@ -14,4 +16,4 @@ Please continue on to the [Authentication](/sso/authentication/) guide.
 
 ## Help
 
-If you have any questions, please post a message to our [Helpmonks Developer forum](https://help.helpmonks.com). 
+If you have any questions, please post a message to our [Helpmonks Developer forum](https://help.helpmonks.com) or contact us per email at support@helpmonks.com

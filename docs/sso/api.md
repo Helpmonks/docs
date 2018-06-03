@@ -1,4 +1,4 @@
-# Single-Sign-On API
+# oAuth API
 
 ## Create an Access Token
 

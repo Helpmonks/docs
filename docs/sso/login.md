@@ -1,8 +1,8 @@
-# Single-Sign-On Login
+# oAuth Login
 
 With a valid access_token and your access_id you can now log into the users Helpmonks account
 
-## Single-Sign-On Login endpoint
+## oAuth Login endpoint
 
 To log into Helpmonks use:
 

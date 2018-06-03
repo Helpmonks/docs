@@ -1,6 +1,6 @@
 # Authentication
 
-## Enable Single-Sign-On for your account
+## Enable the Single-Sign-On plugin for your account
 
 First let's check that you enabled the SSO (Single-Sign-On) plugin (please note that the SSO plugin is only available in our "GO FURTHER" plan). To do so, go to the plugin section in your Helpmonks account (you need to be an Administrator). If you see "SSO" in the left navigation you are good and can go to the next section.
 

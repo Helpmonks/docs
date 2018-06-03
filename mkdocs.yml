@@ -74,7 +74,13 @@ pages:
     - 'Label' : 'api/models/label.md'
     - 'User' : 'api/models/user.md'
 - 'About Helpmonks': 'about.md'
-- 'Single-Sign-On':
+- 'Single-Sign-On (SAML)':
+  - 'Introduction' : 'saml/introduction.md'
+  - 'SAML Setup' : 'saml/setup.md'
+  - 'SAML Settings' : 'saml/settings.md'
+  - 'Auth0 Example' : 'saml/example_auth0.md'
+  - 'OneLogin Example' : 'saml/example_onelogin.md'
+- 'Single-Sign-On (oAuth)':
   - 'Introduction' : 'sso/introduction.md'
   - 'Authentication' : 'sso/authentication.md'
   - 'SSO API' :
