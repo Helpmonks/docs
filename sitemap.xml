@@ -4,7 +4,7 @@
     
     <url>
      <loc>http://developer.helpmonks.com/</loc>
-     <lastmod>2018-02-04</lastmod>
+     <lastmod>2018-06-03</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -34,7 +34,7 @@
     
     <url>
      <loc>http://developer.helpmonks.com/about/</loc>
-     <lastmod>2018-02-04</lastmod>
+     <lastmod>2018-06-03</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -42,14 +42,48 @@
     
         
     <url>
+     <loc>http://developer.helpmonks.com/saml/introduction/</loc>
+     <lastmod>2018-06-03</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://developer.helpmonks.com/saml/setup/</loc>
+     <lastmod>2018-06-03</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://developer.helpmonks.com/saml/settings/</loc>
+     <lastmod>2018-06-03</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://developer.helpmonks.com/saml/example_auth0/</loc>
+     <lastmod>2018-06-03</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://developer.helpmonks.com/saml/example_onelogin/</loc>
+     <lastmod>2018-06-03</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
      <loc>http://developer.helpmonks.com/sso/introduction/</loc>
-     <lastmod>2018-02-04</lastmod>
+     <lastmod>2018-06-03</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://developer.helpmonks.com/sso/authentication/</loc>
-     <lastmod>2018-02-04</lastmod>
+     <lastmod>2018-06-03</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -61,13 +95,13 @@
         
     <url>
      <loc>http://developer.helpmonks.com/sso/login/</loc>
-     <lastmod>2018-02-04</lastmod>
+     <lastmod>2018-06-03</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://developer.helpmonks.com/sso/access_token/</loc>
-     <lastmod>2018-02-04</lastmod>
+     <lastmod>2018-06-03</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
