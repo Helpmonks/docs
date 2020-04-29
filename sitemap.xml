@@ -1,110 +1,235 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-    
-    <url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url>
      <loc>http://developer.helpmonks.com/</loc>
-     <lastmod>2018-06-03</lastmod>
+     <lastmod>2020-04-29</lastmod>
      <changefreq>daily</changefreq>
-    </url>
-    
-
-    
-        
-    <url>
-     <loc>http://developer.helpmonks.com</loc>
-     <lastmod></lastmod>
+    </url><url>
+     <loc>http://developer.helpmonks.com/api/overview/</loc>
+     <lastmod>2020-04-29</lastmod>
      <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>http://developer.helpmonks.com</loc>
-     <lastmod></lastmod>
+    </url><url>
+     <loc>http://developer.helpmonks.com/api/authentication/</loc>
+     <lastmod>2020-04-29</lastmod>
      <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>http://developer.helpmonks.com</loc>
-     <lastmod></lastmod>
+    </url><url>
+     <loc>http://developer.helpmonks.com/api/syntax/</loc>
+     <lastmod>2020-04-29</lastmod>
      <changefreq>daily</changefreq>
-    </url>
-        
-    
-
-    
-    <url>
+    </url><url>
+     <loc>http://developer.helpmonks.com/api/conversation/find/</loc>
+     <lastmod>2020-04-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>http://developer.helpmonks.com/api/conversation/findone/</loc>
+     <lastmod>2020-04-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>http://developer.helpmonks.com/api/conversation/findbyid/</loc>
+     <lastmod>2020-04-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>http://developer.helpmonks.com/api/conversation/update/</loc>
+     <lastmod>2020-04-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>http://developer.helpmonks.com/api/conversation/update_status/</loc>
+     <lastmod>2020-04-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>http://developer.helpmonks.com/api/conversation/update_assignee/</loc>
+     <lastmod>2020-04-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>http://developer.helpmonks.com/api/conversation/update_label/</loc>
+     <lastmod>2020-04-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>http://developer.helpmonks.com/api/conversation/note_add/</loc>
+     <lastmod>2020-04-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>http://developer.helpmonks.com/api/conversation/note_delete/</loc>
+     <lastmod>2020-04-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>http://developer.helpmonks.com/api/conversation/delete/</loc>
+     <lastmod>2020-04-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>http://developer.helpmonks.com/api/conversation/create/</loc>
+     <lastmod>2020-04-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>http://developer.helpmonks.com/api/customer/find/</loc>
+     <lastmod>2020-04-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>http://developer.helpmonks.com/api/customer/findone/</loc>
+     <lastmod>2020-04-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>http://developer.helpmonks.com/api/customer/findbyid/</loc>
+     <lastmod>2020-04-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>http://developer.helpmonks.com/api/customer/delete/</loc>
+     <lastmod>2020-04-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>http://developer.helpmonks.com/api/customer/update/</loc>
+     <lastmod>2020-04-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>http://developer.helpmonks.com/api/customer/update_label/</loc>
+     <lastmod>2020-04-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>http://developer.helpmonks.com/api/customer/create/</loc>
+     <lastmod>2020-04-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>http://developer.helpmonks.com/api/mailbox/find/</loc>
+     <lastmod>2020-04-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>http://developer.helpmonks.com/api/mailbox/findone/</loc>
+     <lastmod>2020-04-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>http://developer.helpmonks.com/api/mailbox/findbyid/</loc>
+     <lastmod>2020-04-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>http://developer.helpmonks.com/api/mailbox/create/</loc>
+     <lastmod>2020-04-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>http://developer.helpmonks.com/api/label/find/</loc>
+     <lastmod>2020-04-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>http://developer.helpmonks.com/api/label/findone/</loc>
+     <lastmod>2020-04-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>http://developer.helpmonks.com/api/label/findbyid/</loc>
+     <lastmod>2020-04-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>http://developer.helpmonks.com/api/user/find/</loc>
+     <lastmod>2020-04-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>http://developer.helpmonks.com/api/user/findone/</loc>
+     <lastmod>2020-04-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>http://developer.helpmonks.com/api/user/findbyid/</loc>
+     <lastmod>2020-04-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>http://developer.helpmonks.com/api/user/delete/</loc>
+     <lastmod>2020-04-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>http://developer.helpmonks.com/api/user/update/</loc>
+     <lastmod>2020-04-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>http://developer.helpmonks.com/api/user/create/</loc>
+     <lastmod>2020-04-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>http://developer.helpmonks.com/api/user/activate/</loc>
+     <lastmod>2020-04-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>http://developer.helpmonks.com/api/user/deactivate/</loc>
+     <lastmod>2020-04-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>http://developer.helpmonks.com/api/search/</loc>
+     <lastmod>2020-04-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>http://developer.helpmonks.com/api/models/conversation/</loc>
+     <lastmod>2020-04-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>http://developer.helpmonks.com/api/models/customer/</loc>
+     <lastmod>2020-04-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>http://developer.helpmonks.com/api/models/mailbox/</loc>
+     <lastmod>2020-04-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>http://developer.helpmonks.com/api/models/label/</loc>
+     <lastmod>2020-04-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>http://developer.helpmonks.com/api/models/user/</loc>
+     <lastmod>2020-04-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
      <loc>http://developer.helpmonks.com/about/</loc>
-     <lastmod>2018-06-03</lastmod>
+     <lastmod>2020-04-29</lastmod>
      <changefreq>daily</changefreq>
-    </url>
-    
-
-    
-        
-    <url>
+    </url><url>
      <loc>http://developer.helpmonks.com/saml/introduction/</loc>
-     <lastmod>2018-06-03</lastmod>
+     <lastmod>2020-04-29</lastmod>
      <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
+    </url><url>
      <loc>http://developer.helpmonks.com/saml/setup/</loc>
-     <lastmod>2018-06-03</lastmod>
+     <lastmod>2020-04-29</lastmod>
      <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
+    </url><url>
      <loc>http://developer.helpmonks.com/saml/settings/</loc>
-     <lastmod>2018-06-03</lastmod>
+     <lastmod>2020-04-29</lastmod>
      <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
+    </url><url>
      <loc>http://developer.helpmonks.com/saml/example_auth0/</loc>
-     <lastmod>2018-06-03</lastmod>
+     <lastmod>2020-04-29</lastmod>
      <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
+    </url><url>
      <loc>http://developer.helpmonks.com/saml/example_onelogin/</loc>
-     <lastmod>2018-06-03</lastmod>
+     <lastmod>2020-04-29</lastmod>
      <changefreq>daily</changefreq>
-    </url>
-        
-    
-
-    
-        
-    <url>
+    </url><url>
      <loc>http://developer.helpmonks.com/sso/introduction/</loc>
-     <lastmod>2018-06-03</lastmod>
+     <lastmod>2020-04-29</lastmod>
      <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
+    </url><url>
      <loc>http://developer.helpmonks.com/sso/authentication/</loc>
-     <lastmod>2018-06-03</lastmod>
+     <lastmod>2020-04-29</lastmod>
      <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>http://developer.helpmonks.com</loc>
-     <lastmod></lastmod>
+    </url><url>
+     <loc>http://developer.helpmonks.com/sso/token_create/</loc>
+     <lastmod>2020-04-29</lastmod>
      <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
+    </url><url>
+     <loc>http://developer.helpmonks.com/sso/token_update/</loc>
+     <lastmod>2020-04-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>http://developer.helpmonks.com/sso/token_get/</loc>
+     <lastmod>2020-04-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>http://developer.helpmonks.com/sso/token_check/</loc>
+     <lastmod>2020-04-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>http://developer.helpmonks.com/sso/token_delete/</loc>
+     <lastmod>2020-04-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
      <loc>http://developer.helpmonks.com/sso/login/</loc>
-     <lastmod>2018-06-03</lastmod>
+     <lastmod>2020-04-29</lastmod>
      <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
+    </url><url>
      <loc>http://developer.helpmonks.com/sso/access_token/</loc>
-     <lastmod>2018-06-03</lastmod>
+     <lastmod>2020-04-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
-    
-
 </urlset>
