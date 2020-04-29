@@ -13,7 +13,10 @@ This is the data model for records in the returning data structure. You also use
     'last_name' : String,
     'notes' : String,
     'last_correspondence_date' : Date,
-    'last_email_chain_id' : ObjectId
+    'last_email_chain_id' : ObjectId,
+    'labels' : [
+        ObjectId
+    ]
 }
 ```
 

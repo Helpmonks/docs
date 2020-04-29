@@ -6,8 +6,8 @@ theme:
     primary: 'light green'
     accent: 'light green'
   logo: 'images/icon_transparent_128.png'
-  feature:
-    tabs: true
+  features:
+    - tabs
 site_url: http://developer.helpmonks.com
 site_description: The Helpmonks developer documentation pages
 site_author: Nitai Aventaggiato
@@ -17,11 +17,9 @@ markdown_extensions:
 extra:
   version: 1.0
   social:
-    - type: 'twitter'
+    - icon: fontawesome/brands/twitter
       link: 'https://twitter.com/helpmonks'
-    - type: 'facebook'
-      link: 'https://facebook.com/helpmonks'
-pages:
+nav:
 - 'Home': 'index.md'
 - 'Developer API':
   - 'Getting Started':
@@ -47,6 +45,7 @@ pages:
       - 'FindById': 'api/customer/findbyid.md'
       - 'Delete': 'api/customer/delete.md'
       - 'Update': 'api/customer/update.md'
+      - 'Update Label': 'api/customer/update_label.md'
       - 'Create': 'api/customer/create.md'
     - 'Mailbox':
       - 'Find': 'api/mailbox/find.md'
