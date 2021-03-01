@@ -7,7 +7,7 @@ theme:
     accent: 'light green'
   logo: 'images/icon_transparent_128.png'
   features:
-    - tabs
+    - navigation.tabs
 site_url: http://developer.helpmonks.com
 site_description: The Helpmonks developer documentation pages
 site_author: Nitai Aventaggiato
@@ -66,13 +66,19 @@ nav:
       - 'Activate': 'api/user/activate.md'
       - 'Deactivate': 'api/user/deactivate.md'
     - 'Search': 'api/search/index.md'
+    - 'Engage':
+      - 'Automation':
+        - 'Add user': 'api/engage/auto_add.md'
+        - 'Remove user': 'api/engage/auto_remove.md'
+      - 'Distribution list':
+        - 'Add user': 'api/engage/list_add.md'
+        - 'Remove user': 'api/engage/list_remove.md'
   - 'Data Models':
     - 'Conversations' : 'api/models/conversation.md'
     - 'Customer' : 'api/models/customer.md'
     - 'Mailbox' : 'api/models/mailbox.md'
     - 'Label' : 'api/models/label.md'
     - 'User' : 'api/models/user.md'
-- 'About Helpmonks': 'about.md'
 - 'Single-Sign-On (SAML)':
   - 'Introduction' : 'saml/introduction.md'
   - 'SAML Setup' : 'saml/setup.md'
@@ -90,3 +96,4 @@ nav:
     - 'Delete Token' : 'sso/token_delete.md'
   - 'SSO Login' : 'sso/login.md'
   - 'Manage Access Tokens' : 'sso/access_token.md'
+- 'About Helpmonks': 'about.md'

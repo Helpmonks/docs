@@ -1,6 +1,6 @@
 # Query Syntax for the Helpmonks API
 
-Helpmonks utilizes the MongoDB database together with the Mongoose ORM framework. Thus, the Helpmonks API exposes the Mongoose query syntax directly. For you this means that you have the full query syntax to your disposel with the Helpmonks API.
+Helpmonks utilizes the MongoDB database together with the Mongoose ORM framework. Thus, the Helpmonks API exposes the Mongoose query syntax directly. For you this means that you have the full query syntax to your disposal with the Helpmonks API.
 
 If you are not familiar with the MongoDB query syntax we recommend a quick read of the [comparison between SQL queries and MongoDB queries](http://docs.mongodb.org/manual/reference/sql-comparison/index.html).
 
@@ -35,7 +35,7 @@ Every API section (Conversation, User, etc.) will contain at least a "find" meth
 
 ### query
 
-In the query object you define the columns you want to query against, i.e. they are similar to the SQL WHERE columns. Say, you want to query a users firstname and email address:
+In the query object you define the columns you want to query against, i.e. they are similar to the SQL WHERE columns. Say, you want to query a users first name and email address:
 
 ```
 {
@@ -95,7 +95,7 @@ As the "fields" and "options" parameters are optional the above would return all
 
 As the method name implicates, the "findOne" methods will return only one record but utilizes the same syntax and the above "find". The difference is that when the "findOne" executes, the first found document is returned!
 
-You should use the "findOne" whenever you are sure that only one record exists or are looking for an explisit user record. As a fact, the above find query is much faster with the "findOne" method.
+You should use the "findOne" whenever you are sure that only one record exists or are looking for an explicit user record. As a fact, the above find query is much faster with the "findOne" method.
 
 If you know the ID of a record, always use the "findById" methods!
 

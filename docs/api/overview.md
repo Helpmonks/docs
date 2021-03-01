@@ -12,7 +12,7 @@ Please see [Authentication](/api/authentication/) to learn how to create your AP
 
 ## Data structure
 
-All API methods are issues with a POST or a GET request. POST API methods expect a JSON structure in the body. Please see each individidual documentation to learn about the available parameters.
+All API methods are issues with a POST or a GET request. POST API methods expect a JSON structure in the body. Please see each individual documentation to learn about the available parameters.
 
 All API methods return a JSON data object in the format:
 
@@ -24,7 +24,7 @@ All API methods return a JSON data object in the format:
 }
 ```
 
-Please see each individidual documentation to learn about the data in the results.
+Please see each individual documentation to learn about the data in the results.
 
 ## Example for CURL
 

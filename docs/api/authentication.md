@@ -23,4 +23,4 @@ Please make sure to keep your API key a secret. A good practice is to renew your
 
 ## Permissions
 
-Your permissions within Helpmonks will also apply to the API, i.e. if you use the API key of a user who is an Administrator you will also have Administrator access with the API. On the other hand, a user with "user" permissions will not be able to conduct certain actions withs the API. These API requests will receive a validation error message in the returning data structure.
+Your permissions within Helpmonks will also apply to the API, i.e. if you use the API key of a user who is an Administrator you will also have Administrator access with the API. On the other hand, a user with "user" permissions will not be able to conduct certain actions with the API. These API requests will receive a validation error message in the returning data structure.
