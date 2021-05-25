@@ -1,5 +1,5 @@
 # About Helpmonks
 
-[Helpmonks](http://helpmonks.com) is a team email management solution and has already helped over 1000 successful organizations to manage their team email flow.
+[Helpmonks](https://helpmonks.com) is a customer engagement solution and has already helped over 3,000 successful organizations to manage their team email flow. Helpmonks is the only all-in-one platform to combine a shared inbox, Live Chat, CRM, Email Marketing and Marketing Automation in one.
 
-Create your very own Helpmonks account today on the [Helpmonks Website](http://helpmonks.com) for free.
+[Give Helpmonks a try today](https://helpmonks.com).
