@@ -46,7 +46,7 @@ Use "user_id" to add one user or "user_ids" to add multiple users to a distribut
 
 ```
 {
-    "campaign_id" : "934875p9o4j5p9095ul4k5j",
+    "list_id" : "934875p9o4j5p9095ul4k5j",
     "user_id" : "73958uk2hyuiy234857"
 }
 ```
@@ -55,7 +55,7 @@ or
 
 ```
 {
-    "campaign_id" : "934875p9o4j5p9095ul4k5j",
+    "list_id" : "934875p9o4j5p9095ul4k5j",
     "user_ids" : [ "73958uk2hyuiy234857", "jsadhfki8798798das7f98" ]
 }
 ```
