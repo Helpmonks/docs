@@ -3,17 +3,36 @@ theme:
   name: material
   custom_dir: theme_hm
   palette:
-    primary: 'light green'
-    accent: 'light green'
+    primary: 'deep purple'
+    accent: 'deep purple'
   logo: 'images/icon_transparent_128.png'
   features:
     - navigation.tabs
+    - navigation.sections
+    - navigation.top
 site_url: http://developer.helpmonks.com
 site_description: The Helpmonks developer documentation pages
 site_author: Nitai Aventaggiato
 markdown_extensions:
   - smarty
   - toc
+  - pymdownx.caret
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - attr_list
+  - def_list
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.tasklist:
+      custom_checkbox: true
+      clickable_checkbox: true
+  - pymdownx.tabbed:
+      alternate_style: true
 extra:
   version: 1.0
   social:
@@ -71,8 +90,9 @@ nav:
         - 'Add user': 'api/engage/auto_add.md'
         - 'Remove user': 'api/engage/auto_remove.md'
       - 'Distribution list':
-        - 'Add user': 'api/engage/list_add.md'
-        - 'Remove user': 'api/engage/list_remove.md'
+        - 'Add user(s) by email': 'api/engage/list_add_email.md'
+        - 'Add user(s) by ID': 'api/engage/list_add.md'
+        - 'Remove user(s) by ID': 'api/engage/list_remove.md'
   - 'Data Models':
     - 'Conversations' : 'api/models/conversation.md'
     - 'Customer' : 'api/models/customer.md'
@@ -83,8 +103,10 @@ nav:
   - 'Introduction' : 'saml/introduction.md'
   - 'SAML Setup' : 'saml/setup.md'
   - 'SAML Settings' : 'saml/settings.md'
-  - 'Auth0 Example' : 'saml/example_auth0.md'
-  - 'OneLogin Example' : 'saml/example_onelogin.md'
+  - 'Setup Guides':
+    - 'Azure' : 'saml/example_azure.md'
+    - 'Auth0' : 'saml/example_auth0.md'
+    - 'OneLogin' : 'saml/example_onelogin.md'
 - 'Single-Sign-On (oAuth)':
   - 'Introduction' : 'sso/introduction.md'
   - 'Authentication' : 'sso/authentication.md'

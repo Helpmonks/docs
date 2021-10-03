@@ -34,7 +34,7 @@ https://(subdomain).helpmonks.com/api/v1/engage/campaign/auto/user/add
         <td>user_ids</td>
         <td>Yes/No</td>
         <td>An array ID's of users</td>
-        <td>String</td>
+        <td>Array</td>
     </tr>
 </table>
 
