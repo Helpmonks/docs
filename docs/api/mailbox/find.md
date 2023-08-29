@@ -4,7 +4,7 @@
 POST
 
 ### URL
-https://(subdomain).helpmonks.com/api/v1/mailbox/find
+https://api.helpmonks.com/api/v1/mailbox/find
 
 ### Parameters
 <table>

@@ -4,7 +4,7 @@
 POST
 
 ### URL
-https://(subdomain).helpmonks.com/api/v1/company_user/update
+https://api.helpmonks.com/api/v1/company_user/update
 
 ### Parameters
 <table>
@@ -28,8 +28,8 @@ https://(subdomain).helpmonks.com/api/v1/company_user/update
 
 ```
 {
-    customer : { 
-        'id' : '54708b4cd71ef2dbdb557b9d', 
+    customer : {
+        'id' : '54708b4cd71ef2dbdb557b9d',
         'email' : 'nitai@helpmonks.com',
         "first_name" : "Nitai"
     }

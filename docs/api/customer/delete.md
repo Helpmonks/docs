@@ -4,7 +4,7 @@
 GET
 
 ### URL
-https://(subdomain).helpmonks.com/api/v1/company_user/delete/(id)
+https://api.helpmonks.com/api/v1/company_user/delete/(id)
 
 ### Parameters
 <table>
@@ -27,7 +27,7 @@ https://(subdomain).helpmonks.com/api/v1/company_user/delete/(id)
 ### Example
 
 ```
-https://(subdomain).helpmonks.com/api/v1/company_user/delete/54708b4cd71ef2dbdb557b9d
+https://api.helpmonks.com/api/v1/company_user/delete/54708b4cd71ef2dbdb557b9d
 ```
 
 ### Returned data

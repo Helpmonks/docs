@@ -4,7 +4,7 @@
 POST
 
 ### URL
-https://(subdomain).helpmonks.com/api/v1/company_user/create
+https://api.helpmonks.com/api/v1/company_user/create
 
 ### Parameters
 <table>
@@ -28,7 +28,7 @@ https://(subdomain).helpmonks.com/api/v1/company_user/create
 
 ```
 {
-    customer : { 
+    customer : {
         "email" : "customer@domain.com",
         "first_name" : "Customer",
         "last_name" : "Awesome",

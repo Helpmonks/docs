@@ -4,7 +4,7 @@
 POST
 
 ## URL
-https://(subdomain).helpmonks.com/api/v1/search
+https://api.helpmonks.com/api/v1/search
 
 ### Parameters
 <table>

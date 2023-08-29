@@ -4,7 +4,7 @@
 POST
 
 ### URL
-https://(subdomain).helpmonks.com/api/v1/conversation/update/assignee
+https://api.helpmonks.com/api/v1/conversation/update/assignee
 
 ### Parameters
 <table>
@@ -33,7 +33,7 @@ https://(subdomain).helpmonks.com/api/v1/conversation/update/assignee
 ### Example
 
 ```
-{ 
+{
     "id" : "569ed97edfeec6ccffb6c2ec",
     "user_id" : "57c1e0f6c4be9b0a00d6b0cb"
 }

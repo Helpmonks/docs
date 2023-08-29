@@ -4,7 +4,7 @@
 POST
 
 ### URL
-https://(subdomain).helpmonks.com/api/v1/company_user/label
+https://api.helpmonks.com/api/v1/company_user/label
 
 ### Parameters
 <table>
@@ -39,7 +39,7 @@ https://(subdomain).helpmonks.com/api/v1/company_user/label
 ### Example
 
 ```
-{ 
+{
     "id" : "569ed97edfeec6ccffb6c2ec",
     "label" : ["Marketing"],
     "replace" : true

@@ -4,7 +4,7 @@
 GET
 
 ### URL
-https://(subdomain).helpmonks.com/api/v1/user/mailbox/findbyid/(id)
+https://api.helpmonks.com/api/v1/user/mailbox/findbyid/(id)
 
 ### Parameters
 <table>
@@ -27,7 +27,7 @@ https://(subdomain).helpmonks.com/api/v1/user/mailbox/findbyid/(id)
 ### Example
 
 ```
-https://(subdomain).helpmonks.com/api/v1/mailbox/findbyid/54708b4cd71ef2dbdb557b9d
+https://api.helpmonks.com/api/v1/mailbox/findbyid/54708b4cd71ef2dbdb557b9d
 ```
 
 ### Returned data

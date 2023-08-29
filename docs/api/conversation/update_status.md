@@ -4,7 +4,7 @@
 GET
 
 ### URL
-https://(subdomain).helpmonks.com/api/v1/conversation/status/(id)/(status)
+https://api.helpmonks.com/api/v1/conversation/status/(id)/(status)
 
 ### Parameters
 <table>
@@ -31,7 +31,7 @@ https://(subdomain).helpmonks.com/api/v1/conversation/status/(id)/(status)
 ### Example
 
 ```
-https://(subdomain).helpmonks.com/api/v1/conversation/status/54708b4cd71ef2dbdb557b9d/closed
+https://api.helpmonks.com/api/v1/conversation/status/54708b4cd71ef2dbdb557b9d/closed
 ```
 
 ### Returned data

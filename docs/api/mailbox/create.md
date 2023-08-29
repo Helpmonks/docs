@@ -8,7 +8,7 @@ Available as of Sept. 12th, 2017. Version 1.6.3
 POST
 
 ### URL
-https://(subdomain).helpmonks.com/api/v1/mailbox/create
+https://api.helpmonks.com/api/v1/mailbox/create
 
 ### Parameters
 <table>

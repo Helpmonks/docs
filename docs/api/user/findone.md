@@ -4,7 +4,7 @@
 POST
 
 ### URL
-https://(subdomain).helpmonks.com/api/v1/user/findone
+https://api.helpmonks.com/api/v1/user/findone
 
 ### Parameters
 <table>

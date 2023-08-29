@@ -4,7 +4,7 @@
 POST
 
 ### URL
-https://(subdomain).helpmonks.com/api/v1/conversation/note/add
+https://api.helpmonks.com/api/v1/conversation/note/add
 
 ### Parameters
 <table>
@@ -33,10 +33,10 @@ https://(subdomain).helpmonks.com/api/v1/conversation/note/add
 ### Example
 
 ```
-{ 
+{
     "id" : "569ed97edfeec6ccffb6c2ec",
-    "notes" : [ 
-        { 
+    "notes" : [
+        {
             "note" : "A note from the API"
         }
     ]

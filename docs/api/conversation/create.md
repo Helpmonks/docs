@@ -6,7 +6,7 @@ This allows you to import existing converations and add them to your Helpmonks s
 POST
 
 ### URL
-https://(subdomain).helpmonks.com/api/v1/conversation/create
+https://api.helpmonks.com/api/v1/conversation/create
 
 ### Parameters
 <table>
@@ -29,7 +29,7 @@ https://(subdomain).helpmonks.com/api/v1/conversation/create
 ### Example
 
 ```
-{ 
+{
   "status": "inbox",
   "mailbox_id": "54b14a700e3db642552771ab",
   "assignee": null,

@@ -4,7 +4,7 @@
 POST
 
 ### URL
-https://(subdomain).helpmonks.com/api/v1/conversation/update
+https://api.helpmonks.com/api/v1/conversation/update
 
 ### Parameters
 <table>

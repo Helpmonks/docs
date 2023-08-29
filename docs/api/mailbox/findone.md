@@ -4,7 +4,7 @@
 POST
 
 ### URL
-https://(subdomain).helpmonks.com/api/v1/mailbox/findone
+https://api.helpmonks.com/api/v1/mailbox/findone
 
 ### Parameters
 <table>
