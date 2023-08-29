@@ -5,7 +5,7 @@ Will remove the access_token of the user
 ### API endpoint
 
 ```
-https://subdomain.helpmonks.com/p/sso/oauth/remove_token
+https://api.helpmonks.com/p/sso/oauth/remove_token
 ```
 
 ### Parameters
@@ -34,7 +34,7 @@ https://subdomain.helpmonks.com/p/sso/oauth/remove_token
 ## Example
 
 ```
-POST : https://subdomain.helpmonks.com/p/sso/oauth/remove_token
+POST : https://api.helpmonks.com/p/sso/oauth/remove_token
 {
     "access_id" : "bedcdbb55b31ff7bacd9cb4b4e99abfc",
     "access_token" : "71ff80d51fd57fdf9c11172230762b64"

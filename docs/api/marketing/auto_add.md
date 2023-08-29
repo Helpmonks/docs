@@ -1,4 +1,4 @@
-# Automation: Add user(s) to campaign
+# Automation: Add user(s) to sequence
 
 ### Availability
 
@@ -8,7 +8,7 @@ Available as of March 1st, 2021. Version 2.9.0
 POST
 
 ### URL
-https://(subdomain).helpmonks.com/api/v1/engage/campaign/auto/user/add
+https://api.helpmonks.com../v1/engage/campaign/auto/user/add
 
 ### Parameters
 <table>

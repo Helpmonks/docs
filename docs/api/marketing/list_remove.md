@@ -8,7 +8,7 @@ Available as of March 1st, 2021. Version 2.9.0
 POST
 
 ### URL
-https://(subdomain).helpmonks.com/api/v1/engage/campaign/list/user/remove
+https://api.helpmonks.com../v1/engage/campaign/list/user/remove
 
 ### Parameters
 <table>

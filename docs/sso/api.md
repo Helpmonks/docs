@@ -5,7 +5,7 @@
 ### API endpoint
 
 ```
-https://subdomain.helpmonks.com/p/sso/oauth/create_token
+https://api.helpmonks.com/p/sso/oauth/create_token
 ```
 
 ### Parameters
@@ -40,7 +40,7 @@ https://subdomain.helpmonks.com/p/sso/oauth/create_token
 ## Example
 
 ```
-POST : https://subdomain.helpmonks.com/p/sso/oauth/create_token
+POST : https://api.helpmonks.com/p/sso/oauth/create_token
 {
     "access_id" : "bedcdbb55b31ff7bacd9cb4b4e99abfc",
     "access_secret" : "13dee613cbc84826a33cc4c7effd17ee179ef0d1a06f4be9926a78aecf685f8a",

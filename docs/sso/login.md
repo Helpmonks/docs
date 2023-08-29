@@ -7,7 +7,7 @@ With a valid access_token and your access_id you can now log into the users Help
 To log into Helpmonks use:
 
 ```
-https://subdomain.helpmonks.com/auth/sso/login
+https://api.helpmonks.com/auth/sso/login
 ```
 
 ### Parameters
@@ -36,11 +36,11 @@ https://subdomain.helpmonks.com/auth/sso/login
 ## Example
 
 ```
-https://subdomain.helpmonks.com/auth/sso/login? \
+https://api.helpmonks.com/auth/sso/login? \
 access_id=bedcdbb55b31ff7bacd9cb4b4e99abfc \
 &access_token=a76c3a8b969d38649ffb77e469ccff6a
 ```
 
 ## Help
 
-If you have any questions, please post a message to our [Helpmonks Developer forum](https://help.helpmonks.com). 
+If you have any questions, please post a message to our [Helpmonks Developer forum](https://community.helpmonks.com).

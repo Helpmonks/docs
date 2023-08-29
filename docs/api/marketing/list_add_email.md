@@ -1,4 +1,4 @@
-# Automation: Add emai(s) to distribution list
+# Automation: Add email(s) to distribution list
 
 ### Availability
 
@@ -8,7 +8,7 @@ Available as of October 1st, 2021. Version 2.9.5
 POST
 
 ### URL
-https://(subdomain).helpmonks.com/api/v1/engage/campaign/list/email/add
+https://api.helpmonks.com../v1/engage/campaign/list/email/add
 
 ### Parameters
 <table>

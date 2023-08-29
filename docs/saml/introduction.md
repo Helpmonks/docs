@@ -13,8 +13,8 @@ To enable the SSO plugin, please click on the "Plugins directory" button in the 
 
 Helpmonks is not an Identity provider. You need to have a working Identity provider. In addition, you need to create your users in Helpmonks and assign them to your mailboxes. Automatic creation of users in Helpmonks is currently not supported. Though, it's very easy to batch create users. Simply import them from a CSV file.
 
-That said, please continue on to [setting up SAML](/saml/setup/).
+That said, please continue on to [setting up SAML](../setup/).
 
 ## Help
 
-If you have any questions, please post a message to our [Helpmonks Community](https://help.helpmonks.com) or contact us per email at support@helpmonks.com.
+If you have any questions, please post a message to our [Helpmonks Community](https://community.helpmonks.com) or contact us per email at support@helpmonks.com.

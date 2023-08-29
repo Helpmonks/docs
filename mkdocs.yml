@@ -10,7 +10,7 @@ theme:
     - navigation.tabs
     - navigation.sections
     - navigation.top
-site_url: http://developer.helpmonks.com
+site_url: https://developer.helpmonks.com
 site_description: The Helpmonks developer documentation pages
 site_author: Nitai Aventaggiato
 markdown_extensions:
@@ -85,14 +85,14 @@ nav:
       - 'Activate': 'api/user/activate.md'
       - 'Deactivate': 'api/user/deactivate.md'
     - 'Search': 'api/search/index.md'
-    - 'Engage':
-      - 'Automation':
-        - 'Add user': 'api/engage/auto_add.md'
-        - 'Remove user': 'api/engage/auto_remove.md'
+    - 'Marketing':
+      - 'Sequences':
+        - 'Add user': 'api/marketing/auto_add.md'
+        - 'Remove user': 'api/marketing/auto_remove.md'
       - 'Distribution list':
-        - 'Add user(s) by email': 'api/engage/list_add_email.md'
-        - 'Add user(s) by ID': 'api/engage/list_add.md'
-        - 'Remove user(s) by ID': 'api/engage/list_remove.md'
+        - 'Add user(s) by email': 'api/marketing/list_add_email.md'
+        - 'Add user(s) by ID': 'api/marketing/list_add.md'
+        - 'Remove user(s) by ID': 'api/marketing/list_remove.md'
   - 'Data Models':
     - 'Conversations' : 'api/models/conversation.md'
     - 'Customer' : 'api/models/customer.md'

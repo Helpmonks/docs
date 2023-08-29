@@ -1,4 +1,4 @@
-# Automation: Add user(s) to distribution list
+# Automation: Remove user(s) from sequence
 
 ### Availability
 
@@ -8,7 +8,7 @@ Available as of March 1st, 2021. Version 2.9.0
 POST
 
 ### URL
-https://(subdomain).helpmonks.com/api/v1/engage/campaign/list/user/add
+https://api.helpmonks.com../v1/engage/campaign/auto/user/remove
 
 ### Parameters
 <table>
@@ -19,9 +19,9 @@ https://(subdomain).helpmonks.com/api/v1/engage/campaign/list/user/add
         <th>Comment</th>
     </tr>
     <tr>
-        <td>list_id</td>
+        <td>campaign_id</td>
         <td>Yes</td>
-        <td>ID of the distribution list</td>
+        <td>ID of the campaign</td>
         <td>String</td>
     </tr>
     <tr>
@@ -40,13 +40,13 @@ https://(subdomain).helpmonks.com/api/v1/engage/campaign/list/user/add
 
 ### Important Note
 
-Use "user_id" to add one user or "user_ids" to add multiple users to a distribution list.
+Use "user_id" to remove one user or "user_ids" to remove multiple users from a campaign.
 
 ### Example
 
 ```
 {
-    "list_id" : "934875p9o4j5p9095ul4k5j",
+    "campaign_id" : "934875p9o4j5p9095ul4k5j",
     "user_id" : "73958uk2hyuiy234857"
 }
 ```
@@ -55,7 +55,7 @@ or
 
 ```
 {
-    "list_id" : "934875p9o4j5p9095ul4k5j",
+    "campaign_id" : "934875p9o4j5p9095ul4k5j",
     "user_ids" : [ "73958uk2hyuiy234857", "jsadhfki8798798das7f98" ]
 }
 ```

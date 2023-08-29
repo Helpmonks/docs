@@ -10,11 +10,11 @@ Please sign in to your Identity provider's administration to get;
 - Logout URL (optional)
 - Public x509 certificate
 
-Where you will find these credentials depends on your identity provider. Please find an example for [Auth0](/saml/example_auth0/) and [OneLogin](/saml/example_onelogin/).
+Where you will find these credentials depends on your identity provider. Please find an example for [Auth0](../example_auth0/) and [OneLogin](../example_onelogin/).
 
 Once you have all credentials you have to enter them into the SAML Identity provider tab.
 
-![](/images/sso_saml_idp.png)
+![](../images/sso_saml_idp.png)
 
 ## Service provider credentials
 
@@ -22,6 +22,6 @@ Please click on the "Service provider" tab and copy the "Entity ID" and the "Ass
 
 Again, the names of those settings might vary depending on your provider. Usually, they can be find under "Service provider".
 
-![](/images/sso_saml_sp.png)
+![](../images/sso_saml_sp.png)
 
-You can also enforce SAML sign-in and set [other SAML settings](/saml/settings/).
+You can also enforce SAML sign-in and set [other SAML settings](../settings/).

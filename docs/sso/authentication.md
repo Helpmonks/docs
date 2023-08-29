@@ -6,7 +6,7 @@ First let's check that you enabled the SSO (Single-Sign-On) plugin (please note 
 
 To enable the SSO plugin, please click on the "Plugins directory" button in the right corner. Then from the list of plugins, go to the "SSO" plugin and enable it in the detail section.
 
-![](/images/sso_plugin.png)
+![](../images/sso_plugin.png)
 
 ## Create an oAuth Access Key
 
@@ -20,4 +20,4 @@ You should then see in the list of Access Keys your new Access key pair. You can
 
 Now that you have a key, you can go ahead and create "Access Tokens" for your user accounts.
 
-Head over to the [Single-Sign-On](/sso/token_create/) API guide.
+Head over to the [Single-Sign-On](../token_create/) API guide.
