@@ -4,7 +4,7 @@ The Helpmonks API allows you to interact with your data stored in Helpmonks. You
 
 ## API URL
 
-API requests should be done towards https://(yoursubdomain).helpmonks.com/(apimethod). Please refer to the API documentation for the correct URL.
+API requests should be done towards https://api.helpmonks.com/(apimethod). Please refer to the API documentation for the correct URL.
 
 ## API Key
 
@@ -31,7 +31,7 @@ Please see each individual documentation to learn about the data in the results.
 Given the above, you would use the following with CURL to send API requests to the Helpmonks API:
 
 ```
-curl -X "POST" "https://domain.helpmonks.com/api/v1/conversation/create" \
+curl -X "POST" "https://api.helpmonks.com/api/v1/conversation/create" \
 -H "Authorization: Basic Njc3ZjFiZWQ5MTUwNGQzNWE5YTQ1MjkxmU3OGFkYjE6KioqKiogSGlkZGVuIGNyWRlbnRpYWICoqKioq" \
 -H "Content-Type: application/json; charset=utf-8" \
 -d "{JSON BODY}"
@@ -39,4 +39,4 @@ curl -X "POST" "https://domain.helpmonks.com/api/v1/conversation/create" \
 
 ## Help
 
-If you have any questions, please post a message to our [Helpmonks Developer forum](https://help.helpmonks.com). 
+If you have any questions, please post a message to our [Helpmonks Community](https://community.helpmonks.com).
